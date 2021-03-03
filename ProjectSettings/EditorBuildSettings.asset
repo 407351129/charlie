@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/0-Scene/order.unity
     guid: 98703962c50d98e4b98157d583d5bec2
   - enabled: 1
+    path: Assets/0-Scene/fight_food.unity
+    guid: 75d7042cfd0ed2141b7bd0f16e95178d
+  - enabled: 1
     path: Assets/0-Scene/fight.unity
     guid: f3f0a2c41621ab849979b8edad8ad354
   m_configObjects: {}
