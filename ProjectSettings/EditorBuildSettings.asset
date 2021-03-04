@@ -6,24 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/0-Scene/start.unity
-    guid: 6fd4fc6f1f538614c8f1b5c321466b0a
-  - enabled: 1
-    path: Assets/0-Scene/stage.unity
-    guid: a0a91b2c70afd334e8898d1e56f4b484
-  - enabled: 1
-    path: Assets/0-Scene/map1.unity
-    guid: e181a06419c33b34d97ea5c36dc9de8e
-  - enabled: 1
-    path: Assets/0-Scene/map2.unity
-    guid: ef0c4e3ca5bfc60499cd68683018b371
-  - enabled: 1
-    path: Assets/0-Scene/map3.unity
-    guid: 93ba27fe76a7c65458425d7ab23df05b
-  - enabled: 1
-    path: Assets/0-Scene/order.unity
-    guid: 98703962c50d98e4b98157d583d5bec2
-  - enabled: 1
-    path: Assets/0-Scene/fight_food.unity
-    guid: 75d7042cfd0ed2141b7bd0f16e95178d
+    path: Assets/5678/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
