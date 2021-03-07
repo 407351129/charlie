@@ -6,6 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Texture/5678/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/0-Scene/start.unity
+    guid: 6fd4fc6f1f538614c8f1b5c321466b0a
+  - enabled: 1
+    path: Assets/0-Scene/stage.unity
+    guid: a0a91b2c70afd334e8898d1e56f4b484
+  - enabled: 1
+    path: Assets/0-Scene/map1.unity
+    guid: e181a06419c33b34d97ea5c36dc9de8e
+  - enabled: 1
+    path: Assets/0-Scene/map2.unity
+    guid: ef0c4e3ca5bfc60499cd68683018b371
+  - enabled: 1
+    path: Assets/0-Scene/map3.unity
+    guid: 93ba27fe76a7c65458425d7ab23df05b
+  - enabled: 1
+    path: Assets/0-Scene/order.unity
+    guid: 98703962c50d98e4b98157d583d5bec2
+  - enabled: 1
+    path: Assets/0-Scene/character.unity
+    guid: 8684bb84a4ecee54c9b46ccdd842d2d0
+  - enabled: 1
+    path: Assets/0-Scene/car.unity
+    guid: a3afba0b8f7058a4f84d87def95bc438
+  - enabled: 1
+    path: Assets/0-Scene/shop.unity
+    guid: 3dbd974c14e0c5747a9a68f82e052e31
+  - enabled: 1
+    path: Assets/0-Scene/setting.unity
+    guid: b5c37539cbda0fc41bcb798e1aa33497
   m_configObjects: {}
