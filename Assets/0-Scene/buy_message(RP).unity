@@ -468,7 +468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use it restore 10% HP , then the character continue fighting with the monster
+  m_Text: Use it restore 10% HP , then the character continue fighting with the monster.
 --- !u!222 &359426074
 CanvasRenderer:
   m_ObjectHideFlags: 0
