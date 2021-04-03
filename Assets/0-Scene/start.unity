@@ -585,8 +585,8 @@ GameObject:
   - component: {fileID: 938241509}
   - component: {fileID: 938241508}
   - component: {fileID: 938241511}
-  - component: {fileID: 938241510}
   - component: {fileID: 938241512}
+  - component: {fileID: 938241510}
   m_Layer: 5
   m_Name: start
   m_TagString: Untagged
@@ -677,7 +677,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 938241506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34759dd5c50a05742a3d4fd6c8379184, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e45c62d10c3fa24981cb325f0127c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &973287450
