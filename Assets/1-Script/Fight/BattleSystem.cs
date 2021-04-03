@@ -156,6 +156,15 @@ public class BattleSystem : MonoBehaviour
         PlayerAttackOn();
     }
 
+    public void OnDefenseButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        PlayerStartOff();
+        PlayerAttackOn();
+    }
+
     public void OnBagButton()
     {
         if (state != BattleState.PLAYERTURN)
