@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/0-Scene/start.unity
     guid: 6fd4fc6f1f538614c8f1b5c321466b0a
   - enabled: 1
+    path: Assets/0-Scene/login.unity
+    guid: 92059d7ed796e8d4b949396f5f780838
+  - enabled: 1
     path: Assets/0-Scene/stage.unity
     guid: a0a91b2c70afd334e8898d1e56f4b484
   - enabled: 1
@@ -23,18 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0-Scene/order.unity
     guid: 98703962c50d98e4b98157d583d5bec2
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/0-Scene/car.unity
-    guid: a3afba0b8f7058a4f84d87def95bc438
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/0-Scene/fighting_notice.unity
+    guid: 9ac838ef133b37348a18b03730c63c6d
   - enabled: 1
     path: Assets/0-Scene/fight.unity
     guid: f3f0a2c41621ab849979b8edad8ad354
@@ -42,9 +36,30 @@ EditorBuildSettings:
     path: Assets/0-Scene/fight_food.unity
     guid: 75d7042cfd0ed2141b7bd0f16e95178d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/0-Scene/fight_bag.unity
     guid: 1c7502212daa6c843b8ef63bbc56536b
+  - enabled: 1
+    path: Assets/0-Scene/dead_notice.unity
+    guid: 71d8b825f11ec8d4693ca8d2ef6ef49a
+  - enabled: 1
+    path: Assets/0-Scene/character.unity
+    guid: e9d5ee8d56641b749995ac17d65f82dc
+  - enabled: 1
+    path: Assets/0-Scene/car.unity
+    guid: a3afba0b8f7058a4f84d87def95bc438
+  - enabled: 1
+    path: Assets/0-Scene/setting.unity
+    guid: 1df0faff42efcae41ab1e3ac86a413f0
+  - enabled: 1
+    path: Assets/0-Scene/shop_car.unity
+    guid: e954038f70670454e8bfb80d7f0ab0cb
+  - enabled: 1
+    path: Assets/0-Scene/shop_potion.unity
+    guid: bf2d916ad49312b429610d56b207dd4a
+  - enabled: 1
+    path: Assets/0-Scene/buy_message(RP).unity
+    guid: a74d1ab9e9ea2814e86f9adc9f4957b0
+  - enabled: 1
+    path: Assets/0-Scene/buy_message(LP).unity
+    guid: ee021ef9d159e7048a433af65f0c0c02
   m_configObjects: {}
