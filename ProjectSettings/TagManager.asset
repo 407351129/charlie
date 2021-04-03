@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - text
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -41,15 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
-    uniqueID: 1721425139
-    locked: 0
-  - name: element
-    uniqueID: 1386948245
-    locked: 0
-  - name: background-1
-    uniqueID: 493725771
-    locked: 0
-  - name: element-1
-    uniqueID: 623391263
+  - name: 1
+    uniqueID: 2881583589
     locked: 0
