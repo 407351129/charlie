@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 134814005}
   - component: {fileID: 134814004}
   - component: {fileID: 134814003}
+  - component: {fileID: 134814006}
   m_Layer: 5
   m_Name: AttackButton
   m_TagString: Untagged
@@ -617,6 +618,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134814001}
   m_CullTransparentMesh: 0
+--- !u!114 &134814006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134814001}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_UI: {fileID: 0}
+  timestop: 1
 --- !u!1 &205503559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time_UI: {fileID: 1080945351}
+  timestop: 0
 --- !u!114 &1080945351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,6 +4602,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1992411922}
   - component: {fileID: 1992411923}
+  - component: {fileID: 1992411925}
+  - component: {fileID: 1992411924}
   m_Layer: 0
   m_Name: "\u73CD\u73E0\u5976\u8336"
   m_TagString: Untagged
@@ -4657,6 +4675,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1992411924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992411921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_UI: {fileID: 0}
+  timestop: 1
+--- !u!114 &1992411925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992411921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_UI: {fileID: 0}
+  timestop: 0
 --- !u!1 &2017740064
 GameObject:
   m_ObjectHideFlags: 0

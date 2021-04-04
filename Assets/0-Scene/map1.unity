@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 1528832788}
   - component: {fileID: 1528832787}
   - component: {fileID: 1528832789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2550,7 +2550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938de8922df5e6745bfbd1c9fb4b41a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPosX: -336
+  minPosX: -3
   maxPosX: 337
   A: 1
   posx: 0
@@ -2922,7 +2922,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1386948245
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: fe74c54507e88ba47978558a9b58c437, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4602,7 +4602,7 @@ GameObject:
   - component: {fileID: 2091800748}
   - component: {fileID: 2091800747}
   - component: {fileID: 2091800750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,7 +4704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938de8922df5e6745bfbd1c9fb4b41a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPosX: -336
+  minPosX: -3
   maxPosX: 327
   A: 1
   posx: 0

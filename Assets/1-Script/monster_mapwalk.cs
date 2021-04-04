@@ -44,9 +44,9 @@ public class monster_mapwalk : MonoBehaviour
 //             transform.position = new Vector3 (Mathf.Clamp(transform.position.x - 1f * Time .deltaTime, minPosX, maxPosX), transform.position.y, transform.position.z);
 //         }
 
-var pos = transform.position;
+var pos = gameObject.transform.position;
 posx = pos.x;
-if(posx == -336){
+if(posx == -3){
                 A++;
                 }else if(posx == 3){
                     A++;
@@ -58,11 +58,11 @@ if(posx == -336){
             // transform.Translate(new Vector2(3, 0) * Time.deltaTime);
             // A = A - 2 * monster + 7;
             
-            transform.position = new Vector3 (Mathf.Clamp(transform.position.x - 2f * Time .deltaTime, minPosX, maxPosX), transform.position.y, transform.position.z);
+            transform.position = new Vector3 (Mathf.Clamp(transform.position.x - 1 * Time .deltaTime, minPosX, maxPosX), transform.position.y, transform.position.z);
             
         }
         else{
-            transform.position = new Vector3 (Mathf.Clamp(transform.position.x + 2f * Time .deltaTime, minPosX, maxPosX), transform.position.y, transform.position.z);
+            transform.position = new Vector3 (Mathf.Clamp(transform.position.x + 1 * Time .deltaTime, minPosX, maxPosX), transform.position.y, transform.position.z);
         }
 
 
