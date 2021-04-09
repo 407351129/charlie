@@ -953,7 +953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461620672}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: buy_notice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
