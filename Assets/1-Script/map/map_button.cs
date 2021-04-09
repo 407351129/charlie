@@ -20,6 +20,10 @@ public class map_button : MonoBehaviour
     void Start()
     {
         walk_button = gameObject;
+        leftorright = 0;
+        left_is_press = false;
+        walk_is_press = false;
+        right_is_press = false;
     }
 
     // Update is called once per frame
