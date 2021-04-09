@@ -17,10 +17,12 @@ public class BattleSystem : MonoBehaviour
     Unit enemyUnit;
 
     public DialogueText dialogueText;
-    public Die dieNotice;
+    public DieNotice dieNotice;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
+
+    public Weapon fireball;
     
     public BattleState state;
 
@@ -86,7 +88,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        fireball.Attack();
+        bool EnemyisDead = playerUnit.TakeDamage(enemyUnit.damage);
 
         playerHUD.SetHP(playerUnit.currentHP);
 
@@ -95,7 +98,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        if(isDead)
+        if(EnemyisDead)
         {
             state = BattleState.WON;
             EndBattle();
@@ -109,7 +112,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        bool PlayerisDead = enemyUnit.TakeDamage(playerUnit.damage);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
        
@@ -132,7 +135,7 @@ public class BattleSystem : MonoBehaviour
             dialogueText.TypeDialogue("You won the battle!");
         } else if (state == BattleState.LOST) {
             dialogueText.Enabledialogue(false);
-            dieNotice.EnableDie(true);
+            dieNotice.EnableDieNotice(true);
         }
     }
 

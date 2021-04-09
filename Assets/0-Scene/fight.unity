@@ -3111,6 +3111,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177086940}
   m_CullTransparentMesh: 0
+--- !u!1 &1208780493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1208780495}
+  - component: {fileID: 1208780494}
+  m_Layer: 8
+  m_Name: fireball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1208780494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208780493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3459c7ab6ae0d4b9537d0b51e2d3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackEffect: {fileID: 1208780495}
+  attackEffectPrefab: {fileID: 6666645729754730142, guid: 4928554aa6fdbf84ea069c051aaf1ec2,
+    type: 3}
+--- !u!4 &1208780495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208780493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.72, y: 2.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1256134742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,7 +4734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4249630881200452242, guid: 1942e769d246a91409ee07e56bfa1eae,
     type: 3}
-  enemyPrefab: {fileID: 355285237928060408, guid: 7ca53fcf1132e1f40a8d75eac1c623e4,
+  enemyPrefab: {fileID: 3374848781623443945, guid: 7ca53fcf1132e1f40a8d75eac1c623e4,
     type: 3}
   playerBattleStation: {fileID: 307960154}
   enemyBattleStation: {fileID: 1349698444}
@@ -4696,6 +4742,7 @@ MonoBehaviour:
   dieNotice: {fileID: 2116472557}
   playerHUD: {fileID: 40902448}
   enemyHUD: {fileID: 106682551}
+  fireball: {fileID: 1208780494}
   state: 0
 --- !u!4 &2017740066
 Transform:
@@ -4968,7 +5015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17dba270586651049bb9c0dc686fdd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 2116472555}
+  dieNotice: {fileID: 2116472555}
 --- !u!1 &2134370915
 GameObject:
   m_ObjectHideFlags: 0
