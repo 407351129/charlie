@@ -16,9 +16,22 @@ public class appear_2notification : MonoBehaviour
 
     public bool disappear;
 
+    private bool fight_notice;
+
     void Update()
     {
-        notification_on();
+        // if (fight_notice == true)
+        // {
+        // notification_on();
+        appear_on();
+        // }
+
+        // appear_on();
+        // if (appear != false || disappear != true)
+        // {
+        //     appear = false;
+        //     disappear = false;
+        // }
         // notification_off();
     }
 
@@ -51,8 +64,17 @@ public class appear_2notification : MonoBehaviour
     // }
     public void appear_on()
     {
-        disappear = true;
-        appear = true;
+        // disappear = true;
+        // appear = true;
+        // if_click = if_click.click_or_not;
+        fight_notice = people_map.fight_notice;
+        if (fight_notice == true)
+        {
+            appear = true;
+            disappear = true;
+            notification_on();
+        }
+
         return;
     }
 

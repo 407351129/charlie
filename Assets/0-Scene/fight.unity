@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 134814005}
   - component: {fileID: 134814004}
   - component: {fileID: 134814003}
+  - component: {fileID: 134814007}
   - component: {fileID: 134814006}
   m_Layer: 5
   m_Name: AttackButton
@@ -581,6 +582,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 134814007}
+        m_MethodName: Fight_OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 134814006}
+        m_MethodName: StartTimeCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &134814004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,13 +648,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134814001}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_UI: {fileID: 0}
-  timestop: 1
+  time_UI: {fileID: 1080945351}
+  time_out_test: 0
+  time_test: 0
+--- !u!114 &134814007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134814001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94dd7bb34bcba3d42beaa7e3aed8d754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  f_on: 0
 --- !u!1 &205503559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,7 +2662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time_UI: {fileID: 1080945351}
-  timestop: 0
+  time_out_test: 0
+  time_test: 0
 --- !u!114 &1080945351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,7 +4726,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time_UI: {fileID: 0}
-  timestop: 1
+  time_out_test: 0
+  time_test: 0
 --- !u!114 &1992411925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4702,7 +4741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time_UI: {fileID: 0}
-  timestop: 0
+  time_out_test: 0
+  time_test: 0
 --- !u!1 &2017740064
 GameObject:
   m_ObjectHideFlags: 0
