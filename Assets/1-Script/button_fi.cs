@@ -29,7 +29,7 @@ public class button_fi : MonoBehaviour
     {
         // Application.Quit();
         fight_on = true;
-        f_on = fight_on;
+        //f_on = fight_on;
 
         // return;
     }

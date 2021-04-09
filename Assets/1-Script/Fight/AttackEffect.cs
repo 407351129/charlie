@@ -5,7 +5,6 @@ using UnityEngine;
 public class AttackEffect : MonoBehaviour
 {
     public float speed = 20f;
-    public int damage = 30;
     public Rigidbody2D rb;
     public GameObject impactEffect;
 
@@ -17,12 +16,6 @@ public class AttackEffect : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
-        if(enemy != null)
-        {
-            enemy.TakeDamage(damage);
-        }
-
         Debug.Log(hitInfo.name);
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
