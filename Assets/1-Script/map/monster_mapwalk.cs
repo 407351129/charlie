@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,11 +14,14 @@ public class monster_mapwalk : MonoBehaviour
 
     public int m_walk_num;
 
+    // [SerializeField] private int monster;
+    // public int which_monster;
     // public bool m_test;
     // Start is called before the first frame update
     void Start()
     {
         monster_img = gameObject.transform;
+        // which_monster = 0;
 
         // var pos = transform.position;
     }
@@ -82,6 +85,10 @@ public class monster_mapwalk : MonoBehaviour
             // return;
         }
     }
+    // void return_monster_name(){
+
+    //     if(GetComponent())
+    // }
     // Vector3 Pos = gameObject.transform.position;
     // Vector3 pos = gameObject.transform.localPosition;
     // A++;
