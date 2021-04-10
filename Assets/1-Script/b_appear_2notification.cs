@@ -33,7 +33,6 @@ public class b_appear_2notification : MonoBehaviour
         b_notification_on();
         // appear_on();
         // }
-
         // appear_on();
         // if (appear != false || disappear != true)
         // {
