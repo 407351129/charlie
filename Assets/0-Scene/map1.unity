@@ -5036,6 +5036,7 @@ MonoBehaviour:
   m_wall: 0
   m_turn: 0
   m_walk_num: 0
+  which_monster: 0
 --- !u!61 &1528832790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7741,6 +7742,7 @@ MonoBehaviour:
   m_wall: 0
   m_turn: 0
   m_walk_num: 0
+  which_monster: 0
 --- !u!61 &2091800751
 BoxCollider2D:
   m_ObjectHideFlags: 0
