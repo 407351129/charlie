@@ -203,7 +203,10 @@ public class people_map : MonoBehaviour
                 at_corner = true;
                 Action_Controller.SetBool("at_corner", at_corner);
             }
-
+            else if (b_appear_2notification.people_appear == false)
+            {
+                at_corner = false;
+            }
             if (leftorright == 1 || leftorright == 3)
             {
                 if (corner_num % 2 == 0)
