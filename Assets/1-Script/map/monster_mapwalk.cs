@@ -14,6 +14,8 @@ public class monster_mapwalk : MonoBehaviour
 
     public int m_walk_num;
 
+    public int which_monster;
+
     // public bool m_test;
     // Start is called before the first frame update
     void Start()
