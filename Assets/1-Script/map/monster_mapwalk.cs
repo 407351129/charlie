@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +21,7 @@ public class monster_mapwalk : MonoBehaviour
     void Start()
     {
         monster_img = gameObject.transform;
+        // which_monster = 0;
 
         // var pos = transform.position;
     }
@@ -84,6 +85,10 @@ public class monster_mapwalk : MonoBehaviour
             // return;
         }
     }
+    // void return_monster_name(){
+
+    //     if(GetComponent())
+    // }
     // Vector3 Pos = gameObject.transform.position;
     // Vector3 pos = gameObject.transform.localPosition;
     // A++;
