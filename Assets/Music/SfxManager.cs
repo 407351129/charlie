@@ -8,6 +8,7 @@ public class SfxManager : MonoBehaviour
     public AudioClip start;
     public AudioClip UI_click;
     public AudioClip attack;
+    public AudioClip levelup;
     public bool musicToggle = true;
     public static SfxManager sfxInstance;
 
