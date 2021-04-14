@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnButton: MonoBehaviour
+public class SFXButton: MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,13 @@ public class OnButton: MonoBehaviour
         if (SfxManager.sfxInstance.musicToggle == true)
             SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.start);
       
+    }
+
+    public void attackSound()
+    {
+        if (SfxManager.sfxInstance.musicToggle == true)
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.attack);
+
     }
     void Update()
     {
