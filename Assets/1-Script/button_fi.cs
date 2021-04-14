@@ -7,8 +7,8 @@ public class button_attack : MonoBehaviour
 {
     public static bool fight_on;
 
-    public bool f_on;
-
+    // public bool corr
+    // public bool f_on;
     void Start()
     {
         // Button btn = this.GetComponent<Button>();

@@ -9,6 +9,8 @@ public class b_appear_2notification : MonoBehaviour
 
     public GameObject b_disappear_notice;
 
+    public static bool people_appear;
+
     // public string scene;
     // bool map_appear;
     // private bool left_is_press;
@@ -19,6 +21,7 @@ public class b_appear_2notification : MonoBehaviour
     // private bool fight_notice;
     void Start()
     {
+        people_appear = true;
         b_appear = false;
         b_disappear = false;
     }
@@ -30,7 +33,6 @@ public class b_appear_2notification : MonoBehaviour
         b_notification_on();
         // appear_on();
         // }
-
         // appear_on();
         // if (appear != false || disappear != true)
         // {
@@ -46,14 +48,17 @@ public class b_appear_2notification : MonoBehaviour
         // notification.SetActive(true);
         if (b_appear == true)
         {
+            people_appear = false;
             b_appear_notice.SetActive(true);
             b_disappear_notice.SetActive(false);
         }
         else
         {
+            people_appear = true;
             b_appear_notice.SetActive(false);
             b_disappear_notice.SetActive(true);
         }
+        people_appear = true;
         b_appear = false;
         b_disappear = false;
     }
