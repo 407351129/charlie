@@ -13,7 +13,7 @@ public class countdown : MonoBehaviour
 
     public bool time_out_test;
 
-    public int time_test;
+    //public int time_test;
 
     // public bool time_out_test;
     // Start is called before the first frame update
@@ -45,7 +45,7 @@ public class countdown : MonoBehaviour
 
     public void StartTimeCount()
     {
-        if (button_fi.fight_on == true)
+        if (button_attack.fight_on == true)
         {
             time = 30;
             if (time == 30)
