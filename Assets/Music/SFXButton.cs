@@ -31,6 +31,13 @@ public class SFXButton: MonoBehaviour
             SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.attack);
 
     }
+
+    public void levelupSound()
+    {
+        if (SfxManager.sfxInstance.musicToggle == true)
+            SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.levelup);
+
+    }
     void Update()
     {
 
