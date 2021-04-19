@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // using UnityEngine.UI;
-public class button_attack : MonoBehaviour
+public class button_fi : MonoBehaviour
 {
     public static bool fight_on;
 
-    // public bool corr
-    // public bool f_on;
+    public bool f_on;
+
     void Start()
     {
         // Button btn = this.GetComponent<Button>();
