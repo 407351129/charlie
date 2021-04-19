@@ -51,8 +51,6 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-        dialogueText.EnableActions(true);
-
         state = BattleState.PLAYERTURN;
     }
 
