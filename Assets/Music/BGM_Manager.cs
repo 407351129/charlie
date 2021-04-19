@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class BGM_Manager : MonoBehaviour
 {
-    public Text toggleMuscitxt;
+    public Text toggleMusciTxt;
     public Text toggleSfxTxt;
+    public Text toggleSupTxt;
 
     private void Start()
     {
         if (BGM.Bg_Instance.Audio.isPlaying)
         {
-            toggleMuscitxt.text = "OFF";
+            toggleMusciTxt.text = "OFF";
         }
         else
         {
-            toggleMuscitxt.text = "ON";
+            toggleMusciTxt.text = "ON";
         }
+
         if (SfxManager.sfxInstance.musicToggle == true)
         {
             toggleSfxTxt.text = "OFF";
@@ -27,7 +29,31 @@ public class BGM_Manager : MonoBehaviour
             toggleSfxTxt.text = "ON";
         }
 
+        if (SupportManager.SupportInstance.musicToggle == true)
+        {
+            toggleSupTxt.text = "OFF";
+        }
+        else
+        {
+            toggleSupTxt.text = "ON";
+        }
+
     }
+
+    public void SupportToggle()
+    {
+        if (SupportManager.SupportInstance.musicToggle == true)
+        {
+            SupportManager.SupportInstance.musicToggle = false;
+            toggleSupTxt.text = "ON";
+        }
+        else
+        {
+            SupportManager.SupportInstance.musicToggle = true;
+            toggleSupTxt.text = "OFF";
+        }
+    }
+
 
     public void SfxToggle()
     {
@@ -47,12 +73,12 @@ public class BGM_Manager : MonoBehaviour
         if (BGM.Bg_Instance.Audio.isPlaying)
         {
             BGM.Bg_Instance.Audio.Pause();
-            toggleMuscitxt.text = "ON";
+            toggleMusciTxt.text = "ON";
         }
         else
         {
             BGM.Bg_Instance.Audio.Play();
-            toggleMuscitxt.text = "OFF";
+            toggleMusciTxt.text = "OFF";
         }
     }
 }
