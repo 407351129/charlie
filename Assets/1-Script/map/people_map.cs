@@ -14,6 +14,7 @@ public class people_map : MonoBehaviour
 
     public GameObject map_monster;
 
+    // public GameObject TIME;
     // public GameObject monster;
     Transform Player;
 
@@ -59,6 +60,7 @@ public class people_map : MonoBehaviour
         move_map = false;
         turn_back = false;
         at_corner = false;
+        fight_notice = false;
 
         // people_appear = true;
         // appear_num = 0;
