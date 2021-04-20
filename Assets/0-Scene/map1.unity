@@ -817,6 +817,7 @@ GameObject:
   - component: {fileID: 105259888}
   - component: {fileID: 105259887}
   - component: {fileID: 105259889}
+  - component: {fileID: 105259890}
   m_Layer: 8
   m_Name: left
   m_TagString: Untagged
@@ -941,6 +942,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 105259890}
+          m_MethodName: left_button
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &105259888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -970,6 +982,18 @@ MonoBehaviour:
   disappear_notice: {fileID: 0}
   appear: 0
   disappear: 0
+--- !u!114 &105259890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105259883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db4eafc0635783f47917142ddb6fb8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &118529758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4016,6 +4040,7 @@ GameObject:
   - component: {fileID: 709870729}
   - component: {fileID: 709870730}
   - component: {fileID: 709870728}
+  - component: {fileID: 709870731}
   m_Layer: 8
   m_Name: straight
   m_TagString: Untagged
@@ -4115,6 +4140,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 709870731}
+          m_MethodName: straight_button
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &709870729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4142,6 +4178,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9702452, y: 1.0587196, z: 0.2}
   m_Center: {x: -0.04390037, y: -0.055394378, z: -0.000002625555}
+--- !u!114 &709870731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709870725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db4eafc0635783f47917142ddb6fb8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &750312014
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,6 +7029,7 @@ GameObject:
   - component: {fileID: 1367285901}
   - component: {fileID: 1367285902}
   - component: {fileID: 1367285900}
+  - component: {fileID: 1367285903}
   m_Layer: 8
   m_Name: right
   m_TagString: Untagged
@@ -7080,6 +7129,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1367285903}
+          m_MethodName: right_button
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1367285901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7107,6 +7167,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9422112, y: 1.0699999, z: 0.2}
   m_Center: {x: 0.06261669, y: 0.00000047200993, z: -0.000002625555}
+--- !u!114 &1367285903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367285897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db4eafc0635783f47917142ddb6fb8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1377095250
 GameObject:
   m_ObjectHideFlags: 0
