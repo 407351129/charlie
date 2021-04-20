@@ -44,7 +44,7 @@ public class monster_mapwalk : MonoBehaviour
                 transform.position =
                     new Vector3(transform.position.x - 0.4f * Time.deltaTime,
                         transform.position.y,
-                        transform.position.z);
+                        transform.position.z); //0.4
             }
             else if (m_walk_num % 2 == 1)
             {
