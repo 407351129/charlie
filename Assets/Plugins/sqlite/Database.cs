@@ -240,10 +240,11 @@ public class Database
 	/// 準備將資料按順序寫入資料表內，一次限寫一row的資料
 	/// </summary>
 	/// <param name="tableName">資料表名稱</param>
-	/// <param name="value">要寫入的資料</param>
-	public void insertBigDataInto(string tableName, string[] value)
-	{
+	
 		StringBuilder query = new StringBuilder();
+    /// <param name="value">要寫入的資料</param>
+    public void insertBigDataInto(string tableName, string[] value)
+    { 
 		query.Append("INSERT INTO " + tableName + " VALUES (" + value[0]);
 
 		for (int i=1; i<value.Length; i++)
