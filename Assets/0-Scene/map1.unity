@@ -8990,8 +8990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map_time: 0
-  time_map: {fileID: 0}
-  time_map_monster: {fileID: 0}
+  time_map: {fileID: 1699774125}
+  time_map_monster: {fileID: 820301764}
   end_map: 0
 --- !u!4 &1482751086
 Transform:
