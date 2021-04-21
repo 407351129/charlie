@@ -10,5 +10,6 @@ public class Weapon : MonoBehaviour
     public void Attack()
     {
         Instantiate(attackEffectPrefab, attackEffect.position, attackEffect.rotation);
+
     }
 }

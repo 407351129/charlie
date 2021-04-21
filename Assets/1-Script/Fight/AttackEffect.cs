@@ -7,7 +7,6 @@ public class AttackEffect : MonoBehaviour
     public float speed = 20f;
     public Rigidbody2D rb;
     public GameObject impactEffect;
-
     // Start is called before the first frame update
     void Start()
     {
