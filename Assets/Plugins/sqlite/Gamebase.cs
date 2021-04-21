@@ -2,7 +2,7 @@
 using System.Collections;
 using Mono.Data.Sqlite;
 
-public class GameBase : MonoBehaviour
+public class gameBase : MonoBehaviour
 {
     Database db;//資料庫物件
 
@@ -72,4 +72,3 @@ public class GameBase : MonoBehaviour
         db.releaseDatabaseAllResources();
     }
 }
-

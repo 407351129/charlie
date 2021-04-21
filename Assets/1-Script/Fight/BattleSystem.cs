@@ -17,7 +17,7 @@ public class BattleSystem : MonoBehaviour
     Unit enemyUnit;
 
     public DialogueText dialogueText;
-    public DieNotice dieNotice;
+    public EndNotice endNotice;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
@@ -35,6 +35,10 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        PlayerAttackOff();
+        endNotice.EnableDie(false);
+        endNotice.EnableWin(false);
+
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
         
@@ -132,10 +136,10 @@ public class BattleSystem : MonoBehaviour
     {
         if(state == BattleState.WON)
         {
-            dialogueText.TypeDialogue("You won the battle!");
+            endNotice.EnableWin(true);
         } else if (state == BattleState.LOST) {
             dialogueText.Enabledialogue(false);
-            dieNotice.EnableDieNotice(true);
+            endNotice.EnableDie(true);
         }
     }
 
