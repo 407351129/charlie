@@ -6,44 +6,53 @@ using UnityEngine.UI;
 
 public class PlusMinus : MonoBehaviour
 {
+    
     public GameObject Plus;
     public GameObject Minus;
-    public Text price;
-
-    public int money;
-
-
-    //public void changeMoney()
-    //{
-
-    //    price.text = money + "";
-    //}
-
+    public Text price; 
+    public int money; //單價
+    //public int item_num; //數量
+    public int total; //總價格
+  
+  
+   
 
      void Start()
     {
-       
-     price.text = ""+money;
+        money=50; 
+        //item_num=4; 
 
+        total = save_itemNum.item_num * money; 
+        price.text =  total+"";
+        
+        
     }
 
     void Update()
-    {
-        Button add = GetComponent<Button>();
-        add.onClick.AddListener(Increase);
+    { 
+    Button add = GetComponent<Button>();
+    add.onClick.AddListener(Increase);
+    Button minus = GetComponent<Button>();
+     minus.onClick.AddListener(Decrease);
 
-        Button minus = GetComponent<Button>();
-        minus.onClick.AddListener(Decrease);
 
-        price.text = "" +money;
+        total = save_itemNum.item_num * money;
+        price.text = total + "";
+
     }
+    
 
 
 
-   void Increase()
+
+   public void Increase()
     {
-        money +=money;
-       price.text =" "+money;
+       
+
+        save_itemNum.item_num += 1;
+        total = save_itemNum.item_num * money;
+        price.text = total + "";
+
 
         //Button add = GetComponent<Button>();
         //Text price_text = GetComponent<Text>();
@@ -55,12 +64,18 @@ public class PlusMinus : MonoBehaviour
         //}
     }
        
-   void Decrease()
+    public void Decrease()
     {
+       
+        if (save_itemNum.item_num > 1)
+        {
+            save_itemNum.item_num -= 1;
+            total = save_itemNum.item_num * money;
+            price.text = total + "";
 
-        money-=money;
-        price.text = " " + money;
 
+        }
+            
         //Button minus = GetComponent<Button>();
         //Text price_text = GetComponent<Text>();
         //if (GetComponent<Button>() == minus)
@@ -72,5 +87,6 @@ public class PlusMinus : MonoBehaviour
     }
 
     
+    //total+=item_num* money; //持有金幣加
 
 }
