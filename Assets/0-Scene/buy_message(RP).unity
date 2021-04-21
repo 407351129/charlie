@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 322858191}
   m_Layer: 0
-  m_Name: buy_notice
+  m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
