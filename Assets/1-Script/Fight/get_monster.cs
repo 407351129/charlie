@@ -17,7 +17,8 @@ public class get_monster : MonoBehaviour
 
     GameObject monster3;
 
-    [SerializeField] bool monster_alive;
+    [SerializeField]
+    bool monster_alive;
 
     // Image get_monster_img;
     // Start is called before the first frame update
@@ -27,9 +28,9 @@ public class get_monster : MonoBehaviour
 
         // GameObject[] objs = GameObject.FindGameObjectsWithTag("Monster");
         // if(people_map.fight_notice == true){
-        monster1 = GameObject.Find("monster1");
-        monster2 = GameObject.Find("monster2");
-        monster3 = GameObject.Find("monster3");
+        monster1 = GameObject.Find("f_monster1");
+        monster2 = GameObject.Find("f_monster2");
+        monster3 = GameObject.Find("f_monster3");
 
         // if (
         //     people_map.which_monster == 0 //

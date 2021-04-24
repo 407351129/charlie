@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 503293438}
   - component: {fileID: 503293437}
   m_Layer: 0
-  m_Name: monster1
+  m_Name: f_monster1
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,6 +1627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: 0
+  map_fight_index: 0
+  monster_alive: 0
 --- !u!212 &503293438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1689,7 +1691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560389849
 GameObject:
@@ -4447,7 +4449,7 @@ GameObject:
   - component: {fileID: 1456362080}
   - component: {fileID: 1456362079}
   m_Layer: 0
-  m_Name: monster2
+  m_Name: f_monster2
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4466,6 +4468,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: 0
+  map_fight_index: 0
+  monster_alive: 0
 --- !u!212 &1456362080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4963,7 +4967,7 @@ GameObject:
   - component: {fileID: 1578443469}
   - component: {fileID: 1578443468}
   m_Layer: 0
-  m_Name: monster3
+  m_Name: f_monster3
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4982,6 +4986,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: 0
+  map_fight_index: 0
+  monster_alive: 0
 --- !u!212 &1578443469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5044,7 +5050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592376802
 GameObject:
