@@ -186,7 +186,7 @@ Transform:
   m_Children:
   - {fileID: 1660964404}
   m_Father: {fileID: 1119996110}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &40902448
 MonoBehaviour:
@@ -549,7 +549,7 @@ Transform:
   m_Children:
   - {fileID: 702942444}
   m_Father: {fileID: 1119996110}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &106682551
 MonoBehaviour:
@@ -1034,10 +1034,8 @@ RectTransform:
   m_Children:
   - {fileID: 1080945349}
   - {fileID: 94409511}
-  - {fileID: 612605307}
   - {fileID: 453932348}
   - {fileID: 1992411922}
-  - {fileID: 2066563276}
   - {fileID: 1487804887}
   m_Father: {fileID: 1890944243}
   m_RootOrder: 3
@@ -1469,7 +1467,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 301551645}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1855,12 +1853,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 301551645}
-  m_RootOrder: 2
+  m_Father: {fileID: 1390080111}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0007019043, y: 0}
+  m_AnchoredPosition: {x: 141, y: -254}
   m_SizeDelta: {x: 349.2342, y: 51.40767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612605308
@@ -1883,7 +1881,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: fecc37a0cd2f7744ea62da2c36275b4b, type: 3}
+    m_Font: {fileID: 12800000, guid: c7d989c564057e246be0aba99ac268a8, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -3011,8 +3009,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'You''re dead!
 
-    Would you like to spend 1 life potion to continue the
-    game?
+    Would you like to spend 1 life potion to continue the game?
 
     You have 3 in your bag.'
 --- !u!222 &1100350553
@@ -3192,6 +3189,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1890944243}
+  - {fileID: 1390080111}
   - {fileID: 40902447}
   - {fileID: 106682550}
   m_Father: {fileID: 0}
@@ -3961,6 +3959,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1390080110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390080111}
+  - component: {fileID: 1390080112}
+  m_Layer: 5
+  m_Name: AzureSpeech
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1390080111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390080110}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 612605307}
+  - {fileID: 2066563276}
+  m_Father: {fileID: 1119996110}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1390080112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390080110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82ffcea3a222df43ad0ce39abc5acb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outputText: {fileID: 612605308}
+  startRecoButton: {fileID: 2066563277}
 --- !u!1 &1405334857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,7 +4454,7 @@ RectTransform:
   m_Children:
   - {fileID: 85898153}
   m_Father: {fileID: 301551645}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5476,7 +5526,7 @@ Transform:
   m_LocalScale: {x: 14.4169, y: 14.4169, z: 14.4169}
   m_Children: []
   m_Father: {fileID: 301551645}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1992411923
 SpriteRenderer:
@@ -5717,12 +5767,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1829372891}
-  m_Father: {fileID: 301551645}
-  m_RootOrder: 5
+  m_Father: {fileID: 1390080111}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -291.20026, y: -165.75693}
+  m_AnchoredPosition: {x: -151.19997, y: -430.498}
   m_SizeDelta: {x: 83.54146, y: 83.76915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066563277

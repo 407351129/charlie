@@ -12,8 +12,14 @@ public class map_button : MonoBehaviour
 
     public static bool right_is_press;
 
+    // public bool Contains (string value);
+    // public static string s2;
+    // public bool b;
     public int l;
 
+    public int stop_talk;
+
+    // public int test_stop_talk;
     public GameObject walk_button;
 
     // Start is called before the first frame update
@@ -29,6 +35,8 @@ public class map_button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // test_stop_talk=stop_talk;
+        // b = AzureSpeech.message.Contains(s2);
         left_on();
         walk_on();
         right_on();
@@ -36,6 +44,7 @@ public class map_button : MonoBehaviour
 
     public void leftbutton_click()
     {
+        // InvokeRepeating("timer", 1, 1);
         left_is_press = true;
         walk_is_press = false;
         right_is_press = false;
@@ -71,28 +80,45 @@ public class map_button : MonoBehaviour
 
     void left_on()
     {
-        if (left_is_press == true)
+        // stop_talk = 0;
+        // InvokeRepeating("timer", 1, 1);
+        // s2 = "左轉";
+        if (AzureSpeech.message.Contains("左轉") == true)
         {
-            leftorright = 1;
-            return;
+            if (left_is_press == true)
+            {
+                leftorright = 1;
+                return;
+            }
         }
     }
 
     void walk_on()
     {
-        if (walk_is_press == true)
+        if (AzureSpeech.message.Contains("直走") == true)
         {
-            leftorright = 2;
-            return;
+            if (walk_is_press == true)
+            {
+                leftorright = 2;
+                return;
+            }
         }
     }
 
     void right_on()
     {
-        if (right_is_press == true)
+        if (AzureSpeech.message.Contains("右轉") == true)
         {
-            leftorright = 3;
-            return;
+            if (right_is_press == true)
+            {
+                leftorright = 3;
+                return;
+            }
         }
     }
+
+    // void timer()
+    // {
+    //     stop_talk += 1;
+    // }
 }
