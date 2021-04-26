@@ -97,7 +97,7 @@ public class b_appear_2notification : MonoBehaviour
     {
         // test2 = false;
         // notification.SetActive(true);
-        if (AzureSpeech.message.Contains("直走") == true)
+        //if (AzureSpeech.message.Contains("直走") == true)
         {
             if (click == true)
             {

@@ -7,17 +7,7 @@ using UnityEngine.SceneManagement;
 public class Map_time : MonoBehaviour
 {
     public static int map_time;
-
-<<<<<<< HEAD
-    // public Text map_time_UI;
-    // public static bool time_out;
-    // public bool time_out_test;
-    // public int time_test;
-    public bool end_map;
-
-    // public bool time_out_test;
-    // Start is called before the first frame update
-=======
+    
     public int test_map_time;
 
     [SerializeField]
@@ -33,7 +23,8 @@ public class Map_time : MonoBehaviour
 
     [SerializeField]
     private int end_time;
-
+    public GameObject stars;
+    public Canvas game_clear;
     // [SerializeField]
     // int hi;
     // public GameObject time_map;
@@ -58,11 +49,11 @@ public class Map_time : MonoBehaviour
         {
             // if (map_fight_index == 8)
             // {
-            DontDestroyOnLoad (time_map);
+            DontDestroyOnLoad(time_map);
         }
         else
         {
-            Destroy (time_map);
+            Destroy(time_map);
 
             // exit_map = true;
         }
@@ -89,7 +80,6 @@ public class Map_time : MonoBehaviour
         // }
     }
 
->>>>>>> 01f14213245cf8838c9cccc1339b36827474ac84
     void Start()
     {
         // if (map_start == true)
@@ -98,15 +88,6 @@ public class Map_time : MonoBehaviour
         // }
     }
 
-<<<<<<< HEAD
-        if (end_map == true)
-        {
-            CancelInvoke("timer");
-        }
-        else
-        {
-            InvokeRepeating("timer", 1, 1);
-=======
     void go_to_map()
     {
         // Awake();
@@ -121,12 +102,11 @@ public class Map_time : MonoBehaviour
             map_fight_index == 2
         )
         {
-            DontDestroyOnLoad (map_setting);
+            DontDestroyOnLoad(map_setting);
         }
         else
         {
-            Destroy (map_setting);
->>>>>>> 01f14213245cf8838c9cccc1339b36827474ac84
+            Destroy(map_setting);
         }
     }
 
@@ -134,21 +114,6 @@ public class Map_time : MonoBehaviour
     {
         map_start = true;
 
-<<<<<<< HEAD
-        if (end_map == true)
-        {
-            CancelInvoke("timer");
-        }
-        // if (map_time == 0)
-        // {
-        //     time_out_test = true;
-        //     // CancelInvoke("timer");
-        // }
-        // if (time != 30)
-        // {
-        //     time_UI.text = time + "";
-        // }
-=======
         // map_time = 555;
         // InvokeRepeating("timer", 1, 1);
         // map_time += 1;
@@ -163,11 +128,15 @@ public class Map_time : MonoBehaviour
         test_map_start = map_start;
         test_map_time = map_time;
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
->>>>>>> 01f14213245cf8838c9cccc1339b36827474ac84
 
         if (end_map == true)
         {
             map_start = false;
+            game_clear.gameObject.SetActive(true);
+        }
+        else
+        {
+            game_clear.gameObject.SetActive(false);
         }
 
         if (
@@ -202,13 +171,10 @@ public class Map_time : MonoBehaviour
     {
         map_time += 1;
     }
-<<<<<<< HEAD
-=======
 
     // public void map_time_start(){
 
     // }
->>>>>>> 01f14213245cf8838c9cccc1339b36827474ac84
 }
 
 //     public GameObject time_map;
