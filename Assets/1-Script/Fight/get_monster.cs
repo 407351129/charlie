@@ -24,7 +24,7 @@ public class get_monster : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        monster = people_map.which_monster;
+        monster = monster_mapwalk.which_monster;
 
         // GameObject[] objs = GameObject.FindGameObjectsWithTag("Monster");
         // if(people_map.fight_notice == true){
@@ -33,7 +33,7 @@ public class get_monster : MonoBehaviour
         monster3 = GameObject.Find("f_monster3");
 
         // if (
-        //     people_map.which_monster == 0 //
+        //     monster_mapwalk.which_monster == 0 //
         // )
         // {
         // }
@@ -46,19 +46,19 @@ public class get_monster : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (people_map.which_monster == 1)
+        if (monster == 1)
         {
             DontDestroyOnLoad (monster1);
             Destroy (monster2);
             Destroy (monster3);
         }
-        else if (people_map.which_monster == 2)
+        else if (monster == 2)
         {
             DontDestroyOnLoad (monster2);
             Destroy (monster1);
             Destroy (monster3);
         }
-        else if (people_map.which_monster == 3)
+        else if (monster == 3)
         {
             DontDestroyOnLoad (monster3);
             Destroy (monster1);
@@ -90,7 +90,7 @@ public class get_monster : MonoBehaviour
 
         if (map_fight_index != 8)
         {
-            // if(people_map.which_monster == 1 &&)
+            // if(monster_mapwalk.which_monster == 1 &&)
             Destroy (monster1);
             Destroy (monster2);
             Destroy (monster3);
@@ -105,7 +105,7 @@ public class get_monster : MonoBehaviour
     // 　　　　　box = GameObject.Find("PackForest01.png");
     // 　　　　　box_rb = box.GetComponent<Rigidbody>();
     // 　　　}
-    // monster = people_map.which_monster;
+    // monster = monster_mapwalk.which_monster;
     // GameObject prueba = new GameObject("prueba");
     // SpriteRenderer renderer = prueba.AddComponent<SpriteRenderer>();
     // // Sprite [] sprites
@@ -113,22 +113,22 @@ public class get_monster : MonoBehaviour
     //     Resources
     //         .LoadAll("Assets/2-Character/test/Assets/Textures/PackForest01");
 
-    // // monster = people_map.which_monster;
+    // // monster = monster_mapwalk.which_monster;
     // // get_monster_img =
     // //         Resources
     // //             .Load("Assets/2-Character/test/Assets/PackForest01.png")
-    // if (people_map.which_monster == 1)
+    // if (monster_mapwalk.which_monster == 1)
     // {
     //     renderer.sprite = (Sprite) sprites [1];
     //     // get_monster_img = (Sprite) sprites [1];
     // }
-    // else if (people_map.which_monster == 2)
+    // else if (monster_mapwalk.which_monster == 2)
     // {
     //     renderer.sprite = (Sprite) sprites [1];
     //     // get_monster_img = (Sprite) sprites [1];
 
     // }
-    // else if (people_map.which_monster == 3)
+    // else if (monster_mapwalk.which_monster == 3)
     // {
     //     renderer.sprite = (Sprite) sprites [1];
     //     // get_monster_img = (Sprite) sprites [1];
