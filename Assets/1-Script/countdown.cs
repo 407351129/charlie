@@ -14,7 +14,6 @@ public class countdown : MonoBehaviour
     public bool time_out_test;
 
     //public int time_test;
-
     // public bool time_out_test;
     // Start is called before the first frame update
     // void Start()
@@ -25,6 +24,7 @@ public class countdown : MonoBehaviour
         time -= 1;
         if (time == 0)
         {
+            time_out = true;
             time_out_test = true;
             CancelInvoke("timer");
         }
@@ -43,6 +43,7 @@ public class countdown : MonoBehaviour
         // }
     }
 
+<<<<<<< HEAD
    // public void StartTimeCount()
   //  {
        // if (button_attack.fight_on == true)
@@ -54,6 +55,20 @@ public class countdown : MonoBehaviour
            // }
            // InvokeRepeating("timer", 1, 1);
            // time = 30;
+=======
+    public void StartTimeCount()
+    {
+        if (button_attack.fight_on == true)
+        {
+            CancelInvoke("timer");
+            time = 30;
+            if (time == 30)
+            {
+                time_UI.text = time + "";
+            }
+            InvokeRepeating("timer", 1, 1);
+            time = 30;
+>>>>>>> 01f14213245cf8838c9cccc1339b36827474ac84
             // time_out_test = time_out;
             // // if (time == 0)
             // {
