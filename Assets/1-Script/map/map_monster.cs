@@ -36,38 +36,38 @@ public class map_monster : MonoBehaviour
     // private bool end_map; //之後接值
     void Awake()
     {
-        GameObject map_monster = GameObject.Find("map_monster");
+        // GameObject map_monster = GameObject.Find("map_monster");
         monster1 = GameObject.Find("monster1");
         monster2 = GameObject.Find("monster2");
         monster3 = GameObject.Find("monster3");
 
-        map_fight_index = SceneManager.GetActiveScene().buildIndex;
-        if (map_fight_index == 2)
-        {
-            monster1_alive = true;
-            monster2_alive = true;
-            monster3_alive = true;
-        }
-        if (
-            map_fight_index == 8 ||
-            map_fight_index == 3 ||
-            map_fight_index == 4 ||
-            map_fight_index == 5 ||
-            map_fight_index == 2
-        )
-        {
-            // if (map_fight_index == 8)
-            // {
-            DontDestroyOnLoad (map_monster);
-            // DontDestroyOnLoad (master1);
-            // DontDestroyOnLoad (master2);
-            // DontDestroyOnLoad (master3);
-        }
-        else
-        {
-            Destroy (map_monster);
-            // exit_map = true;
-        }
+        // map_fight_index = SceneManager.GetActiveScene().buildIndex;
+        // if (map_fight_index == 2)
+        // {
+        //     monster1_alive = true;
+        //     monster2_alive = true;
+        //     monster3_alive = true;
+        // }
+        // if (
+        //     map_fight_index == 8 ||
+        //     map_fight_index == 3 ||
+        //     map_fight_index == 4 ||
+        //     map_fight_index == 5 ||
+        //     map_fight_index == 2
+        // )
+        // {
+        //     // if (map_fight_index == 8)
+        //     // {
+        //     // DontDestroyOnLoad (map_monster);
+        //     // DontDestroyOnLoad (master1);
+        //     // DontDestroyOnLoad (master2);
+        //     // DontDestroyOnLoad (master3);
+        // }
+        // else
+        // {
+        //     // Destroy (map_monster);
+        //     // exit_map = true;
+        // }
 
         // if (
         //     people_map.which_monster == 1 &&

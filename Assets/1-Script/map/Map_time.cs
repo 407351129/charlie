@@ -90,7 +90,7 @@ public class Map_time : MonoBehaviour
     void go_to_map()
     {
         // Awake();
-        GameObject time_map = GameObject.Find("map_time");
+        GameObject map_setting = GameObject.Find("map_setting");
 
         // map_fight_index = 8;
         if (
@@ -101,11 +101,11 @@ public class Map_time : MonoBehaviour
             map_fight_index == 2
         )
         {
-            DontDestroyOnLoad (time_map);
+            DontDestroyOnLoad (map_setting);
         }
         else
         {
-            Destroy (time_map);
+            Destroy (map_setting);
         }
     }
 
