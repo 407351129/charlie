@@ -8042,7 +8042,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482751086}
-  - component: {fileID: 1482751085}
   - component: {fileID: 1482751084}
   m_Layer: 0
   m_Name: map_time
@@ -8052,20 +8051,6 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &1482751084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482751083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map_time: 0
-  end_map: 0
---- !u!114 &1482751085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
