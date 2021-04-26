@@ -14,16 +14,25 @@ public class monster_mapwalk : MonoBehaviour
 
     public int m_walk_num;
 
+    [SerializeField]
+    private int map_which_monster; //不能刪[SerializeField]
+
+    public static int which_monster;
+
+    public int test_which_monster;
+
     // public int which_monster;
     // public int monster_num;
     // public bool m_test;
     // Start is called before the first frame update
     void Start()
     {
+        which_monster = 0;
+
         monster_img = gameObject.transform;
 
         // if (
-        //     people_map.which_monster == which_monster &&
+        //     monster_mapwalk.which_monster == which_monster &&
         //     BattleSystem.monster_alive == false
         // )
         // {
@@ -32,7 +41,7 @@ public class monster_mapwalk : MonoBehaviour
         //     // monster1_alive = false;
         // }
         // if (
-        //     people_map.which_monster == which_monster &&
+        //     monster_mapwalk.which_monster == which_monster &&
         //     BattleSystem.monster_alive == false
         // )
         // {
@@ -42,7 +51,7 @@ public class monster_mapwalk : MonoBehaviour
         //     // monster2_alive = false;
         // }
         // if (
-        //     people_map.which_monster == which_monster &&
+        //     monster_mapwalk.which_monster == which_monster &&
         //     BattleSystem.monster_alive == false
         // )
         // {
@@ -59,6 +68,7 @@ public class monster_mapwalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        test_which_monster = which_monster;
         m_walk();
     }
 
@@ -114,7 +124,40 @@ public class monster_mapwalk : MonoBehaviour
             // m_wall = false;
             // return;
         }
+
+        if (c.gameObject.tag == "Player")
+        {
+            // Player.Translate(300, 4000, 0);
+            // fight_notice = true;
+            which_monster = map_which_monster;
+
+            // if (c.gameObject.name == "monster1")
+            // {
+            //     which_monster = 1;
+            // }
+            // else if (c.gameObject.name == "monster2")
+            // {
+            //     which_monster = 2;
+            // }
+            // else if (c.gameObject.name == "monster3")
+            // {
+            //     which_monster = 3;
+            // }
+
+            // public int which_monster;
+
+            // appear_2notification.appear_on();
+
+            // // appear_on ap = new appear_on();fight_notice, fight_notice
+            // appear_2notification.notification_on();
+            // appear_2notification.appear_on(true, true);
+        }
     }
+
+    // void OnCollisionEnter2D(Collision2D c)
+    // {
+
+    // }
     // void return_monster_name(){
 
     //     if(GetComponent())

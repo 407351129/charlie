@@ -50,7 +50,7 @@ public class appear_2notification : MonoBehaviour
     {
         // test2 = false;
         // notification.SetActive(true);
-        appear_notice.SetActive (appear);
+        appear_notice.SetActive(true);
 
         // if (disappear == false)
         // {
@@ -58,11 +58,12 @@ public class appear_2notification : MonoBehaviour
         // }
         // else
         // {
-        appear_notice.SetActive(true);
-
+        // appear_notice.SetActive(true);
         // disappear_notice.SetActive(true);
         // }
         if (appear_notice.activeInHierarchy == true)
+        // &&
+        // monster_mapwalk.which_monster != 0
         {
             disappear_notice.SetActive(false);
         }
@@ -88,14 +89,15 @@ public class appear_2notification : MonoBehaviour
         // food_notice = people_map.food_notice;
         // if (fight_notice == true)
         // {
-        appear = true;
-        disappear = true;
+        // appear = true;
+        // disappear = true;
+        if (monster_mapwalk.which_monster != 0)
+        {
+            notification_on();
+        }
 
-        notification_on();
-
-        appear = false;
-        disappear = false;
-
+        // appear = false;
+        // disappear = false;
         // }
         // else if (food_notice == true)
         // {
