@@ -6,6 +6,9 @@ public class people_map : MonoBehaviour
 {
     public static int which_monster;
 
+    [SerializeField]
+    int test_which;
+
     private int leftorright;
 
     public static GameObject people;
@@ -55,6 +58,7 @@ public class people_map : MonoBehaviour
     // public bool ddd;
     void Start()
     {
+        which_monster = 0;
         transportation = 3; //之後接值替換
         MoveSpeed = 0;
         move_map = false;
@@ -72,6 +76,8 @@ public class people_map : MonoBehaviour
 
     void Update()
     {
+        test_which = which_monster;
+
         // aaaa = fight_notice;
         // ddd = disappear;
         Action_Controller.SetBool("left", left);

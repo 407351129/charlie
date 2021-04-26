@@ -1,13 +1,25 @@
 ﻿using System.Collections;
 // using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class get_monster : MonoBehaviour
 {
     public int monster;
 
-    // [SerializeField]
+    [SerializeField]
+    int map_fight_index;
+
+    GameObject monster1;
+
+    GameObject monster2;
+
+    GameObject monster3;
+
+    [SerializeField]
+    bool monster_alive;
+
     // Image get_monster_img;
     // Start is called before the first frame update
     void Awake()
@@ -16,15 +28,19 @@ public class get_monster : MonoBehaviour
 
         // GameObject[] objs = GameObject.FindGameObjectsWithTag("Monster");
         // if(people_map.fight_notice == true){
-        GameObject monster1 = GameObject.Find("monster1");
-        GameObject monster2 = GameObject.Find("monster2");
-        GameObject monster3 = GameObject.Find("monster3");
+        monster1 = GameObject.Find("f_monster1");
+        monster2 = GameObject.Find("f_monster2");
+        monster3 = GameObject.Find("f_monster3");
 
         // if (
         //     people_map.which_monster == 0 //
         // )
         // {
         // }
+        map_fight_index = SceneManager.GetActiveScene().buildIndex;
+
+        // if (map_fight_index == 8)
+        // {
         if (monster <= 0)
         {
             Destroy(this.gameObject);
@@ -48,9 +64,37 @@ public class get_monster : MonoBehaviour
             Destroy (monster1);
             Destroy (monster2);
         }
-
+        // }
         // else
         // {
+        //     Destroy (monster1);
+        //     Destroy (monster2);
+        //     Destroy (monster3);
+        // }
+        // int map_fight_index = SceneManager.GetActiveScene().buildIndex;
+        // if (map_fight_index == 3 || map_fight_index == 4 || map_fight_index == 5
+        // )
+        // {
+        //     Destroy (monster1);
+        //     Destroy (monster2);
+        //     Destroy (monster3);
+        // }
+        // else
+        // {
+    }
+
+    void Update()
+    {
+        monster_alive = BattleSystem.monster_alive;
+        map_fight_index = SceneManager.GetActiveScene().buildIndex;
+
+        if (map_fight_index != 8)
+        {
+            // if(people_map.which_monster == 1 &&)
+            Destroy (monster1);
+            Destroy (monster2);
+            Destroy (monster3);
+        }
     }
     // }
     //     void Start()

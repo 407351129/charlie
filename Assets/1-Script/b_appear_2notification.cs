@@ -18,9 +18,13 @@ public class b_appear_2notification : MonoBehaviour
 
     public bool b_disappear;
 
+    [SerializeField]
+    private bool click;
+
     // private bool fight_notice;
     void Start()
     {
+        click = false;
         people_appear = true;
         b_appear = false;
         b_disappear = false;
@@ -30,6 +34,9 @@ public class b_appear_2notification : MonoBehaviour
     {
         // if (fight_notice == true)
         // {
+        // speak_b_appear_on();
+        // food_speak_click();
+        speak_b_appear_on();
         b_notification_on();
         // appear_on();
         // }
@@ -84,6 +91,32 @@ public class b_appear_2notification : MonoBehaviour
 
         // b_notification_on();
         // return;
+    }
+
+    void speak_b_appear_on()
+    {
+        // test2 = false;
+        // notification.SetActive(true);
+        if (AzureSpeech.message.Contains("直走") == true)
+        {
+            if (click == true)
+            {
+                b_appear = true;
+                b_disappear = true;
+
+                // click = false;
+                return;
+            }
+        }
+    }
+
+    public void food_speak_click()
+    {
+        click = true;
+        return;
+        // }
+        // speak_b_appear_on();
+        // click = false;
     }
 
     // public void disappear_on()

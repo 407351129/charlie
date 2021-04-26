@@ -14,13 +14,43 @@ public class monster_mapwalk : MonoBehaviour
 
     public int m_walk_num;
 
-    public int which_monster;
-
+    // public int which_monster;
+    // public int monster_num;
     // public bool m_test;
     // Start is called before the first frame update
     void Start()
     {
         monster_img = gameObject.transform;
+
+        // if (
+        //     people_map.which_monster == which_monster &&
+        //     BattleSystem.monster_alive == false
+        // )
+        // {
+        //     monster_alive = false;
+        //     // this.SetActive(false);
+        //     // monster1_alive = false;
+        // }
+        // if (
+        //     people_map.which_monster == which_monster &&
+        //     BattleSystem.monster_alive == false
+        // )
+        // {
+        //     monster_alive = false;
+
+        //     // this.SetActive(false);
+        //     // monster2_alive = false;
+        // }
+        // if (
+        //     people_map.which_monster == which_monster &&
+        //     BattleSystem.monster_alive == false
+        // )
+        // {
+        //     monster_alive = false;
+
+        //     // this.SetActive(false);
+        //     // monster3_alive = false;
+        // }
         // which_monster = 0;
 
         // var pos = transform.position;
