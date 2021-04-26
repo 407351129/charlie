@@ -23,7 +23,6 @@ public class Map_time : MonoBehaviour
 
     [SerializeField]
     private int end_time;
-    public GameObject stars;
     public Canvas game_clear;
     // [SerializeField]
     // int hi;
