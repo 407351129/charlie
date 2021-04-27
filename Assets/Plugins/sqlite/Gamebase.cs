@@ -57,7 +57,9 @@ public class gameBase : MonoBehaviour
             int[] data = db.readIntData(reader, "Age");
 
             //將讀取到的第一筆資料顯示出來
+           
             show = data[0].ToString();
+            show = data[1].ToString();
         }
     }
 
