@@ -216,7 +216,6 @@ MonoBehaviour:
   Minus: {fileID: 1550107057}
   price: {fileID: 167796778}
   money: 0
-  item_num: 3
   total: 0
 --- !u!1 &231674054
 GameObject:
@@ -251,7 +250,6 @@ MonoBehaviour:
   Minus: {fileID: 1550107057}
   price: {fileID: 167796778}
   money: 0
-  item_num: 0
   total: 0
 --- !u!4 &231674056
 Transform:
@@ -340,7 +338,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 623391263
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 60f686add6e7c32438daed6e5d5152d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -598,7 +596,6 @@ MonoBehaviour:
   Minus: {fileID: 1550107057}
   price: {fileID: 167796778}
   money: 0
-  item_num: 0
   total: 0
 --- !u!1 &359426071
 GameObject:
@@ -745,8 +742,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 623391263
-  m_SortingLayer: 4
+  m_SortingLayerID: -992838069
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9d6c2059aa8ff0341ad02c71a4e5121e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -909,8 +906,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 623391263
-  m_SortingLayer: 4
+  m_SortingLayerID: -992838069
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8a7cf7531369f1145b22a477cdd3b7dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1026,7 +1023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790758499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -383.99, y: -512.14264, z: 0}
+  m_LocalPosition: {x: -383.99, y: -512.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 231674056}
@@ -1073,7 +1070,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 493725771
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a5d8785d80a4ee42a2a4c8632436dc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1310,7 +1307,6 @@ MonoBehaviour:
   Minus: {fileID: 1550107057}
   price: {fileID: 167796778}
   money: 0
-  item_num: 0
   total: 0
 --- !u!1 &1555409839
 GameObject:
@@ -1626,7 +1622,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 623391263
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 24d91ca91631e4c4da0691901c74ffb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
