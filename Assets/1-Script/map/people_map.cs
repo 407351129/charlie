@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class people_map : MonoBehaviour
 {
-    public static int which_monster;
+    // public static int which_monster;
+    // public int map_which_monster;
+    [SerializeField]
+    int which_monster;
 
     private int leftorright;
 
@@ -14,6 +17,7 @@ public class people_map : MonoBehaviour
 
     public GameObject map_monster;
 
+    // public GameObject TIME;
     // public GameObject monster;
     Transform Player;
 
@@ -54,11 +58,14 @@ public class people_map : MonoBehaviour
     // public bool ddd;
     void Start()
     {
+        // map_which_monster = 0;
+        // which_monster = 0;
         transportation = 3; //之後接值替換
         MoveSpeed = 0;
         move_map = false;
         turn_back = false;
         at_corner = false;
+        fight_notice = false;
 
         // people_appear = true;
         // appear_num = 0;
@@ -70,6 +77,8 @@ public class people_map : MonoBehaviour
 
     void Update()
     {
+        // test_which = which_monster;
+        // which_monster = map_which_monster;
         // aaaa = fight_notice;
         // ddd = disappear;
         Action_Controller.SetBool("left", left);
@@ -274,6 +283,9 @@ public class people_map : MonoBehaviour
             at_corner = false;
             Action_Controller.SetBool("at_corner", at_corner);
         }
+        // if (c.gameObject.tag == "Food")
+        // {
+        // }
     }
 
     void OnCollisionEnter2D(Collision2D c)
@@ -304,19 +316,21 @@ public class people_map : MonoBehaviour
         {
             Player.Translate(300, 4000, 0);
             fight_notice = true;
+            which_monster = monster_mapwalk.which_monster;
+            // which_monster = map_which_monster;
 
-            if (c.gameObject.name == "monster1")
-            {
-                which_monster = 1;
-            }
-            else if (c.gameObject.name == "monster2")
-            {
-                which_monster = 2;
-            }
-            else if (c.gameObject.name == "monster3")
-            {
-                which_monster = 3;
-            }
+            // if (c.gameObject.name == "monster1")
+            // {
+            //     which_monster = 1;
+            // }
+            // else if (c.gameObject.name == "monster2")
+            // {
+            //     which_monster = 2;
+            // }
+            // else if (c.gameObject.name == "monster3")
+            // {
+            //     which_monster = 3;
+            // }
 
             // public int which_monster;
 
