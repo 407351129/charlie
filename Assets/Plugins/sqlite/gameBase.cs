@@ -43,7 +43,7 @@ public class gameBase : MonoBehaviour
         if (GUI.Button(new Rect(0, 0, 200, 100), "搜尋Name資料並顯示"))
         {
             //搜尋和讀取符合的資料
-            reader = db.searchAccordData(tableName, "Name", "=", "'Qing'");
+            reader = db.searchAccordData(tableName, "Name", "=", "'Yang'");
             string[] data = db.readStringData(reader, "Name");
 
             //將讀取到的第一筆資料顯示出來
