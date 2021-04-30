@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,12 +19,15 @@ public class b_appear_2notification : MonoBehaviour
     public bool b_disappear;
 
     [SerializeField]
-    private bool click;
+    private bool food_click;
 
+    public int now_food;
+
+    // public int get_food;
     // private bool fight_notice;
     void Start()
     {
-        click = false;
+        food_click = false;
         people_appear = true;
         b_appear = false;
         b_disappear = false;
@@ -95,11 +98,11 @@ public class b_appear_2notification : MonoBehaviour
 
     void speak_b_appear_on()
     {
-        // test2 = false;
-        // notification.SetActive(true);
-        if (AzureSpeech.message.Contains("直走") == true)
+        if (
+            AzureSpeech.message.Contains("右轉") == true //放訂單題目
+        )
         {
-            if (click == true)
+            if (food_click == true)
             {
                 b_appear = true;
                 b_disappear = true;
@@ -112,7 +115,7 @@ public class b_appear_2notification : MonoBehaviour
 
     public void food_speak_click()
     {
-        click = true;
+        food_click = true;
         return;
         // }
         // speak_b_appear_on();

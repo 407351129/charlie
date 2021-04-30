@@ -9,6 +9,8 @@ public class appear_2notification : MonoBehaviour
 
     public GameObject disappear_notice;
 
+    private GameObject[] FoodAppear;
+
     // public string scene;
     // bool map_appear;
     // private bool left_is_press;
@@ -24,6 +26,11 @@ public class appear_2notification : MonoBehaviour
 
     [SerializeField]
     int test_which;
+
+    [SerializeField]
+    int Map_which_map_pin;
+
+    public static int which_map_pin;
 
     void Start()
     {
@@ -47,6 +54,29 @@ public class appear_2notification : MonoBehaviour
     }
 
     void notification_on()
+    {
+        // test2 = false;
+        // notification.SetActive(true);
+        appear_notice.SetActive(true);
+
+        // if (disappear == false)
+        // {
+        //     // disappear_notice.SetActive(false);
+        // }
+        // else
+        // {
+        // appear_notice.SetActive(true);
+        // disappear_notice.SetActive(true);
+        // }
+        if (appear_notice.activeInHierarchy == true)
+        // &&
+        // monster_mapwalk.which_monster != 0
+        {
+            disappear_notice.SetActive(false);
+        }
+    }
+
+    void food_notification_on()
     {
         // test2 = false;
         // notification.SetActive(true);
@@ -94,17 +124,11 @@ public class appear_2notification : MonoBehaviour
         if (monster_mapwalk.which_monster != 0)
         {
             notification_on();
+        } // appear = false; // disappear = false;
+        if (food_notice == true)
+        {
+            food_notification_on(); //想要放陣列appear_notice = GameObject.Find("monster1");
         }
-
-        // appear = false;
-        // disappear = false;
-        // }
-        // else if (food_notice == true)
-        // {
-        //     appear = true;
-        //     disappear = true;
-        //     //     // notification_on();
-        // }
         return;
     }
 
@@ -139,6 +163,10 @@ public class appear_2notification : MonoBehaviour
     {
         if (c.gameObject.tag == "Player")
         {
+            food_notice = true;
+            appear = true;
+            disappear = true;
+
             appear_on();
             // m_wall = false;
             // return;
