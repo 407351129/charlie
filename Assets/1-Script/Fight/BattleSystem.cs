@@ -26,9 +26,15 @@ public class BattleSystem : MonoBehaviour
     
     public BattleState state;
 
+    public static bool monster_alive; //這裡
+
     // Start is called before the first frame update
+    // void Awake(){
+        
+    // }
     void Start()
     {
+        monster_alive = true;
         state = BattleState.START;
         StartCoroutine(SetupBattle());        
     }
@@ -93,6 +99,8 @@ public class BattleSystem : MonoBehaviour
         fireball.Attack();
         bool EnemyisDead = playerUnit.TakeDamage(enemyUnit.damage);
 
+
+
         playerHUD.SetHP(playerUnit.currentHP);
 
         PlayerAttackOff();
@@ -103,6 +111,8 @@ public class BattleSystem : MonoBehaviour
         if(EnemyisDead)
         {
             state = BattleState.WON;
+            monster_alive = false; //這裡
+
             EndBattle();
         }
         else

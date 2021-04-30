@@ -5,48 +5,34 @@ using Microsoft.CognitiveServices.Speech;
 using UnityEngine.Android;
 #endif
 
-
 public class AzureSpeech : MonoBehaviour
 {
     // Hook up the two properties below with a Text and Button object in your UI.
     public Text outputText;
-
     public Button startRecoButton;
 
     private object threadLocker = new object();
-
     private bool waitingForReco;
-
     public static string message;
-    // public string map_turn;
 
     private bool micPermissionGranted = false;
-
     public bool fight_a;
-
-    // public string map_turn;
-
     public void gight()
     {
         fight_a = true;
     }
-
-
 #if PLATFORM_ANDROID
     // Required to manifest microphone permission, cf.
     // https://docs.unity3d.com/Manual/android-manifest.html
     private Microphone mic;
 #endif
 
-
     public async void ButtonClick()
     {
         // Creates an instance of a speech config with specified subscription key and service region.
         // Replace with your own subscription key and service region (e.g., "westus").
-        var config =
-            SpeechConfig
-                .FromSubscription("2e0bc6bdff0f4bc8a0fc21ef889ee8c1", "westus");
-        config.SpeechRecognitionLanguage = "zh-TW";
+        var config = SpeechConfig.FromSubscription("2e0bc6bdff0f4bc8a0fc21ef889ee8c1", "westus");
+		config.SpeechRecognitionLanguage = "zh-TW";
 
         // Make sure to dispose the recognizer after use!
         using (var recognizer = new SpeechRecognizer(config))
@@ -62,8 +48,8 @@ public class AzureSpeech : MonoBehaviour
             // Note: Since RecognizeOnceAsync() returns only a single utterance, it is suitable only for single
             // shot recognition like command or query.
             // For long-running multi-utterance recognition, use StartContinuousRecognitionAsync() instead.
-            var result =
-                await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+            var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+            
 
             // Checks result.
             string newMessage = string.Empty;
@@ -78,36 +64,28 @@ public class AzureSpeech : MonoBehaviour
             else if (result.Reason == ResultReason.Canceled)
             {
                 var cancellation = CancellationDetails.FromResult(result);
-                newMessage =
-                    $"CANCELED: Reason={cancellation.Reason} ErrorDetails={cancellation.ErrorDetails}";
+                newMessage = $"CANCELED: Reason={cancellation.Reason} ErrorDetails={cancellation.ErrorDetails}";
             }
 
             lock (threadLocker)
             {
                 message = newMessage;
-                // map_turn=message;
                 waitingForReco = false;
             }
         }
     }
+    
 
-    //  Console.WriteLine($"Input: {input} {"Begins with uppercase? ",30}: " +
-    //                           $"{input.StartsWithUpper() ? "Yes" : "No"}\n");
-    //  Console.WriteLine($"Input: {input} {"Begins with uppercase? ",30}: " +
-    //             "input.StartsWithUpper() ? \"Yes\" : \"No\"");
     void Start()
     {
         if (outputText == null)
         {
-            UnityEngine
-                .Debug
-                .LogError("outputText property is null! Assign a UI Text element to it.");
+            UnityEngine.Debug.LogError("outputText property is null! Assign a UI Text element to it.");
         }
         else if (startRecoButton == null)
         {
-            message =
-                "startRecoButton property is null! Assign a UI Button to it.";
-            UnityEngine.Debug.LogError (message);
+            message = "startRecoButton property is null! Assign a UI Button to it.";
+            UnityEngine.Debug.LogError(message);
         }
         else
         {
@@ -125,32 +103,25 @@ public class AzureSpeech : MonoBehaviour
             micPermissionGranted = true;
             message = "Click button to recognize speech";
 #endif
-
-
-            startRecoButton.onClick.AddListener (ButtonClick);
+            startRecoButton.onClick.AddListener(ButtonClick);
         }
     }
 
     void Update()
     {
 #if PLATFORM_ANDROID
-        if (
-            !micPermissionGranted &&
-            Permission.HasUserAuthorizedPermission(Permission.Microphone)
-        )
+        if (!micPermissionGranted && Permission.HasUserAuthorizedPermission(Permission.Microphone))
         {
             micPermissionGranted = true;
             message = "Click button to recognize speech";
         }
 #endif
 
-
         lock (threadLocker)
         {
             if (startRecoButton != null)
             {
-                startRecoButton.interactable =
-                    !waitingForReco && micPermissionGranted;
+                startRecoButton.interactable = !waitingForReco && micPermissionGranted;
             }
             if (outputText != null)
             {
