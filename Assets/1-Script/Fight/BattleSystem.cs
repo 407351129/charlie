@@ -26,10 +26,9 @@ public class BattleSystem : MonoBehaviour
     public Weapon playerAttack;
     public Weapon enemyAttack;
 
-    public bool click;
-
     public BattleState state;
 
+    public bool click;
     public static bool monster_alive; //這裡
 
     // Start is called before the first frame update
@@ -38,6 +37,7 @@ public class BattleSystem : MonoBehaviour
     // }
     void Start()
     {
+        click = true;
         monster_alive = true;
         state = BattleState.START;
         StartCoroutine(SetupBattle());        
@@ -91,7 +91,7 @@ public class BattleSystem : MonoBehaviour
     void DefenseFail()
     {
         enemyAttack.Attack();
-        enemyUnit.DefenseDamage((Unit.damage1 / 2));
+        enemyUnit.DefenseDamage((playerUnit.damage / 2));
         enemyHUD.SetHP(enemyUnit.currentHP);
     }
 
