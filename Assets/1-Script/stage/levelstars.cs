@@ -63,6 +63,7 @@ public class levelstars : MonoBehaviour
     public void level_click()
     {
         now_level = level_num;
+        foods =food;
     }
 
     void Start()
