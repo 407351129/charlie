@@ -39,7 +39,7 @@ public class Map_time : MonoBehaviour
         // InvokeRepeating("timer", 1, 1);
         // hi = 0;
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
-        GameObject time_map = GameObject.Find("map_time");
+        GameObject time_map = GameObject.Find("map_setting");
 
         //  monster1 = GameObject.Find("monster1");
         if (
@@ -96,7 +96,7 @@ public class Map_time : MonoBehaviour
         end_map = test_end_map; //暫時
 
         // Awake();
-        GameObject time_map = GameObject.Find("map_setting");
+        GameObject map_setting = GameObject.Find("map_setting");
 
         // map_fight_index = 8;
         if (
@@ -107,11 +107,11 @@ public class Map_time : MonoBehaviour
             map_fight_index == 2
         )
         {
-            DontDestroyOnLoad (time_map);
+            DontDestroyOnLoad (map_setting);
         }
         else
         {
-            Destroy (time_map);
+            Destroy (map_setting);
         }
     }
 
@@ -133,11 +133,6 @@ public class Map_time : MonoBehaviour
         test_map_start = map_start;
         test_map_time = map_time;
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
-
-        if (end_map == true)
-        {
-            map_start = false;
-        }
 
         if (
             map_fight_index == 8 ||
@@ -164,6 +159,12 @@ public class Map_time : MonoBehaviour
             map_time = 0;
             // CancelInvoke("timer");
         }
+
+        if (end_map == true)
+        {
+            map_start = false;
+        }
+
         go_to_map();
     }
 

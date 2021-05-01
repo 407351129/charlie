@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,25 +19,45 @@ public class b_appear_2notification : MonoBehaviour
     public bool b_disappear;
 
     [SerializeField]
-    private bool click;
+    private bool food_click;
 
+    private int now_food;
+
+    public static bool speak_get_food;
+
+    public bool test_speak_get_food;
+
+    private bool get_food;
+
+    // public int get_food;
     // private bool fight_notice;
     void Start()
     {
-        click = false;
+        food_click = false;
         people_appear = true;
         b_appear = false;
         b_disappear = false;
+
+        // speak_get_food = false;
+        get_food = Map_food.get_food;
     }
 
     void Update()
     {
+        test_speak_get_food = speak_get_food;
+
+        // get_food = Map_food.get_food;
         // if (fight_notice == true)
         // {
         // speak_b_appear_on();
         // food_speak_click();
         speak_b_appear_on();
         b_notification_on();
+
+        // if (Map_food.get_food == true)
+        // {
+        //     speak_get_food = false;
+        // }
         // appear_on();
         // }
         // appear_on();
@@ -95,24 +115,30 @@ public class b_appear_2notification : MonoBehaviour
 
     void speak_b_appear_on()
     {
-        // test2 = false;
-        // notification.SetActive(true);
-        //if (AzureSpeech.message.Contains("直走") == true)
+        if (
+            Map_food.get_food == true // AzureSpeech.message.Contains("右轉") == true //放訂單題目
+        )
         {
-            if (click == true)
+            if (food_click == true)
             {
                 b_appear = true;
                 b_disappear = true;
+
+                // speak_get_food = true;
+                food_click = false;
 
                 // click = false;
                 return;
             }
         }
+        b_appear = false;
+        b_disappear = false;
     }
 
     public void food_speak_click()
     {
-        click = true;
+        // speak_get_food = false;
+        food_click = true;
         return;
         // }
         // speak_b_appear_on();

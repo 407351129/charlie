@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class map_monster : MonoBehaviour
+public class Map_monster_alive_check : MonoBehaviour
 {
     // public bool map_to_fight;
     // public bool end_map;
+    public static bool escape_monster; //逃跑成功==true
+
+    [SerializeField]
+    bool test_escape_monster; //逃跑成功==true
+
     [SerializeField]
     GameObject monster1;
 
@@ -18,7 +23,10 @@ public class map_monster : MonoBehaviour
 
     // public int test;
     [SerializeField]
-    bool monster_alive;
+    static bool escape;
+
+    [SerializeField]
+    string escape_speek;
 
     [SerializeField]
     bool monster1_alive;
@@ -32,8 +40,14 @@ public class map_monster : MonoBehaviour
     [SerializeField]
     private int map_fight_index;
 
+    public void Start()
+    {
+        escape_monster = false;
+    }
+
     void Update()
     {
+        test_escape_monster = escape_monster;
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
 
         // monster_alive = BattleSystem.monster_alive;
@@ -46,6 +60,7 @@ public class map_monster : MonoBehaviour
             monster1_alive = true;
             monster2_alive = true;
             monster3_alive = true;
+            escape_monster = false;
         }
 
         if (Map_time.map_start == true)
@@ -54,14 +69,42 @@ public class map_monster : MonoBehaviour
             monster2 = GameObject.Find("monster2");
             monster3 = GameObject.Find("monster3");
         }
-
-        if (
-            monster_mapwalk.which_monster == 1 &&
-            BattleSystem.monster_alive == false
-        )
+        check_monster();
+        if (AzureSpeech.message.Contains("右轉") == true)
         {
+            if (escape == true)
+            {
+                escape_monster = true;
+                check_monster();
+                if (people_map.people_on_map == true)
+                {
+                    escape_monster = false;
+                }
+            }
+        }
+
+        // map_fight_index = SceneManager.GetActiveScene().buildIndex;
+        monster1.SetActive (monster1_alive);
+        monster2.SetActive (monster2_alive);
+        monster3.SetActive (monster3_alive);
+    }
+
+    public void escape_click()
+    {
+        escape = true;
+        return;
+    }
+
+    void check_monster()
+    {
+        if (monster_mapwalk.which_monster == 1)
+        {
+            if (BattleSystem.monster_alive == false || escape_monster == true)
+            {
+                monster1_alive = false;
+                //escape_monster = true;
+            }
             // monster1.SetActive(false);
-            monster1_alive = false;
         }
         else if (
             monster_mapwalk.which_monster == 2 &&
@@ -79,11 +122,6 @@ public class map_monster : MonoBehaviour
             // monster3.SetActive(false);
             monster3_alive = false;
         }
-
-        // map_fight_index = SceneManager.GetActiveScene().buildIndex;
-        monster1.SetActive (monster1_alive);
-        monster2.SetActive (monster2_alive);
-        monster3.SetActive (monster3_alive);
     }
 }
 // [SerializeField]

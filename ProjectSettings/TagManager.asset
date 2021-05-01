@@ -10,6 +10,8 @@ TagManager:
   - Appear
   - Food
   - Food_End
+  - GetFood
+  - MapPin
   layers:
   - Default
   - TransparentFX
