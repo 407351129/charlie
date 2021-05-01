@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +19,8 @@ public class levelstars : MonoBehaviour
     public int level_num;
 
     public string[] food = new string[4];
+
+    public string getfood;
 
     public static string[] foods;
 
@@ -69,6 +71,7 @@ public class levelstars : MonoBehaviour
     {
         now_level = level_num;
         foods = food;
+        foods[3] = getfood;
     }
 
     void Start()

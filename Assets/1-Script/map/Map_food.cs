@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// using UnityEngine.UI;
 public class Map_food : MonoBehaviour
 {
     public static bool get_food;
@@ -28,7 +29,10 @@ public class Map_food : MonoBehaviour
     bool[] map_pin_appear;
 
     [SerializeField]
-    private int now_food;
+    private int test_now_food;
+
+    [SerializeField]
+    public static int now_food;
 
     [SerializeField]
     private int which_map_pin;
@@ -41,6 +45,7 @@ public class Map_food : MonoBehaviour
     [SerializeField]
     private bool speak_get_food;
 
+    // public Text food_UI;
     // [SerializeField]
     // private int test_i;
     // [SerializeField]
@@ -56,7 +61,7 @@ public class Map_food : MonoBehaviour
     {
         //         food_speak = new string[4];　// 定義陣列長度(同時會清空陣列)
         // food_speak = new string[] { "hello", "world", "game", "learning", "unity" };　// 定義陣列的值和長度
-        food_speak = new string[] { "珍珠奶茶", "牛肉", "豬肉" };
+        // food_speak = new string[] { "珍珠奶茶", "牛肉", "豬肉" };
         map_pin = new GameObject[4];
         map_pin_appear = new bool[4];
         now_food = 0;
@@ -71,6 +76,9 @@ public class Map_food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        test_now_food = now_food;
+        food_speak = levelstars.foods;
+
         // now_level = levelstars.now_level;
         test_get_food = get_food;
         speak_get_food = b_appear_2notification.speak_get_food;
@@ -113,6 +121,7 @@ public class Map_food : MonoBehaviour
                 get_food = true;
                 map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
             }
+            // food_UI.text = food_speak[now_food] + "";
         }
 
         if (now_food == 3)
@@ -128,6 +137,7 @@ public class Map_food : MonoBehaviour
         {
             get_food = false;
         }
+
         // if (speak_get_food == true)
         // {
         //     get_food = false;
