@@ -19,6 +19,7 @@ public class BattleSystem : MonoBehaviour
     public DialogueText dialogueText;
     public EndNotice endNotice;
     public AzureSpeech azureSpeech;
+    public SpeechLibTest speechLibTest;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
@@ -48,6 +49,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.EnableStart(true);
         dialogueText.EnableQuestions(false);
         azureSpeech.EnableAzure(false);
+        speechLibTest.EnableSpeech(false);
         dialogueText.EnableBag(false);
         endNotice.EnableDie(false);
         endNotice.EnableWin(false);
@@ -129,6 +131,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.EnableStart(false);
         dialogueText.EnableQuestions(true);
         azureSpeech.EnableAzure(true);
+        speechLibTest.EnableSpeech(true);
         click = true;
     }
 
@@ -141,6 +144,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.EnableStart(false);
         dialogueText.EnableQuestions(true);
         azureSpeech.EnableAzure(true);
+        speechLibTest.EnableSpeech(true);
         click = true;
     }
 
