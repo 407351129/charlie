@@ -2,52 +2,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;   
+using UnityEngine.UI;
 
 public class PlusMinus : MonoBehaviour
 {
-    
+
     public GameObject Plus;
     public GameObject Minus;
-    public Text price; 
+    public Text price;
     public int money; //單價
     //public int item_num; //數量
     public int total; //總價格
-  
-  
-   
 
-     void Start()
+
+
+
+    void Start()
     {
-        money=50; 
+        money = 100;
         //item_num=4; 
 
-        total = save_itemNum.item_num * money; 
-        price.text =  total+"";
-        
-        
+        total = save_itemNum.item_num * money; //item_num 為public variable ,已預先設好item_num 引用過來
+        price.text = total + "";
+
+
     }
 
     void Update()
-    { 
-    Button add = GetComponent<Button>();
-    add.onClick.AddListener(Increase);
-    Button minus = GetComponent<Button>();
-     minus.onClick.AddListener(Decrease);
+    {
+        Button add = GetComponent<Button>();
+        if (add != null) //一定要加這行 不然會有NullReferenceException: Object reference not set to an instance of an object的Error
+        {
+            add.onClick.AddListener(Increase);
+        }
+
+
+        Button minus = GetComponent<Button>();
+
+        if (minus != null) //同add相同原因
+        {
+            minus.onClick.AddListener(Decrease);
+        }
+
 
 
         total = save_itemNum.item_num * money;
         price.text = total + "";
 
     }
-    
 
 
 
 
-   public void Increase()
+
+    public void Increase()
     {
-       
+
 
         save_itemNum.item_num += 1;
         total = save_itemNum.item_num * money;
@@ -63,10 +73,10 @@ public class PlusMinus : MonoBehaviour
         //    GetComponent<Text>().text = " " + a;    // 前面加空字串，是為了把 整數a 轉為 字串。
         //}
     }
-       
+
     public void Decrease()
     {
-       
+
         if (save_itemNum.item_num > 1)
         {
             save_itemNum.item_num -= 1;
@@ -75,7 +85,7 @@ public class PlusMinus : MonoBehaviour
 
 
         }
-            
+
         //Button minus = GetComponent<Button>();
         //Text price_text = GetComponent<Text>();
         //if (GetComponent<Button>() == minus)
@@ -86,7 +96,7 @@ public class PlusMinus : MonoBehaviour
         //}
     }
 
-    
+
     //total+=item_num* money; //持有金幣加
 
 }
