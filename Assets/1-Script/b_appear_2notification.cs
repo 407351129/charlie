@@ -131,7 +131,7 @@ public class b_appear_2notification : MonoBehaviour
 
     public void food_speak_click()
     {
-        speak_get_food = false;
+        // speak_get_food = false;
         food_click = true;
         return;
         // }

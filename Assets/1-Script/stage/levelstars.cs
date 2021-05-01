@@ -73,7 +73,7 @@ public class levelstars : MonoBehaviour
 
     void Start()
     {
-        food = new string[4];
+        foods = new string[4];
         now_level = PlayerPrefs.GetInt("Lv");
         // PlayerPrefs.DeleteAll();
         //PlayerPrefs.SetInt("num"+1, 12345);

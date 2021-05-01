@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿// using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,13 +10,13 @@ public class Map_time : MonoBehaviour
 
     public int test_map_time;
 
+    public static bool end_map; //之後接值，暫時公有
+
     [SerializeField]
-    private bool end_map; //之後接值
+    public bool test_end_map; //暫時
 
     [SerializeField]
     private int map_fight_index;
-
-    public GameObject[] stars;
 
     public static bool map_start;
 
@@ -24,15 +24,10 @@ public class Map_time : MonoBehaviour
     private bool test_map_start;
 
     [SerializeField]
-    private int now_level;
+    public static int end_time;
 
-    [SerializeField]
-    private int end_time;
-
-    public Canvas game_clear;
-
-    private int currentStarNum = 0;
-
+    // [SerializeField]
+    // private int now_level;
     // [SerializeField]
     // int hi;
     // public GameObject time_map;
@@ -90,9 +85,6 @@ public class Map_time : MonoBehaviour
 
     void Start()
     {
-        now_level = PlayerPrefs.GetInt("Lv");
-
-        //PlayerPrefs.DeleteAll();
         // if (map_start == true)
         // {
         InvokeRepeating("timer", 1, 1);
@@ -101,6 +93,8 @@ public class Map_time : MonoBehaviour
 
     void go_to_map()
     {
+        end_map = test_end_map; //暫時
+
         // Awake();
         GameObject map_setting = GameObject.Find("map_setting");
 
@@ -134,68 +128,12 @@ public class Map_time : MonoBehaviour
     // {
     //     exit_map = true;
     // }
-    //public void star(int _starNUM)
-    //{
-    //   currentStarNum = _starNUM;
-    //}
-    //void Map_Star()
-    //{
-    //    now_level = levelstars.now_level;
-    //   test_map_start = map_start;
-    ////    test_map_time = map_time;
-    //  if (end_map == true)
-    //   {
-    //      game_clear.gameObject.SetActive(true);
-    //      map_start = false;
-    //      if (end_time >= 0 && end_time < 10)
-    //      {
-    //          stars[0].SetActive(true);
-    //          stars[1].SetActive(true);
-    //          stars[3].SetActive(true);
-    //          currentStarNum = 3;
-    //PlayerPrefs.SetInt("num" + 2, 12);
-    //if (3 > PlayerPrefs.GetInt("Lv" + now_level))
-    //{
-    //    PlayerPrefs.SetInt("Lv" + now_level, 3);
-    //}
-    //PlayerPrefs.SetInt("Lv" + now_level, _starNUM);
-    //    }
-    //    else if (end_time >= 10 && end_time < 20)
-    //    {
-    //        stars[0].SetActive(true);
-    //         stars[1].SetActive(true);
-    //        currentStarNum = 2;
-    //PlayerPrefs.SetInt("num" + 2, 12);
-    //if (2 > PlayerPrefs.GetInt("Lv" + now_level))
-    //{
-    //PlayerPrefs.SetInt("Lv" + now_level, 2);
-    //}
-    //    }
-    //    else if (end_time >= 30)
-    //   {
-    //       stars[0].SetActive(true);
-    //       currentStarNum = 1;
-    //PlayerPrefs.SetInt("num" + 2, 12);
-    //if (1 > PlayerPrefs.GetInt("Lv" + now_level))
-    //{
-    //    PlayerPrefs.SetInt("Lv" + now_level, 1);
-    //}
-    //  }
-    //}
-    //  else
-    // {
-    //currentStarNum = 0;
-    //PlayerPrefs.SetInt("num" + 2, 111112);
-    //   game_clear.gameObject.SetActive(false);
-    // }
-    //  }
     void Update()
     {
-        map_fight_index = SceneManager.GetActiveScene().buildIndex;
-
-        now_level = levelstars.now_level;
         test_map_start = map_start;
         test_map_time = map_time;
+        map_fight_index = SceneManager.GetActiveScene().buildIndex;
+
         if (
             map_fight_index == 8 ||
             map_fight_index == 3 ||
@@ -224,55 +162,7 @@ public class Map_time : MonoBehaviour
 
         if (end_map == true)
         {
-            game_clear.gameObject.SetActive(true);
             map_start = false;
-            if (end_time < 10)
-            {
-                stars[0].SetActive(true);
-                stars[1].SetActive(true);
-                stars[2].SetActive(true);
-                currentStarNum = 3;
-
-                //PlayerPrefs.SetInt("num" + 2, 12);
-                if (currentStarNum > PlayerPrefs.GetInt("Lv" + now_level))
-                {
-                    PlayerPrefs.SetInt("Lv" + now_level, 3);
-                }
-
-                //PlayerPrefs.SetInt("Lv" + now_level, _starNUM);
-            }
-            else if (end_time < 20)
-            {
-                stars[0].SetActive(true);
-                stars[1].SetActive(true);
-                stars[2].SetActive(false);
-                currentStarNum = 2;
-
-                //PlayerPrefs.SetInt("num" + 2, 12);
-                if (2 > PlayerPrefs.GetInt("Lv" + now_level))
-                {
-                    PlayerPrefs.SetInt("Lv" + now_level, 2);
-                }
-            }
-            else
-            {
-                stars[0].SetActive(true);
-                stars[1].SetActive(false);
-                stars[2].SetActive(false);
-                currentStarNum = 1;
-
-                //PlayerPrefs.SetInt("num" + 2, 12);
-                if (1 > PlayerPrefs.GetInt("Lv" + now_level))
-                {
-                    PlayerPrefs.SetInt("Lv" + now_level, 1);
-                }
-            }
-        }
-        else
-        {
-            //currentStarNum = 0;
-            //PlayerPrefs.SetInt("num" + 2, 111112);
-            game_clear.gameObject.SetActive(false);
         }
 
         go_to_map();

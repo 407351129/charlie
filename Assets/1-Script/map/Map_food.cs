@@ -35,6 +35,9 @@ public class Map_food : MonoBehaviour
     private int map_fight_index;
 
     [SerializeField]
+    private int now_level;
+
+    [SerializeField]
     private bool speak_get_food;
 
     // [SerializeField]
@@ -66,6 +69,7 @@ public class Map_food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        now_level = levelstars.now_level;
         test_get_food = get_food;
         speak_get_food = b_appear_2notification.speak_get_food;
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
@@ -106,10 +110,10 @@ public class Map_food : MonoBehaviour
                 map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
             }
         }
-        if (speak_get_food == false && get_food == true)
-        {
-            get_food = false;
-        }
+        // if (speak_get_food == false && get_food == true)
+        // {
+        //     get_food = false;
+        // }
 
         // food = GameObject.FindGameObjectsWithTag("Food");
         // map_pin = GameObject.FindGameObjectsWithTag("Food");
