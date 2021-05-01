@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // using UnityEngine.UI;
-public class button_fi : MonoBehaviour
+public class button_attack : MonoBehaviour
 {
     public static bool fight_on;
 

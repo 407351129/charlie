@@ -11,6 +11,8 @@ public class AzureSpeech : MonoBehaviour
     public Text outputText;
     public Button startRecoButton;
 
+    public GameObject azure;
+
     private object threadLocker = new object();
     private bool waitingForReco;
     public static string message;
@@ -128,5 +130,10 @@ public class AzureSpeech : MonoBehaviour
                 outputText.text = message;
             }
         }
+    }
+
+    public void EnableAzure(bool enabled)
+    {
+        azure.SetActive(enabled);
     }
 }
