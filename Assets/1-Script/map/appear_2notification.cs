@@ -20,15 +20,19 @@ public class appear_2notification : MonoBehaviour
 
     private bool fight_notice;
 
-    private bool food_notice;
+    public bool food_notice;
+
+    private bool get_food;
 
     Transform Player;
 
     [SerializeField]
     int test_which;
 
+    // [SerializeField]
+    // int Map_which_map_pin;
     [SerializeField]
-    int Map_which_map_pin;
+    private int map_pin_num;
 
     public static int which_map_pin;
 
@@ -39,6 +43,13 @@ public class appear_2notification : MonoBehaviour
 
     void Update()
     {
+        // if (b_appear_2notification.speak_get_food == true)
+        // {
+        //     food_notice = false;
+        //     // which_map_pin = map_pin_num;
+        //     appear = false;
+        //     disappear = false;
+        // }
         // if (fight_notice == true)
         // {
         // notification_on();
@@ -164,6 +175,7 @@ public class appear_2notification : MonoBehaviour
         if (c.gameObject.tag == "Player")
         {
             food_notice = true;
+            which_map_pin = map_pin_num;
             appear = true;
             disappear = true;
 
