@@ -115,6 +115,15 @@ public class Map_food : MonoBehaviour
             }
         }
 
+        if (now_food == 3)
+        {
+            map_pin[3].SetActive(true);
+        }
+        else
+        {
+            map_pin[3].SetActive(false);
+        }
+
         if (food_appear.activeInHierarchy == false)
         {
             get_food = false;
