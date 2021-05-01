@@ -14,6 +14,8 @@ public class SpeechLibTest : MonoBehaviour
     private bool waitingForPla;
     private object threadLocker = new object();
 
+    public GameObject speech;
+
     public async void ButtonClick()
     {
         lock (threadLocker)
@@ -52,5 +54,10 @@ public class SpeechLibTest : MonoBehaviour
         {
             waitingForPla = false;
         }
+    }
+
+    public void EnableSpeech(bool enabled)
+    {
+        speech.SetActive(enabled);
     }
 }
