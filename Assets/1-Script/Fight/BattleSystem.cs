@@ -69,6 +69,14 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ACTIONS;
     }
 
+    void ActionsOn()
+    {
+        dialogueText.EnableQuestions(false);
+        azureSpeech.EnableAzure(false);
+        speechLibTest.EnableSpeech(false);
+        dialogueText.EnableStart(true);
+    }
+
     void PlayerAttack()
     {
         playerAttack.Attack();
@@ -181,9 +189,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -195,9 +201,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -212,9 +216,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -225,10 +227,7 @@ public class BattleSystem : MonoBehaviour
                     //DefenseFail();
 
                     state = BattleState.ACTIONS;
-                    AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -241,6 +240,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (EnemyIsDead == true)
         {
+            monster_alive = false;
             state = BattleState.WIN;
             EndBattle();
         }
