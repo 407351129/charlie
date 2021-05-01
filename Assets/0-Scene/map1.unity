@@ -1047,9 +1047,9 @@ GameObject:
   - component: {fileID: 105259892}
   - component: {fileID: 105259891}
   - component: {fileID: 105259890}
-  - component: {fileID: 105259889}
   - component: {fileID: 105259893}
   - component: {fileID: 105259894}
+  - component: {fileID: 105259885}
   m_Layer: 5
   m_Name: left
   m_TagString: Untagged
@@ -1076,6 +1076,22 @@ RectTransform:
   m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 1.65, y: 1.07}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &105259885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105259883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outputText: {fileID: 0}
+  startRecoButton: {fileID: 105259892}
+  azure: {fileID: 0}
+  fight_a: 0
 --- !u!114 &105259886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,7 +1135,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 105259889}
+        - m_Target: {fileID: 105259885}
           m_MethodName: ButtonClick
           m_Mode: 1
           m_Arguments:
@@ -1154,18 +1170,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.017131, y: 1.0699999, z: 0.2}
   m_Center: {x: -0.05686585, y: 0.00000047200993, z: -0.000002625555}
---- !u!114 &105259889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105259883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &105259890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6592,9 +6596,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 759335684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outputText: {fileID: 0}
+  startRecoButton: {fileID: 759335691}
+  azure: {fileID: 0}
+  fight_a: 0
 --- !u!114 &759335689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7094,7 +7102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &820301765
 Transform:
   m_ObjectHideFlags: 0
@@ -9553,14 +9561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_map_time: 0
-  end_map: 0
-  map_fight_index: 0
-  stars: []
-  test_map_start: 0
-  now_level: 0
-  end_time: 0
-  game_clear: {fileID: 0}
 --- !u!1 &1087075874
 GameObject:
   m_ObjectHideFlags: 0
@@ -10175,9 +10175,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1215435174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outputText: {fileID: 0}
+  startRecoButton: {fileID: 1215435181}
+  azure: {fileID: 0}
+  fight_a: 0
 --- !u!114 &1215435179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17257,14 +17261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_map_time: 0
-  end_map: 0
-  map_fight_index: 0
-  stars: []
-  test_map_start: 0
-  now_level: 0
-  end_time: 0
-  game_clear: {fileID: 0}
 --- !u!114 &1945595040
 MonoBehaviour:
   m_ObjectHideFlags: 0
