@@ -746,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94dd7bb34bcba3d42beaa7e3aed8d754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  f_on: 0
 --- !u!1 &205503559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +3107,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'You''re dead!
 
-    Would you like to spend 1 life potion to continue the game?
+    Would you like to spend 1 life potion to continue the
+    game?
 
     You have 3 in your bag.'
 --- !u!222 &1100350553
@@ -3777,7 +3779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1355617092
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5661,10 +5663,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lettersPerSecond: 30
   dialogueText: {fileID: 927957183}
-  others: {fileID: 751740655}
   actions: {fileID: 1960848847}
-  turnAttack: {fileID: 301551644}
-  turnBag: {fileID: 12555674}
+  questions: {fileID: 0}
+  bag: {fileID: 0}
 --- !u!1 &1891145206
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,10 +5933,14 @@ MonoBehaviour:
   enemyBattleStation: {fileID: 1349698444}
   dialogueText: {fileID: 1890944244}
   endNotice: {fileID: 1355617093}
+  azureSpeech: {fileID: 0}
+  speechLibTest: {fileID: 0}
   playerHUD: {fileID: 40902448}
   enemyHUD: {fileID: 106682551}
-  fireball: {fileID: 1208780494}
+  playerAttack: {fileID: 0}
+  enemyAttack: {fileID: 0}
   state: 0
+  click: 0
 --- !u!4 &2017740066
 Transform:
   m_ObjectHideFlags: 0
