@@ -1115,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307960153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: 2.1, z: -5.6911016}
+  m_LocalPosition: {x: -1.57, y: 2.1, z: -5.6911016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3028,7 +3028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.80975, y: 150.74301}
+  m_AnchoredPosition: {x: 133, y: 133}
   m_SizeDelta: {x: 65.403046, y: 73.377914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080945350
@@ -3706,7 +3706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208780493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.94, y: 2.25, z: 0}
+  m_LocalPosition: {x: -0.31, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4917,7 +4917,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4948,8 +4948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.99974, y: -137}
-  m_SizeDelta: {x: 349.2342, y: 51.40767}
+  m_AnchoredPosition: {x: -45, y: -136}
+  m_SizeDelta: {x: 604.06836, y: 51.40767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1537345621
 GameObject:
@@ -6144,6 +6144,7 @@ MonoBehaviour:
     type: 3}
   enemyPrefab: {fileID: 2350438263787434833, guid: 46542877c309fd34e94d84aeef5de2e7,
     type: 3}
+  levelText: {fileID: 453932349}
   playerBattleStation: {fileID: 307960154}
   enemyBattleStation: {fileID: 1349698444}
   dialogueText: {fileID: 1890944244}
@@ -6326,7 +6327,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2066563278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2017740065}
+        m_MethodName: testing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2066563278
 MonoBehaviour:
   m_ObjectHideFlags: 0
