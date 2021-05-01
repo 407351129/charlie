@@ -5145,7 +5145,7 @@ MonoBehaviour:
   - "\u725B\u8089"
   - "\u8C6C\u8089"
   - "\u8C6C\u8089"
-  getfood: "\u8ACB\u7D66\u6211\u5169\u584A\u96DE\u8089"
+  getfood: "\u8ACB\u7D66\u6211\u5169\u584A\u725B\u8089"
 --- !u!1 &907276332
 GameObject:
   m_ObjectHideFlags: 0

@@ -122,12 +122,11 @@ public class b_appear_2notification : MonoBehaviour
         {
             if (food_click == true)
             {
+                food_click = false;
                 b_appear = true;
                 b_disappear = true;
 
                 // speak_get_food = true;
-                food_click = false;
-
                 // click = false;
                 return;
             }

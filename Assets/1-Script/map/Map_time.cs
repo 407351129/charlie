@@ -10,7 +10,7 @@ public class Map_time : MonoBehaviour
 
     public int test_map_time;
 
-    public static bool end_map; //之後接值，暫時公有
+    public bool end_map; //之後接值，暫時公有
 
     [SerializeField]
     public bool test_end_map; //暫時
@@ -93,7 +93,7 @@ public class Map_time : MonoBehaviour
 
     void go_to_map()
     {
-        end_map = test_end_map; //暫時
+        end_map = Map_food.end_map; //暫時
 
         // Awake();
         GameObject map_setting = GameObject.Find("map_setting");

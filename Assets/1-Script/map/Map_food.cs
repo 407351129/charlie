@@ -8,6 +8,8 @@ public class Map_food : MonoBehaviour
 {
     public static bool get_food;
 
+    public static bool end_map;
+
     public bool test_get_food;
 
     // [SerializeField]
@@ -45,6 +47,8 @@ public class Map_food : MonoBehaviour
     [SerializeField]
     private bool speak_get_food;
 
+    public bool test_end_map; //之後接值，暫時公有
+
     // public Text food_UI;
     // [SerializeField]
     // private int test_i;
@@ -76,6 +80,7 @@ public class Map_food : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        test_end_map = end_map;
         test_now_food = now_food;
         food_speak = levelstars.foods;
 
@@ -89,41 +94,56 @@ public class Map_food : MonoBehaviour
 
         parent_map_pin = GameObject.Find("map_pin");
 
+        if (now_food == 4)
+        {
+            end_map = true;
+        }
         if (map_fight_index == 2)
         {
+            end_map = false;
+            now_food = 0;
+            get_food = false;
             map_pin_appear[0] = true;
             map_pin_appear[1] = true;
             map_pin_appear[2] = true;
             map_pin_appear[3] = true;
         }
-        for (int i = 1; i < 5; i++)
+        else
         {
-            if (map_fight_index == 2)
+            for (int i = 1; i < 5; i++)
             {
-                map_pin_appear[i] = true;
-                now_food = 0;
-                get_food = false;
-                // test_i = i;
+                // if (map_fight_index != 2)
+                // {
+                //     map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
+                // }
+                map_pin[i - 1] =
+                    parent_map_pin.transform.GetChild(i - 1).gameObject;
+                if (
+                    i == which_map_pin &&
+                    map_fight_index != 2 &&
+                    AzureSpeech.message.Contains(food_speak[now_food]) == true
+                )
+                // &&
+                // speak_get_food == false
+                // food_notice
+                {
+                    map_pin_appear[i - 1] = false;
+                    now_food++;
+                    get_food = true;
+                    map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
+                }
+
+                if (map_pin_appear[i - 1] == false)
+                {
+                    map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
+                }
+                // food_UI.text = food_speak[now_food] + "";
             }
-            map_pin[i - 1] =
-                parent_map_pin.transform.GetChild(i - 1).gameObject;
-            if (
-                i == which_map_pin &&
-                map_fight_index != 2 &&
-                AzureSpeech.message.Contains(food_speak[now_food]) == true
-            )
-            // &&
-            // speak_get_food == false
-            // food_notice
-            {
-                map_pin_appear[i - 1] = false;
-                now_food++;
-                get_food = true;
-                map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
-            }
-            // food_UI.text = food_speak[now_food] + "";
         }
 
+        // map_pin[0].SetActive(map_pin_appear[0]);
+        // map_pin[1].SetActive(map_pin_appear[1]);
+        // map_pin[2].SetActive(map_pin_appear[2]);
         if (now_food == 3)
         {
             map_pin[3].SetActive(true);

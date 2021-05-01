@@ -51,9 +51,10 @@ public class Map_monster_alive_check : MonoBehaviour
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
 
         // monster_alive = BattleSystem.monster_alive;
-        // monster1 = GameObject.Find("monster1");
-        // monster2 = GameObject.Find("monster2");
-        // monster3 = GameObject.Find("monster3");
+        monster1 = GameObject.Find("monster1");
+        monster2 = GameObject.Find("monster2");
+        monster3 = GameObject.Find("monster3");
+
         // test = monster_mapwalk.which_monster;
         if (map_fight_index == 2)
         {
