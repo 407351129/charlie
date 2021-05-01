@@ -53,6 +53,10 @@ public class b_appear_2notification : MonoBehaviour
         speak_b_appear_on();
         b_notification_on();
 
+        // if (Map_food.get_food == true)
+        // {
+        //     speak_get_food = false;
+        // }
         // appear_on();
         // }
         // appear_on();
