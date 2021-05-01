@@ -1165,6 +1165,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 967252377}
   level_num: 12
+  food:
+  - "\u8C46\u82B1"
+  - "\u7092\u624B"
+  - "\u86CB\u82B1\u6E6F"
 --- !u!212 &251498985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1280,6 +1284,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 0
+  food: []
 --- !u!222 &252717089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2047,6 +2052,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 2009145494}
   level_num: 0
+  food: []
 --- !u!1 &403113231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +2985,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 133499009}
   level_num: 11
+  food:
+  - "\u8C46\u4E7E"
+  - "\u5208\u5305"
+  - "\u9D28\u8CDE"
 --- !u!212 &502148609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3320,14 +3330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_map_time: 0
-  end_map: 0
-  map_fight_index: 0
-  stars: []
-  test_map_start: 0
-  now_level: 0
-  end_time: 0
-  game_clear: {fileID: 0}
 --- !u!114 &600777875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4268,6 +4270,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 2009145494}
   level_num: 0
+  food: []
 --- !u!1 &795221611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: 1
-  UnlockImage: {fileID: 0}
+  UnlockImage: {fileID: 1672151110}
   star:
   - {fileID: 1859917822}
   - {fileID: 1385199589}
@@ -4631,6 +4634,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1644267670}
   level_num: 3
+  food:
+  - "\u6C34\u9903"
+  - "\u70E4\u9CE5\u86CB"
+  - "\u991B\u98E9"
 --- !u!1 &861575478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +4742,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 446724768}
   level_num: 0
+  food: []
 --- !u!1 &889010287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,6 +5091,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 569134640}
   level_num: 1
+  food:
+  - "\u96DE\u8089"
+  - "\u725B\u8089"
+  - "\u8C6C\u8089"
 --- !u!1 &907276332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,6 +5509,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 0
+  food: []
 --- !u!1 &929945617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,6 +7905,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1391453165}
   level_num: 8
+  food:
+  - "\u6DBC\u9EB5"
+  - "\u934B\u8CBC"
+  - "\u7C84\u689D"
 --- !u!212 &1314204481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8131,6 +8148,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 694582574}
   level_num: 0
+  food: []
 --- !u!1 &1323442245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8858,6 +8876,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 0
+  food: []
 --- !u!1 &1413345350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9128,6 +9147,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1696531707}
   level_num: 4
+  food:
+  - "\u767C\u7CBF"
+  - "\u611B\u7389"
+  - "\u6F64\u9905"
 --- !u!1 &1467171114
 GameObject:
   m_ObjectHideFlags: 0
@@ -9186,6 +9209,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 511850487}
   level_num: 7
+  food:
+  - "\u8C46\u6F3F"
+  - "\u7C73\u6F3F"
+  - "\u610F\u9EB5"
 --- !u!212 &1467171117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9991,6 +10018,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1757680266}
   level_num: 0
+  food: []
 --- !u!1 &1519966434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10253,17 +10281,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543109004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
+  m_Script: {fileID: 11500000, guid: dc01b60d4dedd72499ed5984cb87ec03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   test_map_time: 0
-  end_map: 0
+  test_end_map: 0
   map_fight_index: 0
-  stars: []
   test_map_start: 0
-  now_level: 0
-  end_time: 0
-  game_clear: {fileID: 0}
 --- !u!1 &1548591778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,6 +10396,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1323442245}
   level_num: 5
+  food:
+  - "\u86CB\u9905"
+  - "\u98EF\u7CF0"
+  - "\u6CB9\u689D"
 --- !u!1 &1576182271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11180,14 +11208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_map_time: 0
-  end_map: 0
-  map_fight_index: 0
-  stars: []
-  test_map_start: 0
-  now_level: 0
-  end_time: 0
-  game_clear: {fileID: 0}
 --- !u!114 &1685861505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11205,6 +11225,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 1
+  food: []
 --- !u!1 &1696531707
 GameObject:
   m_ObjectHideFlags: 0
@@ -11421,6 +11442,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 0
+  food: []
 --- !u!114 &1699614883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12051,6 +12073,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1914346551}
   level_num: 2
+  food:
+  - "\u8C6C\u8173"
+  - "\u7CA5"
+  - "\u706B\u934B"
 --- !u!114 &1805002983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12068,13 +12094,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 900627877}
+        - m_Target: {fileID: 1519966439}
           m_MethodName: OnStartGame
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -12540,6 +12566,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1050491197}
   level_num: 9
+  food:
+  - "\u9EBB\u7CEC"
+  - "\u5249\u51B0"
+  - "\u6CB9\u98EF"
 --- !u!212 &1858830804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13015,6 +13045,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 317920350}
   level_num: 6
+  food:
+  - "\u96DE\u6392"
+  - "\u96DE\u6E6F"
+  - "\u71D2\u9905"
 --- !u!1 &1914346551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13731,6 +13765,7 @@ MonoBehaviour:
   numbertext:
   - {fileID: 1772525233}
   level_num: 0
+  food: []
 --- !u!1 &2063830736
 GameObject:
   m_ObjectHideFlags: 0
@@ -13914,6 +13949,7 @@ MonoBehaviour:
   star: []
   numbertext: []
   level_num: 2
+  food: []
 --- !u!1 &2086428922
 GameObject:
   m_ObjectHideFlags: 0
@@ -14134,6 +14170,10 @@ MonoBehaviour:
   numbertext:
   - {fileID: 2043111570}
   level_num: 10
+  food:
+  - "\u7D05\u8336"
+  - "\u8089\u5713"
+  - "\u5976\u8336"
 --- !u!212 &2094418134
 SpriteRenderer:
   m_ObjectHideFlags: 0

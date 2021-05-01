@@ -10,6 +10,9 @@ public class levelstars : MonoBehaviour
     public GameObject[] numbertext;
     public static int now_level;
     public int level_num;
+    public string[] food = new string[4];
+
+    public static string [] foods;
 
     int stars;
 
@@ -60,10 +63,12 @@ public class levelstars : MonoBehaviour
     public void level_click()
     {
         now_level = level_num;
+        foods =food;
     }
 
     void Start()
     {
+        food =new string[4];
         now_level =PlayerPrefs.GetInt("Lv");
        // PlayerPrefs.DeleteAll();
         //PlayerPrefs.SetInt("num"+1, 12345);
