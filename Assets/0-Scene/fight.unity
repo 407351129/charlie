@@ -253,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputText: {fileID: 94409512}
   startPlaButton: {fileID: 1487804888}
+  speech: {fileID: 54660766}
 --- !u!1 &59557719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6212,6 +6213,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1890944244}
   endNotice: {fileID: 1355617093}
   azureSpeech: {fileID: 1390080112}
+  speechLibTest: {fileID: 54660768}
   playerHUD: {fileID: 40902448}
   enemyHUD: {fileID: 106682551}
   playerAttack: {fileID: 1208780494}
