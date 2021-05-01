@@ -9,6 +9,7 @@ public class BattleSystem : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public Text levelText;
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
@@ -34,11 +35,11 @@ public class BattleSystem : MonoBehaviour
 
     // Start is called before the first frame update
     // void Awake(){
-        
+
     // }
     void Start()
     {
-        click = true;
+        click = false;
         monster_alive = true;
         state = BattleState.START;
         StartCoroutine(SetupBattle());        
@@ -117,17 +118,17 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerHeal()
+    void PlayerHeal()
     {
         enemyUnit.Heal(20);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
 
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
 
-        state = BattleState.ACTIONS;
-        dialogueText.EnableBag(false);
-        dialogueText.EnableStart(true);
+        //state = BattleState.ACTIONS;
+        //dialogueText.EnableBag(false);
+        //dialogueText.EnableStart(true);
     }
 
     public void OnAttackButton()
@@ -168,7 +169,8 @@ public class BattleSystem : MonoBehaviour
 
     public void HealingButton()
     {
-        StartCoroutine(PlayerHeal());
+        //StartCoroutine(PlayerHeal());
+        click = true;
     }
 
     void Update()
@@ -188,7 +190,7 @@ public class BattleSystem : MonoBehaviour
                     Invoke("EnemyAttack", 1f);
 
                     state = BattleState.ACTIONS;
-                    AzureSpeech.message = "";
+                    AzureSpeech.message = "奶茶";
                     ActionsOn();
 
                     click = false;
@@ -200,7 +202,7 @@ public class BattleSystem : MonoBehaviour
                     //EnemyAttack();
 
                     state = BattleState.ACTIONS;
-                    AzureSpeech.message = "";
+                    AzureSpeech.message = "奶茶";
                     ActionsOn();
 
                     click = false;
@@ -231,6 +233,15 @@ public class BattleSystem : MonoBehaviour
 
                     click = false;
                 }
+            }else if (state == BattleState.BAG)
+            {
+                PlayerHeal();
+
+                state = BattleState.ACTIONS;
+                dialogueText.EnableBag(false);
+                dialogueText.EnableStart(true);
+
+                click = false;
             }
         }
         if (PlayerIsDead == true)
