@@ -43,9 +43,20 @@ public class countdown : MonoBehaviour
         // }
     }
 
+    // public void StartTimeCount()
+    //  {
+    // if (button_attack.fight_on == true)
+    //     {
+    //       time = 30;
+    //     if (time == 30)
+    //   {
+    //     time_UI.text = time + "";
+    // }
+    // InvokeRepeating("timer", 1, 1);
+    // time = 30;
     public void StartTimeCount()
     {
-        if (button_attack.fight_on == true)
+        //if (button_attack.fight_on == true)
         {
             start_time();
             // time_out_test = time_out;
@@ -55,6 +66,8 @@ public class countdown : MonoBehaviour
             // }
 
             // time_test = time;
+            //     }
+            // }
         }
     }
 

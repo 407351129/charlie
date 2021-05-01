@@ -5,20 +5,27 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public string unitName;
-    
+
     public int damage;
+    public static int damage1 = 50;
 
     public int maxHP;
     public int currentHP;
 
-    public bool TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         currentHP -= dmg;
+    }
 
-        if(currentHP <= 0)
-            return true;
-        else
-            return false;
+    public void DefenseDamage(int dmg1)
+    {
+        currentHP -= dmg1;
+    }
+
+    public bool End()
+    {
+        if (currentHP <= 0) return true;
+        else return false;
     }
 
     public void Heal(int amount)

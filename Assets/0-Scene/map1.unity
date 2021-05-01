@@ -931,9 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 313159200}
-  startRecoButton: {fileID: 105259892}
-  fight_a: 0
 --- !u!114 &105259890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,7 +1203,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 0}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!61 &119184585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1677,7 +1676,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!114 &174101770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,9 +1688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 1377095252}
-  startRecoButton: {fileID: 174101771}
-  fight_a: 0
 --- !u!114 &174101771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2526,7 +2521,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 1
 --- !u!1 &294450147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,11 +3388,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d0c688826559c4dacdcc43bfd8ca21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appear_notice: {fileID: 928895770}
+  appear_notice: {fileID: 243018867}
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 3
 --- !u!1 &438836329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,11 +4020,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d0c688826559c4dacdcc43bfd8ca21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appear_notice: {fileID: 689625794}
+  appear_notice: {fileID: 243018867}
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 4
 --- !u!61 &490985974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4339,7 +4340,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!65 &512100652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6017,9 +6017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 313159200}
-  startRecoButton: {fileID: 759335691}
-  fight_a: 0
 --- !u!114 &759335689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6519,7 +6516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &820301765
 Transform:
   m_ObjectHideFlags: 0
@@ -6827,7 +6824,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 0}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!61 &894591268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7672,15 +7671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8b4c3b54f391e478fdcdd6ef30d6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_escape_monster: 0
-  monster1: {fileID: 0}
-  monster2: {fileID: 0}
-  monster3: {fileID: 0}
-  escape_speek: 
-  monster1_alive: 0
-  monster2_alive: 0
-  monster3_alive: 0
-  map_fight_index: 0
 --- !u!114 &964254482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7693,9 +7683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 25799320}
-  startRecoButton: {fileID: 964254480}
-  fight_a: 0
 --- !u!114 &964254483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7813,7 +7800,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!1 &970359458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8096,7 +8082,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 0}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!61 &1011533839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8437,8 +8425,11 @@ MonoBehaviour:
   test_map_time: 0
   end_map: 0
   map_fight_index: 0
+  stars: []
   test_map_start: 0
+  now_level: 0
   end_time: 0
+  game_clear: {fileID: 0}
 --- !u!1 &1087075874
 GameObject:
   m_ObjectHideFlags: 0
@@ -9056,9 +9047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 313159200}
-  startRecoButton: {fileID: 1215435181}
-  fight_a: 0
 --- !u!114 &1215435179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9633,7 +9621,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!114 &1261236500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9646,9 +9633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 1377095252}
-  startRecoButton: {fileID: 1261236501}
-  fight_a: 0
 --- !u!114 &1261236501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10062,9 +10046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 313159200}
-  startRecoButton: {fileID: 1306931401}
-  fight_a: 0
 --- !u!114 &1306931399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10675,7 +10656,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!1 &1367285897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11120,11 +11103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d0c688826559c4dacdcc43bfd8ca21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appear_notice: {fileID: 1937804993}
+  appear_notice: {fileID: 243018867}
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 2
 --- !u!1 &1390902378
 GameObject:
   m_ObjectHideFlags: 0
@@ -12682,7 +12667,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!114 &1593218530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12695,9 +12679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 1377095252}
-  startRecoButton: {fileID: 1593218531}
-  fight_a: 0
 --- !u!114 &1593218531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12921,7 +12902,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!114 &1612698534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13352,15 +13332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8b4c3b54f391e478fdcdd6ef30d6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_escape_monster: 0
-  monster1: {fileID: 0}
-  monster2: {fileID: 0}
-  monster3: {fileID: 0}
-  escape_speek: 
-  monster1_alive: 1
-  monster2_alive: 1
-  monster3_alive: 1
-  map_fight_index: 0
 --- !u!1 &1667591214
 GameObject:
   m_ObjectHideFlags: 0
@@ -13738,7 +13709,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 0}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!61 &1677850693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14451,54 +14424,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1783265717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1783265719}
-  - component: {fileID: 1783265718}
-  m_Layer: 0
-  m_Name: map_time
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1783265718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783265717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498ec791b070aff45ac9d9a97875520a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  test_map_time: 0
-  end_map: 0
-  map_fight_index: 0
-  test_map_start: 0
-  end_time: 0
---- !u!4 &1783265719
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783265717}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19134295, y: 1.4933635, z: -40.780544}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792041746
 GameObject:
   m_ObjectHideFlags: 0
@@ -15963,8 +15888,11 @@ MonoBehaviour:
   test_map_time: 0
   end_map: 0
   map_fight_index: 0
+  stars: []
   test_map_start: 0
+  now_level: 0
   end_time: 0
+  game_clear: {fileID: 0}
 --- !u!114 &1945595040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16198,7 +16126,7 @@ Transform:
   - {fileID: 1084394595}
   - {fileID: 1663056181}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978856884
 GameObject:
@@ -16782,7 +16710,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!61 &2079480954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17161,7 +17091,9 @@ MonoBehaviour:
   disappear_notice: {fileID: 820301764}
   appear: 0
   disappear: 0
+  food_notice: 0
   test_which: 0
+  map_pin_num: 0
 --- !u!1 &2099569145
 GameObject:
   m_ObjectHideFlags: 0
@@ -17254,10 +17186,10 @@ GameObject:
   - component: {fileID: 2101004934}
   - component: {fileID: 2101004933}
   - component: {fileID: 2101004932}
-  - component: {fileID: 2101004935}
   - component: {fileID: 2101004936}
   - component: {fileID: 2101004938}
   - component: {fileID: 2101004937}
+  - component: {fileID: 2101004935}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -17374,11 +17306,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101004930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967ea997150008d469d8e36eba1e7ef2, type: 3}
+  m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   outputText: {fileID: 1377095252}
   startRecoButton: {fileID: 2101004932}
+  azure: {fileID: 0}
   fight_a: 0
 --- !u!114 &2101004936
 MonoBehaviour:
@@ -17397,7 +17330,6 @@ MonoBehaviour:
   b_appear: 0
   b_disappear: 0
   food_click: 0
-  now_food: 0
 --- !u!114 &2101004937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17531,55 +17463,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2144855858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2144855860}
-  - component: {fileID: 2144855859}
-  m_Layer: 0
-  m_Name: map_monster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2144855859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144855858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8b4c3b54f391e478fdcdd6ef30d6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  test_escape_monster: 0
-  monster1: {fileID: 0}
-  monster2: {fileID: 0}
-  monster3: {fileID: 0}
-  escape_speek: 
-  monster1_alive: 1
-  monster2_alive: 1
-  monster3_alive: 1
-  map_fight_index: 0
---- !u!4 &2144855860
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144855858}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.376106, y: 0.13361368, z: -1.0149739}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

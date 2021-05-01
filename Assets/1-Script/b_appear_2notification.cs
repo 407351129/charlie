@@ -21,7 +21,13 @@ public class b_appear_2notification : MonoBehaviour
     [SerializeField]
     private bool food_click;
 
-    public int now_food;
+    private int now_food;
+
+    public static bool speak_get_food;
+
+    public bool test_speak_get_food;
+
+    private bool get_food;
 
     // public int get_food;
     // private bool fight_notice;
@@ -31,16 +37,22 @@ public class b_appear_2notification : MonoBehaviour
         people_appear = true;
         b_appear = false;
         b_disappear = false;
+        speak_get_food = false;
+        get_food = Map_food.get_food;
     }
 
     void Update()
     {
+        test_speak_get_food = speak_get_food;
+
+        // get_food = Map_food.get_food;
         // if (fight_notice == true)
         // {
         // speak_b_appear_on();
         // food_speak_click();
         speak_b_appear_on();
         b_notification_on();
+
         // appear_on();
         // }
         // appear_on();
@@ -99,22 +111,27 @@ public class b_appear_2notification : MonoBehaviour
     void speak_b_appear_on()
     {
         if (
-            AzureSpeech.message.Contains("右轉") == true //放訂單題目
+            Map_food.get_food == true // AzureSpeech.message.Contains("右轉") == true //放訂單題目
         )
         {
             if (food_click == true)
             {
                 b_appear = true;
                 b_disappear = true;
+                speak_get_food = true;
+                food_click = false;
 
                 // click = false;
                 return;
             }
         }
+        b_appear = false;
+        b_disappear = false;
     }
 
     public void food_speak_click()
     {
+        speak_get_food = false;
         food_click = true;
         return;
         // }
