@@ -9290,7 +9290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1058180426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11398,6 +11398,7 @@ GameObject:
   - component: {fileID: 1310461252}
   - component: {fileID: 1310461254}
   - component: {fileID: 1310461255}
+  - component: {fileID: 1310461256}
   m_Layer: 0
   m_Name: floor1
   m_TagString: Appear
@@ -11512,6 +11513,28 @@ MonoBehaviour:
   now_level: 0
   end_time: 0
   game_clear: {fileID: 1058180430}
+--- !u!114 &1310461256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310461251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1aa586cd8cddb47917d26e0bc577b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test_get_food: 0
+  map_pin: []
+  parent_map_pin: {fileID: 0}
+  food_appear: {fileID: 243018867}
+  food_speak: []
+  map_pin_appear: 
+  now_food: 0
+  which_map_pin: 0
+  map_fight_index: 0
+  speak_get_food: 0
 --- !u!1 &1321632803
 GameObject:
   m_ObjectHideFlags: 0

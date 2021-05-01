@@ -19,6 +19,8 @@ public class Map_food : MonoBehaviour
     [SerializeField]
     GameObject parent_map_pin;
 
+    public GameObject food_appear;
+
     [SerializeField]
     string[] food_speak; //接關卡資料庫的
 
@@ -63,6 +65,7 @@ public class Map_food : MonoBehaviour
         map_pin_appear[1] = true;
         map_pin_appear[2] = true;
         map_pin_appear[3] = true;
+        get_food = false;
     }
 
     // Update is called once per frame
@@ -91,6 +94,7 @@ public class Map_food : MonoBehaviour
             {
                 map_pin_appear[i] = true;
                 now_food = 0;
+                get_food = false;
                 // test_i = i;
             }
             map_pin[i - 1] =
@@ -98,9 +102,10 @@ public class Map_food : MonoBehaviour
             if (
                 i == which_map_pin &&
                 map_fight_index != 2 &&
-                AzureSpeech.message.Contains(food_speak[now_food]) == true &&
-                speak_get_food == false
+                AzureSpeech.message.Contains(food_speak[now_food]) == true
             )
+            // &&
+            // speak_get_food == false
             // food_notice
             {
                 map_pin_appear[i - 1] = false;
@@ -109,10 +114,15 @@ public class Map_food : MonoBehaviour
                 map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
             }
         }
-        if (speak_get_food == true)
+
+        if (food_appear.activeInHierarchy == false)
         {
             get_food = false;
         }
+        // if (speak_get_food == true)
+        // {
+        //     get_food = false;
+        // }
 
         // food = GameObject.FindGameObjectsWithTag("Food");
         // map_pin = GameObject.FindGameObjectsWithTag("Food");

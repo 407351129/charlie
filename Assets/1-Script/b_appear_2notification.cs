@@ -37,7 +37,8 @@ public class b_appear_2notification : MonoBehaviour
         people_appear = true;
         b_appear = false;
         b_disappear = false;
-        speak_get_food = false;
+
+        // speak_get_food = false;
         get_food = Map_food.get_food;
     }
 
@@ -122,7 +123,8 @@ public class b_appear_2notification : MonoBehaviour
             {
                 b_appear = true;
                 b_disappear = true;
-                speak_get_food = true;
+
+                // speak_get_food = true;
                 food_click = false;
 
                 // click = false;
