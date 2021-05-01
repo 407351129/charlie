@@ -2303,6 +2303,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 6, z: -10000}
   m_LocalScale: {x: 58.736763, y: 64.97035, z: 58.736763}
   m_Children:
+  - {fileID: 1817788272}
   - {fileID: 1940179349}
   - {fileID: 374647737}
   - {fileID: 1622818659}
@@ -3235,7 +3236,7 @@ Transform:
   m_LocalScale: {x: 1.224213, y: 1.1067557, z: 1.224213}
   m_Children: []
   m_Father: {fileID: 243018868}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &374647738
 SpriteRenderer:
@@ -9691,7 +9692,9 @@ GameObject:
   - component: {fileID: 1103644690}
   - component: {fileID: 1103644689}
   - component: {fileID: 1103644688}
+  - component: {fileID: 1103644692}
   - component: {fileID: 1103644687}
+  - component: {fileID: 1103644691}
   m_Layer: 5
   m_Name: food
   m_TagString: Untagged
@@ -9782,6 +9785,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1103644691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103644686}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1aa586cd8cddb47917d26e0bc577b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test_get_food: 0
+  map_pin: []
+  parent_map_pin: {fileID: 0}
+  food_appear: {fileID: 0}
+  food_speak: []
+  map_pin_appear: 
+  test_now_food: 0
+  which_map_pin: 0
+  map_fight_index: 0
+  speak_get_food: 0
+--- !u!114 &1103644692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103644686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898059f8c3a2e9b44be88d5a11e83ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food_chinese_UI: {fileID: 1377095252}
+  food_speak: []
+  now_food: 0
 --- !u!1 &1123461042
 GameObject:
   m_ObjectHideFlags: 0
@@ -11535,7 +11575,7 @@ MonoBehaviour:
   food_appear: {fileID: 243018867}
   food_speak: []
   map_pin_appear: 
-  now_food: 0
+  test_now_food: 0
   which_map_pin: 0
   map_fight_index: 0
   speak_get_food: 0
@@ -14446,7 +14486,7 @@ RectTransform:
   - {fileID: 2101004931}
   - {fileID: 1087075875}
   m_Father: {fileID: 243018868}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16076,6 +16116,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce9fc1cc5e87ae4d9f63257cf5c5c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1817788271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817788272}
+  - component: {fileID: 1817788274}
+  - component: {fileID: 1817788273}
+  m_Layer: 5
+  m_Name: RecordText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1817788272
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817788271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 170.25113}
+  m_LocalScale: {x: 0.01703274, y: 0.015398532, z: 0.01703274}
+  m_Children: []
+  m_Father: {fileID: 243018868}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.357, y: 2.221}
+  m_SizeDelta: {x: 641.4714, y: 110.97194}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1817788273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817788271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c7d989c564057e246be0aba99ac268a8, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Click button to recognize speech
+--- !u!222 &1817788274
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817788271}
+  m_CullTransparentMesh: 0
 --- !u!1 &1822506849
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,7 +17124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 243018868}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1940179350
 SpriteRenderer:
@@ -18677,7 +18795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 1377095252}
+  outputText: {fileID: 1817788273}
   startRecoButton: {fileID: 2101004932}
   azure: {fileID: 0}
   fight_a: 0

@@ -56,7 +56,7 @@ public class countdown : MonoBehaviour
     // time = 30;
     public void StartTimeCount()
     {
-        //if (button_attack.fight_on == true)
+        if (button_attack.fight_on == true)
         {
             start_time();
             // time_out_test = time_out;

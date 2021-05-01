@@ -1221,6 +1221,7 @@ MonoBehaviour:
   - "\u8C46\u82B1"
   - "\u7092\u624B"
   - "\u86CB\u82B1\u6E6F"
+  getfood: 
 --- !u!212 &251498985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1337,6 +1338,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!222 &252717089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2105,6 +2107,7 @@ MonoBehaviour:
   - {fileID: 2009145494}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &403113231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,6 +3044,7 @@ MonoBehaviour:
   - "\u8C46\u4E7E"
   - "\u5208\u5305"
   - "\u9D28\u8CDE"
+  getfood: 
 --- !u!212 &502148609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4323,6 +4327,7 @@ MonoBehaviour:
   - {fileID: 2009145494}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &795221611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,6 +4695,8 @@ MonoBehaviour:
   - "\u6C34\u9903"
   - "\u70E4\u9CE5\u86CB"
   - "\u991B\u98E9"
+  - "\u991B\u98E9"
+  getfood: "\u4F8610\u9846\u6C34\u9903"
 --- !u!1 &861575478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,6 +4802,7 @@ MonoBehaviour:
   - {fileID: 446724768}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &889010287
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,9 +5141,11 @@ MonoBehaviour:
   - {fileID: 569134640}
   level_num: 1
   food:
-  - "\u96DE\u8089"
+  - "\u9D28\u8089"
   - "\u725B\u8089"
   - "\u8C6C\u8089"
+  - "\u8C6C\u8089"
+  getfood: "\u8ACB\u7D66\u6211\u5169\u584A\u725B\u8089"
 --- !u!1 &907276332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5551,6 +5561,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &929945617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7989,6 +8000,7 @@ MonoBehaviour:
   - "\u6DBC\u9EB5"
   - "\u934B\u8CBC"
   - "\u7C84\u689D"
+  getfood: 
 --- !u!212 &1314204481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8229,6 +8241,7 @@ MonoBehaviour:
   - {fileID: 694582574}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1323442245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8990,6 +9003,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1413345350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9264,6 +9278,8 @@ MonoBehaviour:
   - "\u767C\u7CBF"
   - "\u611B\u7389"
   - "\u6F64\u9905"
+  - "\u6F64\u9905"
+  getfood: "\u8ACB\u7D66\u62114\u500B\u6F64\u9905"
 --- !u!1 &1467171114
 GameObject:
   m_ObjectHideFlags: 0
@@ -9326,6 +9342,7 @@ MonoBehaviour:
   - "\u8C46\u6F3F"
   - "\u7C73\u6F3F"
   - "\u610F\u9EB5"
+  getfood: 
 --- !u!212 &1467171117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10132,6 +10149,7 @@ MonoBehaviour:
   - {fileID: 1757680266}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1519966434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10513,6 +10531,8 @@ MonoBehaviour:
   - "\u86CB\u9905"
   - "\u98EF\u7CF0"
   - "\u6CB9\u689D"
+  - "\u6CB9\u689D"
+  getfood: 
 --- !u!1 &1552986880
 GameObject:
   m_ObjectHideFlags: 0
@@ -10562,7 +10582,7 @@ MonoBehaviour:
   food_appear: {fileID: 0}
   food_speak: []
   map_pin_appear: 
-  now_food: 0
+  test_now_food: 0
   which_map_pin: 0
   map_fight_index: 0
   speak_get_food: 0
@@ -11392,6 +11412,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 1
   food: []
+  getfood: 
 --- !u!1 &1696531707
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,6 +11630,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!114 &1699614883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12243,6 +12265,8 @@ MonoBehaviour:
   - "\u8C6C\u8173"
   - "\u7CA5"
   - "\u706B\u934B"
+  - "\u706B\u934B"
+  getfood: "\u6211\u8981\u4E00\u7897\u7CA5"
 --- !u!114 &1805002983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12736,6 +12760,7 @@ MonoBehaviour:
   - "\u9EBB\u7CEC"
   - "\u5249\u51B0"
   - "\u6CB9\u98EF"
+  getfood: 
 --- !u!212 &1858830804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13215,6 +13240,8 @@ MonoBehaviour:
   - "\u96DE\u6392"
   - "\u96DE\u6E6F"
   - "\u71D2\u9905"
+  - "\u71D2\u9905"
+  getfood: 
 --- !u!1 &1914346551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13932,6 +13959,7 @@ MonoBehaviour:
   - {fileID: 1772525233}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &2063830736
 GameObject:
   m_ObjectHideFlags: 0
@@ -14116,6 +14144,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 2
   food: []
+  getfood: 
 --- !u!1 &2086428922
 GameObject:
   m_ObjectHideFlags: 0
@@ -14340,6 +14369,7 @@ MonoBehaviour:
   - "\u7D05\u8336"
   - "\u8089\u5713"
   - "\u5976\u8336"
+  getfood: 
 --- !u!212 &2094418134
 SpriteRenderer:
   m_ObjectHideFlags: 0

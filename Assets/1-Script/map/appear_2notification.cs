@@ -136,7 +136,7 @@ public class appear_2notification : MonoBehaviour
         {
             notification_on();
         } // appear = false; // disappear = false;
-        if (food_notice == true)
+        if (food_notice == true && Map_food.get_food == false)
         {
             food_notification_on(); //想要放陣列appear_notice = GameObject.Find("monster1");
         }

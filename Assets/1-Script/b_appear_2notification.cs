@@ -116,17 +116,17 @@ public class b_appear_2notification : MonoBehaviour
     void speak_b_appear_on()
     {
         if (
-            Map_food.get_food == true // AzureSpeech.message.Contains("右轉") == true //放訂單題目
+            Map_food.get_food == true //
         )
+        // AzureSpeech.message.Contains("右轉") == true //放訂單題目
         {
             if (food_click == true)
             {
+                food_click = false;
                 b_appear = true;
                 b_disappear = true;
 
                 // speak_get_food = true;
-                food_click = false;
-
                 // click = false;
                 return;
             }

@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0-Scene/stage.unity
     guid: a0a91b2c70afd334e8898d1e56f4b484
+  - enabled: 1
+    path: Assets/0-Scene/map1.unity
+    guid: e181a06419c33b34d97ea5c36dc9de8e
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0-Scene/delete/fighting_notice.unity
     guid: 9ac838ef133b37348a18b03730c63c6d
+  - enabled: 1
+    path: Assets/0-Scene/fight.unity
+    guid: 80d5ef879e598bd45a3faf8e87c939f9
   - enabled: 1
     path: Assets/0-Scene/fight.unity
     guid: 80d5ef879e598bd45a3faf8e87c939f9
