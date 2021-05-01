@@ -8,7 +8,6 @@ public class DialogueText : MonoBehaviour
     public int lettersPerSecond;
     public Text dialogueText;
 
-    public GameObject others;
     public GameObject actions;
     public GameObject questions;
     public GameObject bag;
@@ -31,7 +30,6 @@ public class DialogueText : MonoBehaviour
     public void EnableStart(bool enabled)
     {
         dialogueText.enabled = enabled;
-        others.SetActive(enabled);
         actions.SetActive(enabled);
     }
 
