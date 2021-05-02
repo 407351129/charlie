@@ -120,15 +120,15 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerHeal()
     {
-        enemyUnit.Heal(20);
+        enemyUnit.Heal(100);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
 
         //yield return new WaitForSeconds(0.5f);
 
-        //state = BattleState.ACTIONS;
-        //dialogueText.EnableBag(false);
-        //dialogueText.EnableStart(true);
+        state = BattleState.ACTIONS;
+        dialogueText.EnableBag(false);
+        dialogueText.EnableStart(true);
     }
 
     public void OnAttackButton()
@@ -169,8 +169,7 @@ public class BattleSystem : MonoBehaviour
 
     public void HealingButton()
     {
-        //StartCoroutine(PlayerHeal());
-        click = true;
+        PlayerHeal();
     }
 
     void Update()
@@ -190,7 +189,7 @@ public class BattleSystem : MonoBehaviour
                     Invoke("EnemyAttack", 1f);
 
                     state = BattleState.ACTIONS;
-                    AzureSpeech.message = "奶茶";
+                    AzureSpeech.message = "";
                     ActionsOn();
 
                     click = false;
@@ -202,7 +201,7 @@ public class BattleSystem : MonoBehaviour
                     //EnemyAttack();
 
                     state = BattleState.ACTIONS;
-                    AzureSpeech.message = "奶茶";
+                    AzureSpeech.message = "";
                     ActionsOn();
 
                     click = false;
@@ -229,20 +228,22 @@ public class BattleSystem : MonoBehaviour
                     //DefenseFail();
 
                     state = BattleState.ACTIONS;
+                    AzureSpeech.message = "";
                     ActionsOn();
 
                     click = false;
                 }
-            }else if (state == BattleState.BAG)
-            {
-                PlayerHeal();
-
-                state = BattleState.ACTIONS;
-                dialogueText.EnableBag(false);
-                dialogueText.EnableStart(true);
-
-                click = false;
             }
+            //else if (state == BattleState.BAG)
+            //{
+            //    PlayerHeal();
+
+            //    state = BattleState.ACTIONS;
+            //    dialogueText.EnableBag(false);
+            //    dialogueText.EnableStart(true);
+
+            //    click = false;
+            //}
         }
         if (PlayerIsDead == true)
         {

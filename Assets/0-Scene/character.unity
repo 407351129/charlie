@@ -2250,7 +2250,7 @@ MonoBehaviour:
   levelNotice: {fileID: 2001083338}
   moneyEN: {fileID: 1022165825}
   moneyCH: {fileID: 2115453724}
-  level_int: 1
+  level_int: 0
   level_prefs: 0
   levelText: {fileID: 722483928}
 --- !u!114 &539847621
@@ -3144,7 +3144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &751955795
 Transform:
   m_ObjectHideFlags: 0
@@ -4097,7 +4097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &972954386
 Transform:
   m_ObjectHideFlags: 0
@@ -7766,7 +7766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1762206845
 Transform:
   m_ObjectHideFlags: 0
@@ -7961,7 +7961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1840565557
 Transform:
   m_ObjectHideFlags: 0
@@ -8201,7 +8201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1935972999
 Transform:
   m_ObjectHideFlags: 0
@@ -8398,7 +8398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2001083339
 Transform:
   m_ObjectHideFlags: 0
@@ -9652,7 +9652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2131240965
 Transform:
   m_ObjectHideFlags: 0

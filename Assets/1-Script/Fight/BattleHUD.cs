@@ -16,6 +16,6 @@ public class BattleHUD : MonoBehaviour
     public void SetHP(int hp)
     {
         hpSlider.value = hp;
-        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.levelup);
+        //SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.levelup);
     }
 }
