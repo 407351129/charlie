@@ -51,8 +51,8 @@ public class b_appear_2notification : MonoBehaviour
         // {
         // speak_b_appear_on();
         // food_speak_click();
-        speak_b_appear_on();
         b_notification_on();
+        speak_b_appear_on();
 
         // if (Map_food.get_food == true)
         // {
@@ -86,8 +86,8 @@ public class b_appear_2notification : MonoBehaviour
             b_disappear_notice.SetActive(true);
         }
         people_appear = true;
-        b_appear = false;
-        b_disappear = false;
+        // b_appear = false;
+        // b_disappear = false;
     }
 
     // void notification_off()
