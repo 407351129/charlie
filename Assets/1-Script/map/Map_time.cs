@@ -93,7 +93,7 @@ public class Map_time : MonoBehaviour
 
     void go_to_map()
     {
-        end_map = Map_food.end_map; //暫時
+        end_map = Map_food.end_map;
 
         // Awake();
         GameObject map_setting = GameObject.Find("map_setting");
