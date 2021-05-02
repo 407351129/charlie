@@ -7,7 +7,6 @@ public class Unit : MonoBehaviour
     public string unitName;
 
     public int damage;
-    public static int damage1 = 50;
 
     public int maxHP;
     public int currentHP;
