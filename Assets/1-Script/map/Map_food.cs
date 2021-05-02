@@ -68,8 +68,8 @@ public class Map_food : MonoBehaviour
         // food_speak = new string[] { "珍珠奶茶", "牛肉", "豬肉" };
         map_pin = new GameObject[4];
         map_pin_appear = new bool[4];
-        now_food = 0;
 
+        // now_food = 0;
         map_pin_appear[0] = true;
         map_pin_appear[1] = true;
         map_pin_appear[2] = true;
@@ -90,25 +90,23 @@ public class Map_food : MonoBehaviour
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
 
         which_map_pin = appear_2notification.which_map_pin;
-        map_pin = new GameObject[4];
 
+        // map_pin = new GameObject[4];
         parent_map_pin = GameObject.Find("map_pin");
 
-        if (now_food == 4)
+        if (now_food == 3)
+        {
+            map_pin_appear[3] = true;
+            map_pin_appear[0] = false;
+            map_pin_appear[1] = false;
+            map_pin_appear[2] = false;
+        }
+        else if (now_food == 4)
         {
             end_map = true;
         }
-        if (map_fight_index == 2)
-        {
-            end_map = false;
-            now_food = 0;
-            get_food = false;
-            map_pin_appear[0] = true;
-            map_pin_appear[1] = true;
-            map_pin_appear[2] = true;
-            map_pin_appear[3] = true;
-        }
-        else
+
+        if (map_fight_index != 2 && map_fight_index != 8)
         {
             for (int i = 1; i < 5; i++)
             {
@@ -131,6 +129,7 @@ public class Map_food : MonoBehaviour
                     now_food++;
                     get_food = true;
                     map_pin[i - 1].SetActive(map_pin_appear[i - 1]);
+                    // return;
                 }
 
                 if (map_pin_appear[i - 1] == false)
@@ -140,19 +139,28 @@ public class Map_food : MonoBehaviour
                 // food_UI.text = food_speak[now_food] + "";
             }
         }
+        else if (map_fight_index == 2)
+        {
+            end_map = false;
+            now_food = 0;
+            get_food = false;
+            map_pin_appear[0] = true;
+            map_pin_appear[1] = true;
+            map_pin_appear[2] = true;
+            map_pin_appear[3] = true;
+        }
 
         // map_pin[0].SetActive(map_pin_appear[0]);
         // map_pin[1].SetActive(map_pin_appear[1]);
         // map_pin[2].SetActive(map_pin_appear[2]);
-        if (now_food == 3)
-        {
-            map_pin[3].SetActive(true);
-        }
-        else
-        {
-            map_pin[3].SetActive(false);
-        }
-
+        // if (now_food == 3)
+        // {
+        //     map_pin[3].SetActive(true);
+        // }
+        // else
+        // {
+        //     map_pin[3].SetActive(false);
+        // }
         if (food_appear.activeInHierarchy == false)
         {
             get_food = false;

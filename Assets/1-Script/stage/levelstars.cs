@@ -18,8 +18,7 @@ public class levelstars : MonoBehaviour
 
     public int level_num;
 
-
-
+    public string[] food = new string[4];
 
     public string getfood;
 
@@ -71,23 +70,18 @@ public class levelstars : MonoBehaviour
     public void level_click()
     {
         now_level = level_num;
-
-
-
-
-
-        void Start()
-        {
-
-
-
-            now_level = PlayerPrefs.GetInt("Lv");
-            // PlayerPrefs.DeleteAll();
-
-            //PlayerPrefs.SetInt("num"+1, 12345);
-            //PlayerPrefs.SetInt("num"+2, 12);
-            //PlayerPrefs.SetInt("numwewkoekwoekweowkoe", 1);
-        }
-        // Update is called once per frame
+        foods = food;
+        foods[3] = getfood;
     }
+
+    void Start()
+    {
+        foods = new string[4];
+        now_level = PlayerPrefs.GetInt("Lv");
+        // PlayerPrefs.DeleteAll();
+        //PlayerPrefs.SetInt("num"+1, 12345);
+        //PlayerPrefs.SetInt("num"+2, 12);
+        //PlayerPrefs.SetInt("numwewkoekwoekweowkoe", 1);
+    }
+    // Update is called once per frame
 }

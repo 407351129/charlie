@@ -18,7 +18,8 @@ public class button_attack : MonoBehaviour
     void Update()
     {
         if (
-            countdown.time_out == true //再加上或語音(攻擊)成功
+            countdown.time_out == true ||
+            AzureSpeech.message.Contains("珍珠奶茶") //再加上或語音(攻擊)成功
         )
         {
             fight_on = false;

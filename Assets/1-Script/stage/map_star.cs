@@ -119,10 +119,8 @@ public class map_star : MonoBehaviour
     {
         // map_fight_index = SceneManager.GetActiveScene().buildIndex;
         now_level = levelstars.now_level;
-
-        //end_map = Map_time.end_map;
-        //end_time = Map_time.end_time;
-
+        end_map = Map_food.end_map;
+        end_time = Map_time.end_time;
         if (end_map == true)
         {
             game_clear.gameObject.SetActive(true);

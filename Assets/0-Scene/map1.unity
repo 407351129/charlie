@@ -6812,7 +6812,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.110358775}
+  m_Offset: {x: 0, y: 0.42955774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6823,7 +6823,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.21, y: 2.669283}
+  m_Size: {x: 7.21, y: 2.0308847}
   m_EdgeRadius: 0
 --- !u!212 &760078527
 SpriteRenderer:
@@ -9807,6 +9807,7 @@ MonoBehaviour:
   which_map_pin: 0
   map_fight_index: 0
   speak_get_food: 0
+  test_end_map: 0
 --- !u!114 &1103644692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11443,6 +11444,7 @@ GameObject:
   - component: {fileID: 1310461254}
   - component: {fileID: 1310461255}
   - component: {fileID: 1310461256}
+  - component: {fileID: 1310461257}
   m_Layer: 0
   m_Name: floor1
   m_TagString: Appear
@@ -11579,6 +11581,22 @@ MonoBehaviour:
   which_map_pin: 0
   map_fight_index: 0
   speak_get_food: 0
+  test_end_map: 0
+--- !u!114 &1310461257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310461251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898059f8c3a2e9b44be88d5a11e83ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food_chinese_UI: {fileID: 1377095252}
+  food_speak: []
+  now_food: 0
 --- !u!1 &1321632803
 GameObject:
   m_ObjectHideFlags: 0
@@ -13225,7 +13243,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0075867176, y: 0.35538578}
+  m_Offset: {x: -0.0075867176, y: 0.2145567}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13236,7 +13254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.2884345, y: 5.3359566}
+  m_Size: {x: 7.2884345, y: 5.0542984}
   m_EdgeRadius: 0
 --- !u!212 &1526082921
 SpriteRenderer:
