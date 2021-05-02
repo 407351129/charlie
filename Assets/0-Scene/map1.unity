@@ -9823,6 +9823,7 @@ MonoBehaviour:
   food_chinese_UI: {fileID: 1377095252}
   food_speak: []
   now_food: 0
+  map_pin_end: {fileID: 0}
 --- !u!1 &1123461042
 GameObject:
   m_ObjectHideFlags: 0
@@ -11597,6 +11598,7 @@ MonoBehaviour:
   food_chinese_UI: {fileID: 1377095252}
   food_speak: []
   now_food: 0
+  map_pin_end: {fileID: 490985971}
 --- !u!1 &1321632803
 GameObject:
   m_ObjectHideFlags: 0
