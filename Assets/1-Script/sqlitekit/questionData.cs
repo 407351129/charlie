@@ -7,6 +7,7 @@ public class questionData : MonoBehaviour
 
 {
     public SqliteDatabase sqlDB;
+  
    
 
     // Use this for initialization
@@ -58,9 +59,11 @@ public class questionData : MonoBehaviour
             print("name:" + Questions_Type);
 
             //檢查在電腦上是否有連到資料庫用
-            Debug.Log("Questions_Content="+Questions_Content+"Questions_Symbol="+Questions_Symbol+"Questions_Chinese="+Questions_Chinese+"Questions_Reward="+Questions_Reward+"Questions_Type="+Questions_Type);
+            //Debug.Log("Questions_Content="+Questions_Content+"Questions_Symbol="+Questions_Symbol+"Questions_Chinese="+Questions_Chinese+"Questions_Reward="+Questions_Reward+"Questions_Type="+Questions_Type);
 
-          
+         
+
+
 
 
         }

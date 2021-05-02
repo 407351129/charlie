@@ -11,6 +11,8 @@ public class levelstars : MonoBehaviour
     public static int now_level;
     public int level_num;
 
+
+
     int stars;
 
 
@@ -60,10 +62,14 @@ public class levelstars : MonoBehaviour
     public void level_click()
     {
         now_level = level_num;
+
+ 
     }
 
     void Start()
     {
+
+
         now_level =PlayerPrefs.GetInt("Lv");
        // PlayerPrefs.DeleteAll();
         //PlayerPrefs.SetInt("num"+1, 12345);

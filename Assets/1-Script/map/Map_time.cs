@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Map_time : MonoBehaviour
 {
     public static int map_time;
+
     
     public int test_map_time;
 
@@ -55,11 +56,13 @@ public class Map_time : MonoBehaviour
         {
             // if (map_fight_index == 8)
             // {
+
             DontDestroyOnLoad(time_map);
         }
         else
         {
             Destroy(time_map);
+
 
             // exit_map = true;
         }
@@ -88,18 +91,18 @@ public class Map_time : MonoBehaviour
 
     void Start()
     {
+
         now_level =PlayerPrefs.GetInt("Lv");
         //PlayerPrefs.DeleteAll();
-        // if (map_start == true)
-        // {
-        InvokeRepeating("timer", 1, 1);
-        // }
+
     }
+
 
     void go_to_map()
     {
         // Awake();
         GameObject map_setting = GameObject.Find("map_setting");
+
         // map_fight_index = 8;
         if (
             map_fight_index == 8 ||
@@ -109,11 +112,13 @@ public class Map_time : MonoBehaviour
             map_fight_index == 2
         )
         {
+
             DontDestroyOnLoad(map_setting);
         }
         else
         {
             Destroy(map_setting);
+
         }
     }
 
@@ -130,6 +135,7 @@ public class Map_time : MonoBehaviour
     // {
     //     exit_map = true;
     // }
+
 
     //public void star(int _starNUM)
     //{
@@ -270,6 +276,7 @@ public class Map_time : MonoBehaviour
 
             game_clear.gameObject.SetActive(false);
         }
+
 
         if (
             map_fight_index == 8 ||
@@ -471,4 +478,4 @@ public class Map_time : MonoBehaviour
 
 //     //     }
 //     // }
-// }
+
