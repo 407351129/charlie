@@ -26,6 +26,7 @@ public class countdown : MonoBehaviour
         {
             time_out = true;
             time_out_test = true;
+            time = 30;
             CancelInvoke("timer");
         }
         if (time != 30)
@@ -73,6 +74,7 @@ public class countdown : MonoBehaviour
 
     void start_time()
     {
+        time = 30;
         CancelInvoke("timer");
         time = 30;
         if (time == 30)
