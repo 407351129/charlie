@@ -17,7 +17,7 @@ public class ArmorLevel : MonoBehaviour
     public Text moneyEN;
     public Text moneyCH;
 
-    public int level_int = 1;
+    public int level_int = 0;
     public int level_prefs;
     public Text levelText;
 
@@ -54,7 +54,10 @@ public class ArmorLevel : MonoBehaviour
         if (level_int < 3)
         {
             level_int++;
+            Debug.Log("裝備:" + level_int);
             PlayerPrefs.SetInt("level_int", level_int);
+            Debug.Log("裝備:" + level_int);
+            Debug.Log("裝備等級:" + level_prefs);
         }
         EnableLevelNotice(false);
     }
@@ -71,19 +74,19 @@ public class ArmorLevel : MonoBehaviour
 
     void Armor()
     {
-        if (level_int == 1)
+        if (level_int == 0)
         {
             EnableLevel2(false);
             EnableLevel3(false);
             EnableLevel1(true);
         }
-        else if (level_int == 2)
+        else if (level_int == 1)
         {
             EnableLevel1(false);
             EnableLevel3(false);
             EnableLevel2(true);
         }
-        else if (level_int == 3)
+        else if (level_int == 2)
         {
             EnableLevel1(false);
             EnableLevel2(false);
@@ -93,12 +96,12 @@ public class ArmorLevel : MonoBehaviour
 
     void Money()
     {
-        if (level_int == 1)
+        if (level_int == 0)
         {
             moneyEN.text = "50";
             moneyCH.text = "50";
         }
-        else if (level_int == 2)
+        else if (level_int == 1)
         {
             moneyEN.text = "80";
             moneyCH.text = "80";
