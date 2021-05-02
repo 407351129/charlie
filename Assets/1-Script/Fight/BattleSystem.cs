@@ -9,6 +9,12 @@ public class BattleSystem : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public Text levelText;
+
+    public GameObject level0CurrentArmors;
+    public GameObject level1CurrentArmors;
+    public GameObject level2CurrentArmors;
+    public GameObject level3CurrentArmors;
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
@@ -31,17 +37,21 @@ public class BattleSystem : MonoBehaviour
 
     public bool click;
     public static bool monster_alive; //這裡
+    public int playerDamage;
+    public  int playerLevel;
 
     // Start is called before the first frame update
     // void Awake(){
-        
+
     // }
     void Start()
     {
-        click = true;
+        click = false;
         monster_alive = true;
+        playerLevel = PlayerPrefs.GetInt("level_int");
+        playerDamage = 35 + playerLevel * 5;
         state = BattleState.START;
-        StartCoroutine(SetupBattle());        
+        StartCoroutine(SetupBattle());   
     }
 
     IEnumerator SetupBattle()
@@ -69,10 +79,18 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ACTIONS;
     }
 
+    void ActionsOn()
+    {
+        dialogueText.EnableQuestions(false);
+        azureSpeech.EnableAzure(false);
+        speechLibTest.EnableSpeech(false);
+        dialogueText.EnableStart(true);
+    }
+
     void PlayerAttack()
     {
         playerAttack.Attack();
-        playerUnit.TakeDamage(enemyUnit.damage);
+        playerUnit.TakeDamage(playerDamage);
 
         playerHUD.SetHP(playerUnit.currentHP);
     }
@@ -109,17 +127,47 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerHeal()
+    void PlayerHeal()
     {
-        enemyUnit.Heal(20);
+        enemyUnit.Heal(100);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
-
-        yield return new WaitForSeconds(0.5f);
 
         state = BattleState.ACTIONS;
         dialogueText.EnableBag(false);
         dialogueText.EnableStart(true);
+    }
+
+    void Armor()
+    {
+        if (playerLevel == 0)
+        {
+            EnableLevel1(false);
+            EnableLevel2(false);
+            EnableLevel3(false);
+            EnableLevel0(true);
+        }
+        else if (playerLevel == 1)
+        {
+            EnableLevel0(false);
+            EnableLevel2(false);
+            EnableLevel3(false);
+            EnableLevel1(true);
+        }
+        else if (playerLevel == 2)
+        {
+            EnableLevel0(false);
+            EnableLevel1(false);
+            EnableLevel3(false);
+            EnableLevel2(true);
+        }
+        else if (playerLevel == 3)
+        {
+            EnableLevel0(false);
+            EnableLevel1(false);
+            EnableLevel2(false);
+            EnableLevel3(true);
+        }
     }
 
     public void OnAttackButton()
@@ -160,11 +208,32 @@ public class BattleSystem : MonoBehaviour
 
     public void HealingButton()
     {
-        StartCoroutine(PlayerHeal());
+        PlayerHeal();
+    }
+
+    public void EnableLevel0(bool enabled)
+    {
+        level0CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel1(bool enabled)
+    {
+        level1CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel2(bool enabled)
+    {
+        level2CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel3(bool enabled)
+    {
+        level3CurrentArmors.SetActive(enabled);
     }
 
     void Update()
     {
+        Armor();
         bool EnemyIsDead = playerUnit.End();
         bool PlayerIsDead = enemyUnit.End();
         if (click == true)
@@ -181,9 +250,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -195,9 +262,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -212,9 +277,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -226,9 +289,7 @@ public class BattleSystem : MonoBehaviour
 
                     state = BattleState.ACTIONS;
                     AzureSpeech.message = "";
-                    dialogueText.EnableQuestions(false);
-                    azureSpeech.EnableAzure(false);
-                    dialogueText.EnableStart(true);
+                    ActionsOn();
 
                     click = false;
                 }
@@ -241,6 +302,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (EnemyIsDead == true)
         {
+            monster_alive = false;
             state = BattleState.WIN;
             EndBattle();
         }

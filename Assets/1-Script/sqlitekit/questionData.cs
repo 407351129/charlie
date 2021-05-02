@@ -70,8 +70,6 @@ public class questionData : MonoBehaviour
             print("name:" + Questions_Reward);
             print("name:" + Questions_Type);
 
-
-
             show.text =   Questions_Content  +"\n"+ Questions_Symbol + "\n" + Questions_Chinese;
             //檢查在電腦上是否有連到資料庫用
             //Debug.Log("Questions_Content="+Questions_Content+"Questions_Symbol="+Questions_Symbol+"Questions_Chinese="+Questions_Chinese+"Questions_Reward="+Questions_Reward+"Questions_Type="+Questions_Type);

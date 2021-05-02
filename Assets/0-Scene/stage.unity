@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &65948828
 Transform:
   m_ObjectHideFlags: 0
@@ -389,6 +389,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &91540123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91540124}
+  - component: {fileID: 91540125}
+  m_Layer: 0
+  m_Name: map_monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &91540124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91540123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1412988968}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &91540125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91540123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08bcdca982110046a9ccde71b365a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test_escape_monster: 0
+  monster1: {fileID: 0}
+  monster2: {fileID: 0}
+  monster3: {fileID: 0}
+  escape_speek: 
+  monster1_alive: 0
+  monster2_alive: 0
+  monster3_alive: 0
+  map_fight_index: 0
 --- !u!1 &133499009
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +1028,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1169,6 +1221,7 @@ MonoBehaviour:
   - "\u8C46\u82B1"
   - "\u7092\u624B"
   - "\u86CB\u82B1\u6E6F"
+  getfood: 
 --- !u!212 &251498985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1285,6 +1338,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!222 &252717089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1979,7 +2033,7 @@ Transform:
   - {fileID: 1494187819}
   - {fileID: 2009145497}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &383551274
 SpriteRenderer:
@@ -2053,6 +2107,7 @@ MonoBehaviour:
   - {fileID: 2009145494}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &403113231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2218,7 @@ Transform:
   m_LocalScale: {x: 69.29188, y: 69.29188, z: 69.29186}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &404059746
 SpriteRenderer:
@@ -2875,7 +2930,7 @@ Transform:
   m_LocalScale: {x: 168.16734, y: 168.16734, z: 168.16734}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &491889808
 SpriteRenderer:
@@ -2989,6 +3044,7 @@ MonoBehaviour:
   - "\u8C46\u4E7E"
   - "\u5208\u5305"
   - "\u9D28\u8CDE"
+  getfood: 
 --- !u!212 &502148609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3311,7 +3367,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4197,7 +4253,7 @@ Transform:
   - {fileID: 1314439306}
   - {fileID: 1807071950}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &785778858
 SpriteRenderer:
@@ -4271,6 +4327,7 @@ MonoBehaviour:
   - {fileID: 2009145494}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &795221611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4638,6 +4695,8 @@ MonoBehaviour:
   - "\u6C34\u9903"
   - "\u70E4\u9CE5\u86CB"
   - "\u991B\u98E9"
+  - "\u991B\u98E9"
+  getfood: "\u4F8610\u9846\u6C34\u9903"
 --- !u!1 &861575478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4671,7 +4730,7 @@ Transform:
   - {fileID: 1274301546}
   - {fileID: 446724769}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &861575480
 SpriteRenderer:
@@ -4743,6 +4802,7 @@ MonoBehaviour:
   - {fileID: 446724768}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &889010287
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,17 +5058,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: map_time_start
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 900627880}
           m_MethodName: level_click
           m_Mode: 1
@@ -5092,9 +5141,11 @@ MonoBehaviour:
   - {fileID: 569134640}
   level_num: 1
   food:
-  - "\u96DE\u8089"
+  - "\u9D28\u8089"
   - "\u725B\u8089"
   - "\u8C6C\u8089"
+  - "\u8C6C\u8089"
+  getfood: "\u8ACB\u7D66\u6211\u5169\u584A\u725B\u8089"
 --- !u!1 &907276332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,7 +5406,7 @@ Transform:
   - {fileID: 1874160744}
   - {fileID: 1201932342}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &916778719
 SpriteRenderer:
@@ -5440,7 +5491,7 @@ Transform:
   - {fileID: 1476350059}
   - {fileID: 1227998758}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &925061723
 SpriteRenderer:
@@ -5510,6 +5561,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &929945617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5591,7 @@ Transform:
   m_LocalScale: {x: 67.61063, y: 67.61063, z: 67.61063}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &929945619
 SpriteRenderer:
@@ -5634,14 +5686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8b4c3b54f391e478fdcdd6ef30d6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster1: {fileID: 0}
-  monster2: {fileID: 0}
-  monster3: {fileID: 0}
-  monster_alive: 0
-  monster1_alive: 1
-  monster2_alive: 1
-  monster3_alive: 1
-  map_fight_index: 0
 --- !u!1 &967252377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6967,6 +7011,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161515538}
   m_CullTransparentMesh: 0
+--- !u!1 &1201718035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201718036}
+  - component: {fileID: 1201718037}
+  m_Layer: 0
+  m_Name: map_time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201718036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201718035}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.567449, y: 1.3597498, z: -39.765575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1412988968}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1201718037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201718035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc01b60d4dedd72499ed5984cb87ec03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test_map_time: 0
+  test_end_map: 0
+  map_fight_index: 0
+  test_map_start: 0
 --- !u!1 &1201932341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7392,7 +7483,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7633,7 +7724,7 @@ Transform:
   m_LocalScale: {x: 168.16734, y: 168.16734, z: 168.16734}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1275360049
 SpriteRenderer:
@@ -7715,7 +7806,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7909,6 +8000,7 @@ MonoBehaviour:
   - "\u6DBC\u9EB5"
   - "\u934B\u8CBC"
   - "\u7C84\u689D"
+  getfood: 
 --- !u!212 &1314204481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8075,7 +8167,7 @@ Transform:
   - {fileID: 606986919}
   - {fileID: 694582575}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1315726976
 SpriteRenderer:
@@ -8149,6 +8241,7 @@ MonoBehaviour:
   - {fileID: 694582574}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1323442245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8261,7 +8354,7 @@ Transform:
   - {fileID: 2063830737}
   - {fileID: 1419560316}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1370458067
 SpriteRenderer:
@@ -8646,6 +8739,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1519966435}
   - {fileID: 1498482524}
   - {fileID: 404059745}
   - {fileID: 2086428923}
@@ -8672,7 +8766,6 @@ RectTransform:
   - {fileID: 1473990742}
   - {fileID: 1639922995}
   - {fileID: 1286108112}
-  - {fileID: 1519966435}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8774,6 +8867,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1412988967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412988968}
+  m_Layer: 0
+  m_Name: map_setting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1412988968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412988967}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.376106, y: 0.13361368, z: -1.0149765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1201718036}
+  - {fileID: 91540124}
+  - {fileID: 1552986881}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1413056326
 GameObject:
   m_ObjectHideFlags: 0
@@ -8807,7 +8933,7 @@ Transform:
   - {fileID: 1019597149}
   - {fileID: 1221411650}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1413056328
 SpriteRenderer:
@@ -8877,6 +9003,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1413345350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9151,6 +9278,8 @@ MonoBehaviour:
   - "\u767C\u7CBF"
   - "\u611B\u7389"
   - "\u6F64\u9905"
+  - "\u6F64\u9905"
+  getfood: "\u8ACB\u7D66\u62114\u500B\u6F64\u9905"
 --- !u!1 &1467171114
 GameObject:
   m_ObjectHideFlags: 0
@@ -9213,6 +9342,7 @@ MonoBehaviour:
   - "\u8C46\u6F3F"
   - "\u7C73\u6F3F"
   - "\u610F\u9EB5"
+  getfood: 
 --- !u!212 &1467171117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9374,7 +9504,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9777,7 +9907,7 @@ Transform:
   m_LocalScale: {x: 67.61063, y: 67.61063, z: 67.61063}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1498482525
 SpriteRenderer:
@@ -9945,7 +10075,7 @@ Transform:
   - {fileID: 1096858191}
   - {fileID: 1757680267}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1510487948
 SpriteRenderer:
@@ -10019,6 +10149,7 @@ MonoBehaviour:
   - {fileID: 1757680266}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &1519966434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10060,7 +10191,7 @@ RectTransform:
   - {fileID: 502148607}
   - {fileID: 251498983}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 26
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5026041, y: 0.48600003}
   m_AnchorMax: {x: 0.5026041, y: 0.512}
@@ -10400,6 +10531,61 @@ MonoBehaviour:
   - "\u86CB\u9905"
   - "\u98EF\u7CF0"
   - "\u6CB9\u689D"
+  - "\u6CB9\u689D"
+  getfood: 
+--- !u!1 &1552986880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552986881}
+  - component: {fileID: 1552986882}
+  m_Layer: 0
+  m_Name: map_food
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552986881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552986880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1412988968}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552986882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552986880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1aa586cd8cddb47917d26e0bc577b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test_get_food: 0
+  map_pin: []
+  parent_map_pin: {fileID: 0}
+  food_appear: {fileID: 0}
+  food_speak: []
+  map_pin_appear: 
+  test_now_food: 0
+  which_map_pin: 0
+  map_fight_index: 0
+  speak_get_food: 0
 --- !u!1 &1576182271
 GameObject:
   m_ObjectHideFlags: 0
@@ -10514,7 +10700,7 @@ Transform:
   - {fileID: 1504208639}
   - {fileID: 1146038465}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1581844793
 SpriteRenderer:
@@ -10758,7 +10944,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11080,7 +11266,7 @@ Transform:
   - {fileID: 366740098}
   - {fileID: 1820035338}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1685861500
 SpriteRenderer:
@@ -11226,6 +11412,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 1
   food: []
+  getfood: 
 --- !u!1 &1696531707
 GameObject:
   m_ObjectHideFlags: 0
@@ -11443,6 +11630,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 0
   food: []
+  getfood: 
 --- !u!114 &1699614883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12077,6 +12265,8 @@ MonoBehaviour:
   - "\u8C6C\u8173"
   - "\u7CA5"
   - "\u706B\u934B"
+  - "\u706B\u934B"
+  getfood: "\u6211\u8981\u4E00\u7897\u7CA5"
 --- !u!114 &1805002983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12570,6 +12760,7 @@ MonoBehaviour:
   - "\u9EBB\u7CEC"
   - "\u5249\u51B0"
   - "\u6CB9\u98EF"
+  getfood: 
 --- !u!212 &1858830804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13049,6 +13240,8 @@ MonoBehaviour:
   - "\u96DE\u6392"
   - "\u96DE\u6E6F"
   - "\u71D2\u9905"
+  - "\u71D2\u9905"
+  getfood: 
 --- !u!1 &1914346551
 GameObject:
   m_ObjectHideFlags: 0
@@ -13320,7 +13513,7 @@ Transform:
   - {fileID: 1134150868}
   - {fileID: 907276333}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2009113728
 MonoBehaviour:
@@ -13692,7 +13885,7 @@ Transform:
   - {fileID: 1772525234}
   - {fileID: 2022333953}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2045052702
 SpriteRenderer:
@@ -13766,6 +13959,7 @@ MonoBehaviour:
   - {fileID: 1772525233}
   level_num: 0
   food: []
+  getfood: 
 --- !u!1 &2063830736
 GameObject:
   m_ObjectHideFlags: 0
@@ -13880,7 +14074,7 @@ Transform:
   - {fileID: 1653002339}
   - {fileID: 1141070624}
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2067224930
 SpriteRenderer:
@@ -13950,6 +14144,7 @@ MonoBehaviour:
   numbertext: []
   level_num: 2
   food: []
+  getfood: 
 --- !u!1 &2086428922
 GameObject:
   m_ObjectHideFlags: 0
@@ -13979,7 +14174,7 @@ Transform:
   m_LocalScale: {x: 69.29188, y: 69.29188, z: 69.29186}
   m_Children: []
   m_Father: {fileID: 1402174533}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &2086428924
 SpriteRenderer:
@@ -14174,6 +14369,7 @@ MonoBehaviour:
   - "\u7D05\u8336"
   - "\u8089\u5713"
   - "\u5976\u8336"
+  getfood: 
 --- !u!212 &2094418134
 SpriteRenderer:
   m_ObjectHideFlags: 0

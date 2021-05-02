@@ -21,6 +21,9 @@ public class people_map : MonoBehaviour
     // public GameObject monster;
     Transform Player;
 
+    [SerializeField]
+    bool escape_monster;
+
     public Animator Action_Controller;
 
     public bool left;
@@ -37,10 +40,13 @@ public class people_map : MonoBehaviour
 
     public bool turn_back;
 
+    public static bool people_on_map;
+
     public static bool fight_notice;
 
     public bool move_map;
 
+    // public bool meet_monster;
     private int corner_num;
 
     private int temp_corner_num;
@@ -66,7 +72,10 @@ public class people_map : MonoBehaviour
         turn_back = false;
         at_corner = false;
         fight_notice = false;
+        people_on_map = true;
+        escape_monster = Map_monster_alive_check.escape_monster;
 
+        // meet_monster = false;
         // people_appear = true;
         // appear_num = 0;
         // temp_appear_num = 0;
@@ -81,6 +90,8 @@ public class people_map : MonoBehaviour
         // which_monster = map_which_monster;
         // aaaa = fight_notice;
         // ddd = disappear;
+        escape_monster = Map_monster_alive_check.escape_monster;
+
         Action_Controller.SetBool("left", left);
         Action_Controller.SetBool("right", right);
 
@@ -93,11 +104,22 @@ public class people_map : MonoBehaviour
     {
         leftorright = map_button.leftorright;
 
-        if (leftorright != 0 && wall == false)
+        // if (escape_monster != true)
+        // {
+        if (fight_notice == true)
+        {
+            MoveSpeed = 0;
+        }
+        else if (leftorright != 0 && wall == false && escape_monster != true)
         {
             MoveSpeed = 1f + transportation * 0.15f; //暫時調快 原先0.2
         }
-        if (at_corner == true && wall == false)
+        if (
+            at_corner == true &&
+            wall == false &&
+            fight_notice != true &&
+            escape_monster != true
+        )
         {
             MoveSpeed = 0.3f;
 
@@ -124,6 +146,7 @@ public class people_map : MonoBehaviour
                     right = false;
                 }
             }
+            // }
         }
     }
 
@@ -134,11 +157,21 @@ public class people_map : MonoBehaviour
         AnimatorStateInfo currentState =
             Action_Controller.GetCurrentAnimatorStateInfo(0);
         Player.eulerAngles = new Vector3(0, 0, 0);
-
         if (
+            escape_monster == true //&&map_monster.monster_alive
+        )
+        {
+            // if()
+            MoveSpeed = 0;
+            Player.position = new Vector3(x, y, 0);
+            people_on_map = true;
+            escape_monster = false; //try
+        }
+        else if (
             wall == false &&
             map.activeInHierarchy == true &&
-            map_monster.activeInHierarchy == true
+            map_monster.activeInHierarchy == true &&
+            escape_monster != true
         )
         {
             if (
@@ -315,8 +348,12 @@ public class people_map : MonoBehaviour
         if (c.gameObject.tag == "Monster")
         {
             Player.Translate(300, 4000, 0);
+            people_on_map = false;
+            MoveSpeed = 0;
             fight_notice = true;
             which_monster = monster_mapwalk.which_monster;
+
+            // meet_monster = true;
             // which_monster = map_which_monster;
 
             // if (c.gameObject.name == "monster1")
