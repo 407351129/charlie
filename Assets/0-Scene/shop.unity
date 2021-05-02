@@ -1993,6 +1993,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2134056113}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &340003559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,8 +2487,8 @@ Transform:
   m_LocalPosition: {x: 1.882513, y: 2.6202936, z: -0.67679805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1813726733}
   - {fileID: 1268544911}
+  - {fileID: 1813726733}
   - {fileID: 1008170606}
   m_Father: {fileID: 2071987315363763083}
   m_RootOrder: 0
@@ -2800,6 +2801,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 1132297561}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!222 &457620718
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3623,6 +3625,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 623941059}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &558294901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4616,6 +4619,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 768747817}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &725167477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5001,6 +5005,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &787854877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5579,6 +5584,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2062384058}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!1 &846900495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6372,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &1008170608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7616,6 +7623,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2134056113}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &1172410142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7918,6 +7926,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2062384058}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &1234098239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8172,6 +8181,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &1262510618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8480,7 +8490,7 @@ Transform:
   - {fileID: 43199061}
   - {fileID: 505336885}
   m_Father: {fileID: 413606696}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270728491
 GameObject:
@@ -11282,7 +11292,7 @@ Transform:
   m_Children:
   - {fileID: 7807975}
   m_Father: {fileID: 413606696}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1813726734
 MonoBehaviour:
@@ -11300,6 +11310,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &1813726735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12987,6 +12998,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2071987315363534533}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!65 &2078610884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13438,6 +13450,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 768747817}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &2099537184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13581,6 +13594,7 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 623941059}
   b_appear: 0
   b_disappear: 0
+  click: 0
 --- !u!114 &2106206198
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -83,6 +83,7 @@ public class map_button : MonoBehaviour
         // stop_talk = 0;
         // InvokeRepeating("timer", 1, 1);
         // s2 = "左轉";
+
         if (AzureSpeech.message.Contains("左轉") == true)
         {
             if (left_is_press == true)

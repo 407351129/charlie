@@ -8,10 +8,9 @@ public class DialogueText : MonoBehaviour
     public int lettersPerSecond;
     public Text dialogueText;
 
-    public GameObject others;
     public GameObject actions;
-    public GameObject turnAttack;
-    public GameObject turnBag;
+    public GameObject questions;
+    public GameObject bag;
 
     public void SetDialogue(string dialogue)
     {
@@ -21,35 +20,26 @@ public class DialogueText : MonoBehaviour
     public IEnumerator TypeDialogue(string dialogue)
     {
         dialogueText.text = "";
-        foreach(var letter in dialogue.ToCharArray())
+        foreach (var letter in dialogue.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(1f/lettersPerSecond);
+            yield return new WaitForSeconds(1f / lettersPerSecond);
         }
     }
 
-    public void Enabledialogue(bool enabled)
+    public void EnableStart(bool enabled)
     {
         dialogueText.enabled = enabled;
-    }
-
-    public void EnableOthers(bool enabled)
-    {
-        others.SetActive(enabled);
-    }
-
-    public void EnableActions(bool enabled)
-    {
         actions.SetActive(enabled);
     }
 
-    public void EnableAttack(bool enabled)
+    public void EnableQuestions(bool enabled)
     {
-        turnAttack.SetActive(enabled);
+        questions.SetActive(enabled);
     }
 
     public void EnableBag(bool enabled)
     {
-        turnBag.SetActive(enabled);
+        bag.SetActive(enabled);
     }
 }

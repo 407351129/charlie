@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: a0a91b2c70afd334e8898d1e56f4b484
   - enabled: 1
     path: Assets/0-Scene/map1.unity
-    guid: e181a06419c33b34d97ea5c36dc9de8e
+    guid: ab4d70348b81a9342852cb7fd9083694
   - enabled: 1
     path: Assets/0-Scene/map2.unity
     guid: ef0c4e3ca5bfc60499cd68683018b371
@@ -27,16 +27,16 @@ EditorBuildSettings:
     path: Assets/0-Scene/order.unity
     guid: 98703962c50d98e4b98157d583d5bec2
   - enabled: 1
-    path: Assets/0-Scene/fighting_notice.unity
+    path: Assets/0-Scene/delete/fighting_notice.unity
     guid: 9ac838ef133b37348a18b03730c63c6d
   - enabled: 1
-    path: Assets/0-Scene/fight(old).unity
-    guid: f3f0a2c41621ab849979b8edad8ad354
+    path: Assets/0-Scene/fight.unity
+    guid: 80d5ef879e598bd45a3faf8e87c939f9
   - enabled: 1
-    path: Assets/0-Scene/fight_food.unity
+    path: Assets/0-Scene/delete/fight_food.unity
     guid: 75d7042cfd0ed2141b7bd0f16e95178d
   - enabled: 1
-    path: Assets/0-Scene/fight_bag.unity
+    path: Assets/0-Scene/delete/fight_bag.unity
     guid: 1c7502212daa6c843b8ef63bbc56536b
   - enabled: 1
     path: Assets/0-Scene/dead_notice.unity
@@ -62,7 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0-Scene/buy_message(LP).unity
     guid: ee021ef9d159e7048a433af65f0c0c02
-  - enabled: 1
-    path: Assets/0-Scene/map1.unity
-    guid: 8ed1f7a1cde75324a8e15351a5f69823
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

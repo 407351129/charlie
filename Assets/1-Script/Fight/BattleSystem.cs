@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, ACTIONS, ATTACK, DEFENSE, BAG, ENEMYTURN, WIN, LOST }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -18,24 +18,39 @@ public class BattleSystem : MonoBehaviour
 
     public DialogueText dialogueText;
     public EndNotice endNotice;
+    public AzureSpeech azureSpeech;
+    public SpeechLibTest speechLibTest;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
 
-    public Weapon fireball;
-    
+    public Weapon playerAttack;
+    public Weapon enemyAttack;
+
     public BattleState state;
 
+    public bool click;
+    public static bool monster_alive; //這裡
+
     // Start is called before the first frame update
+    // void Awake(){
+        
+    // }
     void Start()
     {
+        click = true;
+        monster_alive = true;
         state = BattleState.START;
         StartCoroutine(SetupBattle());        
     }
 
     IEnumerator SetupBattle()
     {
-        PlayerAttackOff();
+        dialogueText.EnableStart(true);
+        dialogueText.EnableQuestions(false);
+        azureSpeech.EnableAzure(false);
+        speechLibTest.EnableSpeech(false);
+        dialogueText.EnableBag(false);
         endNotice.EnableDie(false);
         endNotice.EnableWin(false);
 
@@ -51,94 +66,45 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
 
-        dialogueText.EnableActions(true);
-
-        state = BattleState.PLAYERTURN;
+        state = BattleState.ACTIONS;
     }
 
-    void PlayerStartOn()
+    void PlayerAttack()
     {
-        dialogueText.Enabledialogue(true);
-        dialogueText.EnableOthers(true);
-        dialogueText.EnableActions(true);
-    }
-
-    void PlayerStartOff()
-    {
-        dialogueText.Enabledialogue(false);
-        dialogueText.EnableOthers(false);
-        dialogueText.EnableActions(false);
-    }
-
-    void PlayerAttackOn()
-    {
-        dialogueText.EnableAttack(true);
-    }
-
-    void PlayerAttackOff()
-    {
-        dialogueText.EnableAttack(false);
-    }
-
-    void PlayerBagOn()
-    {
-        dialogueText.EnableBag(true);
-    }
-
-    void PlayerBagOff()
-    {
-        dialogueText.EnableBag(false);
-    }
-
-    IEnumerator PlayerAttack()
-    {
-        fireball.Attack();
-        bool EnemyisDead = playerUnit.TakeDamage(enemyUnit.damage);
+        playerAttack.Attack();
+        playerUnit.TakeDamage(enemyUnit.damage);
 
         playerHUD.SetHP(playerUnit.currentHP);
-
-        PlayerAttackOff();
-        PlayerStartOn();
-
-        yield return new WaitForSeconds(0.5f);
-
-        if(EnemyisDead)
-        {
-            state = BattleState.WON;
-            EndBattle();
-        }
-        else
-        {
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
-        }
     }
 
-    IEnumerator EnemyTurn()
+    void EnemyAttack()
     {
-        bool PlayerisDead = enemyUnit.TakeDamage(playerUnit.damage);
+        enemyAttack.Attack();
+        enemyUnit.TakeDamage(playerUnit.damage);
 
         enemyHUD.SetHP(enemyUnit.currentHP);
-       
-        yield return new WaitForSeconds(1f);
+    }
 
-        if(PlayerisDead)
-        {
-            state = BattleState.LOST;
-            EndBattle();
-        } else {
-            state = BattleState.PLAYERTURN;
-            //PlayerTurn();
-        }
+    void DefenseSuccess()
+    {
+        enemyAttack.Attack();
+    }
+
+    void DefenseFail()
+    {
+        enemyAttack.Attack();
+        enemyUnit.DefenseDamage((playerUnit.damage / 2));
+        enemyHUD.SetHP(enemyUnit.currentHP);
     }
 
     void EndBattle()
     {
-        if(state == BattleState.WON)
+        if (state == BattleState.WIN)
         {
             endNotice.EnableWin(true);
-        } else if (state == BattleState.LOST) {
-            dialogueText.Enabledialogue(false);
+        }
+        else if (state == BattleState.LOST)
+        {
             endNotice.EnableDie(true);
         }
     }
@@ -150,44 +116,133 @@ public class BattleSystem : MonoBehaviour
         enemyHUD.SetHP(enemyUnit.currentHP);
 
         yield return new WaitForSeconds(0.5f);
-        PlayerBagOff();
-        PlayerStartOn();
+
+        state = BattleState.ACTIONS;
+        dialogueText.EnableBag(false);
+        dialogueText.EnableStart(true);
     }
 
     public void OnAttackButton()
     {
-        if(state != BattleState.PLAYERTURN)
+        if(state != BattleState.ACTIONS)
             return;
 
-        PlayerStartOff();
-        PlayerAttackOn();
+        state = BattleState.ATTACK;
+        dialogueText.EnableStart(false);
+        dialogueText.EnableQuestions(true);
+        azureSpeech.EnableAzure(true);
+        speechLibTest.EnableSpeech(true);
+        click = true;
     }
 
     public void OnDefenseButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.ACTIONS)
             return;
 
-        PlayerStartOff();
-        PlayerAttackOn();
+        state = BattleState.DEFENSE;
+        dialogueText.EnableStart(false);
+        dialogueText.EnableQuestions(true);
+        azureSpeech.EnableAzure(true);
+        speechLibTest.EnableSpeech(true);
+        click = true;
     }
 
     public void OnBagButton()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.ACTIONS)
             return;
 
-        PlayerStartOff();
-        PlayerBagOn();
-    }
-
-    public void AttackingButton()
-    {
-        StartCoroutine(PlayerAttack());
+        state = BattleState.BAG;
+        dialogueText.EnableStart(false);
+        dialogueText.EnableBag(true);
     }
 
     public void HealingButton()
     {
         StartCoroutine(PlayerHeal());
+    }
+
+    void Update()
+    {
+        bool EnemyIsDead = playerUnit.End();
+        bool PlayerIsDead = enemyUnit.End();
+        if (click == true)
+        {
+            if (state == BattleState.ATTACK)
+            {
+                if (AzureSpeech.message.Contains("奶茶") == true)
+                {
+                    Invoke("PlayerAttack", 0.5f);
+                    //PlayerAttack();
+
+                    state = BattleState.ENEMYTURN;
+                    Invoke("EnemyAttack", 1f);
+
+                    state = BattleState.ACTIONS;
+                    AzureSpeech.message = "";
+                    dialogueText.EnableQuestions(false);
+                    azureSpeech.EnableAzure(false);
+                    dialogueText.EnableStart(true);
+
+                    click = false;
+                }
+                else if (AzureSpeech.message.Contains("奶茶") == false & countdown.time == 0)
+                {
+                    state = BattleState.ENEMYTURN;
+                    Invoke("EnemyAttack", 0.5f);
+                    //EnemyAttack();
+
+                    state = BattleState.ACTIONS;
+                    AzureSpeech.message = "";
+                    dialogueText.EnableQuestions(false);
+                    azureSpeech.EnableAzure(false);
+                    dialogueText.EnableStart(true);
+
+                    click = false;
+                }
+            }
+            else if (state == BattleState.DEFENSE)
+            {
+                if (AzureSpeech.message.Contains("奶茶") == true)
+                {
+                    state = BattleState.ENEMYTURN;
+                    Invoke("DefenseSuccess", 0.5f);
+                    //DefenseSuccess();
+
+                    state = BattleState.ACTIONS;
+                    AzureSpeech.message = "";
+                    dialogueText.EnableQuestions(false);
+                    azureSpeech.EnableAzure(false);
+                    dialogueText.EnableStart(true);
+
+                    click = false;
+                }
+                else if (AzureSpeech.message.Contains("奶茶") == false & countdown.time == 0)
+                {
+                    state = BattleState.ENEMYTURN;
+                    Invoke("DefenseFail", 0.5f);
+                    //DefenseFail();
+
+                    state = BattleState.ACTIONS;
+                    AzureSpeech.message = "";
+                    dialogueText.EnableQuestions(false);
+                    azureSpeech.EnableAzure(false);
+                    dialogueText.EnableStart(true);
+
+                    click = false;
+                }
+            }
+        }
+        if (PlayerIsDead == true)
+        {
+            state = BattleState.LOST;
+            EndBattle();
+        }
+        if (EnemyIsDead == true)
+        {
+            state = BattleState.WIN;
+            EndBattle();
+        }
     }
 }

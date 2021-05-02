@@ -552,7 +552,7 @@ MonoBehaviour:
   start: {fileID: 8300000, guid: 3df68a0c3ff71cd43ac33316a024004b, type: 3}
   UI_click: {fileID: 8300000, guid: 0a1b96cad6b7ae94686e7efe5332eccc, type: 3}
   attack: {fileID: 8300000, guid: 516feb64653ac2445ba85637a8c68c92, type: 3}
-  levelup: {fileID: 8300000, guid: a45339362ec64294fabf7e4d24c408d1, type: 3}
+  levelup: {fileID: 8300000, guid: ddf0aefa61c268541b81cea5b9c72027, type: 3}
   musicToggle: 1
 --- !u!4 &300723695
 Transform:
