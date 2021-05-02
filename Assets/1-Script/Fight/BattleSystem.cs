@@ -11,6 +11,11 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public Text levelText;
 
+    public GameObject level0CurrentArmors;
+    public GameObject level1CurrentArmors;
+    public GameObject level2CurrentArmors;
+    public GameObject level3CurrentArmors;
+
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
 
@@ -32,6 +37,8 @@ public class BattleSystem : MonoBehaviour
 
     public bool click;
     public static bool monster_alive; //這裡
+    public int playerDamage;
+    public  int playerLevel;
 
     // Start is called before the first frame update
     // void Awake(){
@@ -41,8 +48,10 @@ public class BattleSystem : MonoBehaviour
     {
         click = false;
         monster_alive = true;
+        playerLevel = PlayerPrefs.GetInt("level_int");
+        playerDamage = 35 + playerLevel * 5;
         state = BattleState.START;
-        StartCoroutine(SetupBattle());        
+        StartCoroutine(SetupBattle());   
     }
 
     IEnumerator SetupBattle()
@@ -81,7 +90,7 @@ public class BattleSystem : MonoBehaviour
     void PlayerAttack()
     {
         playerAttack.Attack();
-        playerUnit.TakeDamage(enemyUnit.damage);
+        playerUnit.TakeDamage(playerDamage);
 
         playerHUD.SetHP(playerUnit.currentHP);
     }
@@ -124,11 +133,41 @@ public class BattleSystem : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
 
-        //yield return new WaitForSeconds(0.5f);
-
         state = BattleState.ACTIONS;
         dialogueText.EnableBag(false);
         dialogueText.EnableStart(true);
+    }
+
+    void Armor()
+    {
+        if (playerLevel == 0)
+        {
+            EnableLevel1(false);
+            EnableLevel2(false);
+            EnableLevel3(false);
+            EnableLevel0(true);
+        }
+        else if (playerLevel == 1)
+        {
+            EnableLevel0(false);
+            EnableLevel2(false);
+            EnableLevel3(false);
+            EnableLevel1(true);
+        }
+        else if (playerLevel == 2)
+        {
+            EnableLevel0(false);
+            EnableLevel1(false);
+            EnableLevel3(false);
+            EnableLevel2(true);
+        }
+        else if (playerLevel == 3)
+        {
+            EnableLevel0(false);
+            EnableLevel1(false);
+            EnableLevel2(false);
+            EnableLevel3(true);
+        }
     }
 
     public void OnAttackButton()
@@ -172,8 +211,29 @@ public class BattleSystem : MonoBehaviour
         PlayerHeal();
     }
 
+    public void EnableLevel0(bool enabled)
+    {
+        level0CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel1(bool enabled)
+    {
+        level1CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel2(bool enabled)
+    {
+        level2CurrentArmors.SetActive(enabled);
+    }
+
+    public void EnableLevel3(bool enabled)
+    {
+        level3CurrentArmors.SetActive(enabled);
+    }
+
     void Update()
     {
+        Armor();
         bool EnemyIsDead = playerUnit.End();
         bool PlayerIsDead = enemyUnit.End();
         if (click == true)
@@ -234,16 +294,6 @@ public class BattleSystem : MonoBehaviour
                     click = false;
                 }
             }
-            //else if (state == BattleState.BAG)
-            //{
-            //    PlayerHeal();
-
-            //    state = BattleState.ACTIONS;
-            //    dialogueText.EnableBag(false);
-            //    dialogueText.EnableStart(true);
-
-            //    click = false;
-            //}
         }
         if (PlayerIsDead == true)
         {
