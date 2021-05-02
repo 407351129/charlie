@@ -11,11 +11,8 @@ public class Map_time : MonoBehaviour
     
     public int test_map_time;
 
-<<<<<<< HEAD
-=======
-    public bool end_map; //之後接值，暫時公有
 
->>>>>>> 5f51138204529f8ad272a316a25b5b71b3271117
+
     [SerializeField]
     private bool end_map; //之後接值
 
@@ -105,11 +102,8 @@ public class Map_time : MonoBehaviour
 
     void go_to_map()
     {
-<<<<<<< HEAD
-=======
-        end_map = Map_food.end_map; //暫時
 
->>>>>>> 5f51138204529f8ad272a316a25b5b71b3271117
+
         // Awake();
         GameObject map_setting = GameObject.Find("map_setting");
 
@@ -122,7 +116,7 @@ public class Map_time : MonoBehaviour
             map_fight_index == 2
         )
         {
-<<<<<<< HEAD
+
 
             DontDestroyOnLoad(map_setting);
         }
@@ -130,13 +124,7 @@ public class Map_time : MonoBehaviour
         {
             Destroy(map_setting);
 
-=======
-            DontDestroyOnLoad (map_setting);
-        }
-        else
-        {
-            Destroy (map_setting);
->>>>>>> 5f51138204529f8ad272a316a25b5b71b3271117
+
         }
     }
 
@@ -228,7 +216,7 @@ public class Map_time : MonoBehaviour
     {
         map_fight_index = SceneManager.GetActiveScene().buildIndex;
 
-<<<<<<< HEAD
+
         now_level = levelstars.now_level;
         test_map_start = map_start;
         test_map_time = map_time;
@@ -297,8 +285,7 @@ public class Map_time : MonoBehaviour
         }
 
 
-=======
->>>>>>> 5f51138204529f8ad272a316a25b5b71b3271117
+
         if (
             map_fight_index == 8 ||
             map_fight_index == 3 ||
