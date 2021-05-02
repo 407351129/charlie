@@ -13,11 +13,12 @@ public class food_text : MonoBehaviour
     [SerializeField]
     private int now_food;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public GameObject map_pin_end;
 
+    // Start is called before the first frame update
+    // void Start()
+    // {
+    // }
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +26,15 @@ public class food_text : MonoBehaviour
         food_speak = levelstars.foods;
 
         food_chinese_UI.text = food_speak[now_food] + "";
+
+        if (now_food == 3)
+        {
+            map_pin_end.SetActive(true);
+        }
+        else
+        {
+            map_pin_end.SetActive(false);
+        }
         // food_UI.text = food_speak[now_food] + "";
     }
 }

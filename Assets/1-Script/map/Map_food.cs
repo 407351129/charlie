@@ -94,14 +94,7 @@ public class Map_food : MonoBehaviour
         // map_pin = new GameObject[4];
         parent_map_pin = GameObject.Find("map_pin");
 
-        if (now_food == 3)
-        {
-            map_pin_appear[3] = true;
-            map_pin_appear[0] = false;
-            map_pin_appear[1] = false;
-            map_pin_appear[2] = false;
-        }
-        else if (now_food == 4)
+        if (now_food == 4)
         {
             end_map = true;
         }
