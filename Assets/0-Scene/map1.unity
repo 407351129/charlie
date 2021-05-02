@@ -1445,6 +1445,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &119184585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2765,6 +2769,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 1
+  time_UI: {fileID: 189419775}
+  time_out_test: 0
+  food: {fileID: 243018867}
+  monster: {fileID: 820301764}
 --- !u!1 &294450147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,6 +3718,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 3
+  time_UI: {fileID: 189419775}
+  time_out_test: 0
+  food: {fileID: 243018867}
+  monster: {fileID: 820301764}
 --- !u!1 &438836329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4342,6 +4354,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 4
+  time_UI: {fileID: 189419775}
+  time_out_test: 0
+  food: {fileID: 243018867}
+  monster: {fileID: 820301764}
 --- !u!61 &490985974
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7568,6 +7584,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &894591268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8985,6 +9005,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &1011533839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11896,6 +11920,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!1 &1367285897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12347,6 +12375,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 2
+  time_UI: {fileID: 189419775}
+  time_out_test: 0
+  food: {fileID: 243018867}
+  monster: {fileID: 820301764}
 --- !u!1 &1390902378
 GameObject:
   m_ObjectHideFlags: 0
@@ -15148,6 +15180,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &1677850693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18219,6 +18255,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!61 &2079480954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18600,6 +18640,10 @@ MonoBehaviour:
   food_notice: 0
   test_which: 0
   map_pin_num: 0
+  time_UI: {fileID: 0}
+  time_out_test: 0
+  food: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!1 &2099569145
 GameObject:
   m_ObjectHideFlags: 0

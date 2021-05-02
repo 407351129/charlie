@@ -36,6 +36,18 @@ public class appear_2notification : MonoBehaviour
 
     public static int which_map_pin;
 
+    public static int time = 30;
+
+    public Text time_UI;
+
+    public static bool time_out;
+
+    public bool time_out_test;
+
+    public GameObject food;
+
+    public GameObject monster;
+
     void Start()
     {
         // Player = gameObject.transform;
@@ -43,25 +55,21 @@ public class appear_2notification : MonoBehaviour
 
     void Update()
     {
-        // if (b_appear_2notification.speak_get_food == true)
+        time_out_test = time_out;
+        if (food.activeInHierarchy == false)
+        {
+            time_out = false;
+        }
+
+        if (time_out == true)
+        {
+            food.SetActive(false);
+            monster.SetActive(true);
+        }
+        // if (countdown.time_out == true)
         // {
         //     food_notice = false;
-        //     // which_map_pin = map_pin_num;
-        //     appear = false;
-        //     disappear = false;
         // }
-        // if (fight_notice == true)
-        // {
-        // notification_on();
-        // appear_on();
-        // }
-        // appear_on();
-        // if (appear != false || disappear != true)
-        // {
-        //     appear = false;
-        //     disappear = false;
-        // }
-        // notification_off();
     }
 
     void notification_on()
@@ -147,29 +155,10 @@ public class appear_2notification : MonoBehaviour
     {
         if (c.gameObject.tag == "Player")
         {
-            // appear_notice.SetActive(true);
-            // test_which = 5555;
             appear_on();
-            // at_corner = false;
-            // Action_Controller.SetBool("at_corner", at_corner);
         }
-        // if (c.gameObject.tag == "Food")
-        // {
-        //     Player.Translate(300, 4000, 0);
-        //     // food_notice = true;
-        // }
     }
 
-    // void OnCollisionStay(Collider2D c)
-    // {
-    //     if (c.gameObject.tag == "Player")
-    //     {
-    //         // test_which = 5555;
-    //         appear_on();
-    //         // at_corner = false;
-    //         // Action_Controller.SetBool("at_corner", at_corner);
-    //     }
-    // }
     void OnTriggerEnter2D(Collider2D c) //food
     {
         if (c.gameObject.tag == "Player")
@@ -178,11 +167,48 @@ public class appear_2notification : MonoBehaviour
             which_map_pin = map_pin_num;
             appear = true;
             disappear = true;
-
+            start_time();
             appear_on();
             // m_wall = false;
             // return;
         }
+    }
+
+    void timer()
+    {
+        time -= 1;
+        if (time == 0)
+        {
+            time_out = true;
+            time_out_test = true;
+            CancelInvoke("timer");
+        }
+        if (time != 30)
+        {
+            time_UI.text = time + "";
+        }
+
+        // time_test = time;
+        // if (time == 0)
+        // {
+        //     time_UI.text = "0";
+
+        //     // return;
+        //     // CancelInvoke("timer");
+        // }
+    }
+
+    void start_time()
+    {
+        CancelInvoke("timer");
+        time = 30;
+        time_out = false;
+        if (time == 30)
+        {
+            time_UI.text = time + "";
+        }
+        InvokeRepeating("timer", 1, 1);
+        time = 30;
     }
 
     void food_appear()
