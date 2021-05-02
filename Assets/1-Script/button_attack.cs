@@ -31,6 +31,7 @@ public class button_attack : MonoBehaviour
         // Application.Quit();
         fight_on = true;
         //f_on = fight_on;
+
         // return;
     }
 }
