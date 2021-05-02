@@ -1870,10 +1870,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 768, y: 1024}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3180,6 +3180,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 1214025173}
   b_appear: 0
   b_disappear: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &775838291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6772,6 +6774,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 1497620784}
   b_appear: 0
   b_disappear: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1782144688
 MonoBehaviour:
   m_ObjectHideFlags: 0
