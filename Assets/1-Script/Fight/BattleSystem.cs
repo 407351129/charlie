@@ -11,7 +11,6 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public Text levelText;
 
-    public GameObject level0CurrentArmors;
     public GameObject level1CurrentArmors;
     public GameObject level2CurrentArmors;
     public GameObject level3CurrentArmors;
@@ -142,28 +141,18 @@ public class BattleSystem : MonoBehaviour
     {
         if (playerLevel == 0)
         {
-            EnableLevel1(false);
-            EnableLevel2(false);
-            EnableLevel3(false);
-            EnableLevel0(true);
-        }
-        else if (playerLevel == 1)
-        {
-            EnableLevel0(false);
             EnableLevel2(false);
             EnableLevel3(false);
             EnableLevel1(true);
         }
         else if (playerLevel == 2)
         {
-            EnableLevel0(false);
             EnableLevel1(false);
             EnableLevel3(false);
             EnableLevel2(true);
         }
         else if (playerLevel == 3)
         {
-            EnableLevel0(false);
             EnableLevel1(false);
             EnableLevel2(false);
             EnableLevel3(true);
@@ -209,11 +198,6 @@ public class BattleSystem : MonoBehaviour
     public void HealingButton()
     {
         PlayerHeal();
-    }
-
-    public void EnableLevel0(bool enabled)
-    {
-        level0CurrentArmors.SetActive(enabled);
     }
 
     public void EnableLevel1(bool enabled)
