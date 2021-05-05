@@ -41,7 +41,7 @@ public class questionData : MonoBehaviour
 
         //提取每行数据，遍历打印
         //int Questions_Id;
-        string Questions_Content;
+       string Questions_Content;
        string Questions_Symbol;
        string Questions_Chinese;
         int Questions_Reward;
@@ -58,11 +58,11 @@ public class questionData : MonoBehaviour
             Questions_Type = (int)dr["Questions_Type"];
 
             //print("id:" + (int)dr["id"]);
-            print("name:" + Questions_Content);
-            print("name:" + Questions_Symbol);
-            print("name:" + Questions_Chinese);
-            print("name:" + Questions_Reward);
-            print("name:" + Questions_Type);
+            //print("name:" + Questions_Content);
+            //print("name:" + Questions_Symbol);
+            //print("name:" + Questions_Chinese);
+            //print("name:" + Questions_Reward);
+            //print("name:" + Questions_Type);
 
 
             show.text = Questions_Content + "\n" + Questions_Symbol + "\n" + Questions_Chinese;
