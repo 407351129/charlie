@@ -35,28 +35,6 @@ public class ArmorLevel : MonoBehaviour
         level_int = 1;
     }
 
-    public void EnableLevel1(bool enabled)
-    {
-        level1Armors.SetActive (enabled);
-        level1CurrentArmors.SetActive (enabled);
-    }
-
-    public void EnableLevel2(bool enabled)
-    {
-        level2Armors.SetActive (enabled);
-        level2CurrentArmors.SetActive (enabled);
-    }
-
-    public void EnableLevel3(bool enabled)
-    {
-        level3Armors.SetActive (enabled);
-        level3CurrentArmors.SetActive (enabled);
-    }
-
-    public void EnableLevelNotice(bool enabled)
-    {
-        levelNotice.SetActive (enabled);
-    }
 
     public void SetLevel()
     {
@@ -119,6 +97,29 @@ public class ArmorLevel : MonoBehaviour
             moneyEN.text = "80";
             moneyCH.text = "80";
         }
+    }
+
+    public void EnableLevel1(bool enabled)
+    {
+        level1Armors.SetActive (enabled);
+        level1CurrentArmors.SetActive (enabled);
+    }
+
+    public void EnableLevel2(bool enabled)
+    {
+        level2Armors.SetActive (enabled);
+        level2CurrentArmors.SetActive (enabled);
+    }
+
+    public void EnableLevel3(bool enabled)
+    {
+        level3Armors.SetActive (enabled);
+        level3CurrentArmors.SetActive (enabled);
+    }
+
+    public void EnableLevelNotice(bool enabled)
+    {
+        levelNotice.SetActive (enabled);
     }
 
     void Update()
