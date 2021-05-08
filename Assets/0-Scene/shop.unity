@@ -1993,7 +1993,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2134056113}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &340003559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,7 +2802,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 1132297561}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!222 &457620718
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3536,6 +3538,7 @@ GameObject:
   - component: {fileID: 558294902}
   - component: {fileID: 558294901}
   - component: {fileID: 558294900}
+  - component: {fileID: 558294903}
   m_Layer: 0
   m_Name: agreeButton
   m_TagString: Untagged
@@ -3625,7 +3628,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 623941059}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &558294901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3654,6 +3658,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 558294903}
+          m_MethodName: Cost
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &558294902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3667,6 +3682,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 2.4825196, y: 2.7384295, z: 90}
+--- !u!114 &558294903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558294897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b311bac06a370548aa9f98257ccbd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 2089874044}
+  coin_int: 0
 --- !u!1 &574543614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,6 +4559,7 @@ GameObject:
   - component: {fileID: 725167478}
   - component: {fileID: 725167477}
   - component: {fileID: 725167476}
+  - component: {fileID: 725167479}
   m_Layer: 0
   m_Name: agreeButton
   m_TagString: Untagged
@@ -4547,7 +4577,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.7113, y: -2.4076, z: 287.95224}
   m_LocalScale: {x: 0.68934, y: 0.87918997, z: 1}
-  m_Children: [{fileID: 6459717}, {fileID: 1923001217}]
+  m_Children:
+  - {fileID: 6459717}
+  - {fileID: 1923001217}
   m_Father: {fileID: 225829638}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4617,7 +4649,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 768747817}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &725167477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4646,6 +4679,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 725167479}
+          m_MethodName: Cost
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &725167478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4659,6 +4703,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 2.4825196, y: 2.7384295, z: 90}
+--- !u!114 &725167479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725167473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b311bac06a370548aa9f98257ccbd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 2089874044}
+  coin_int: 0
 --- !u!1 &726190607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,7 +5061,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &787854877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5452,6 +5511,7 @@ GameObject:
   - component: {fileID: 834508233}
   - component: {fileID: 834508232}
   - component: {fileID: 834508231}
+  - component: {fileID: 834508234}
   m_Layer: 0
   m_Name: agreeButton
   m_TagString: Untagged
@@ -5553,6 +5613,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 834508234}
+          m_MethodName: Cost
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &834508232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5582,7 +5653,22 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2062384058}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
+--- !u!114 &834508234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834508228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b311bac06a370548aa9f98257ccbd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 2089874044}
+  coin_int: 0
 --- !u!1 &846900495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6370,7 +6456,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1008170608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7532,6 +7619,7 @@ GameObject:
   - component: {fileID: 1172410143}
   - component: {fileID: 1172410142}
   - component: {fileID: 1172410141}
+  - component: {fileID: 1172410144}
   m_Layer: 0
   m_Name: agreeButton
   m_TagString: Untagged
@@ -7621,7 +7709,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2134056113}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1172410142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7650,6 +7739,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1172410144}
+          m_MethodName: Cost
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &1172410143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7663,6 +7763,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0, y: 0, z: 0}
   m_Center: {x: 2.4825196, y: 2.7384295, z: 90}
+--- !u!114 &1172410144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172410138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b311bac06a370548aa9f98257ccbd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 2089874044}
+  coin_int: 0
 --- !u!1 &1206649264
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,7 +8038,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2062384058}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1234098239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8179,7 +8294,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1262510618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8807,7 +8923,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.2763379, y: -1.2749982, z: 0.67679805}
   m_LocalScale: {x: 0.54954934, y: 0.4928697, z: 1}
-  m_Children: [{fileID: 2087214963}]
+  m_Children:
+  - {fileID: 2087214963}
   m_Father: {fileID: 748239346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9792,7 +9909,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.5750003, y: 15.399994, z: 0}
   m_LocalScale: {x: 9.616108, y: 42.51892, z: 102.4}
-  m_Children: [{fileID: 695135693}, {fileID: 1475274536}]
+  m_Children:
+  - {fileID: 695135693}
+  - {fileID: 1475274536}
   m_Father: {fileID: 1883737807}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10695,7 +10814,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.8663373, y: -1.274998, z: 0.67679805}
   m_LocalScale: {x: 0.54954934, y: 0.49286973, z: 1}
-  m_Children: [{fileID: 2071987315363689463}]
+  m_Children:
+  - {fileID: 2071987315363689463}
   m_Father: {fileID: 846900496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11304,7 +11424,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 237336035}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &1813726735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12992,7 +13113,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 2071987315363534533}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!65 &2078610884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13275,6 +13397,7 @@ GameObject:
   - component: {fileID: 2089874043}
   - component: {fileID: 2089874045}
   - component: {fileID: 2089874044}
+  - component: {fileID: 2089874046}
   m_Layer: 5
   m_Name: money
   m_TagString: Untagged
@@ -13333,7 +13456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4310
+  m_Text: 
 --- !u!222 &2089874045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13342,6 +13465,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089874042}
   m_CullTransparentMesh: 0
+--- !u!114 &2089874046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089874042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b311bac06a370548aa9f98257ccbd32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coin: {fileID: 2089874044}
+  coin_int: 1000
 --- !u!1 &2099537180
 GameObject:
   m_ObjectHideFlags: 0
@@ -13372,7 +13509,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.7113, y: -2.4076, z: 287.95224}
   m_LocalScale: {x: 0.68934, y: 0.87918997, z: 1}
-  m_Children: [{fileID: 794033402}, {fileID: 137452624}]
+  m_Children:
+  - {fileID: 794033402}
+  - {fileID: 137452624}
   m_Father: {fileID: 225829638}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13442,7 +13581,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 768747817}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &2099537184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13586,7 +13726,8 @@ MonoBehaviour:
   b_disappear_notice: {fileID: 623941059}
   b_appear: 0
   b_disappear: 0
-  click: 0
+  food_click: 0
+  test_speak_get_food: 0
 --- !u!114 &2106206198
 MonoBehaviour:
   m_ObjectHideFlags: 0
