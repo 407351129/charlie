@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "J7AXB7628397J2C",
+    "m_SelectedDeviceId": "JAAXB760E748V56",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "JAAXB760E748V56",
+        "name": "com.charlie",
+        "processId": 22964,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -13,6 +13,24 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 12132,
             "exited": true
+        },
+        {
+            "deviceId": "JAAXB760E748V56",
+            "name": "com.charlie",
+            "processId": 20416,
+            "exited": true
+        },
+        {
+            "deviceId": "JAAXB760E748V56",
+            "name": "com.charlie",
+            "processId": 18447,
+            "exited": true
+        },
+        {
+            "deviceId": "JAAXB760E748V56",
+            "name": "com.charlie",
+            "processId": 22964,
+            "exited": false
         }
     ],
     "m_Tags": {
