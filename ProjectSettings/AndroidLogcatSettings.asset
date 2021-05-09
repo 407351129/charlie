@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "JAAXB760E748V56",
         "name": "com.charlie",
-        "processId": 18447,
-        "exited": true
+        "processId": 22964,
+        "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -25,6 +25,12 @@
             "name": "com.charlie",
             "processId": 18447,
             "exited": true
+        },
+        {
+            "deviceId": "JAAXB760E748V56",
+            "name": "com.charlie",
+            "processId": 22964,
+            "exited": false
         }
     ],
     "m_Tags": {

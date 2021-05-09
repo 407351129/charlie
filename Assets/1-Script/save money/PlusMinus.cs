@@ -22,7 +22,8 @@ public class PlusMinus : MonoBehaviour
         money = 100;
         //item_num=4; 
 
-        total = save_itemNum.item_num * money; //item_num 為public variable ,已預先設好item_num 引用過來
+        total = save_itemNum.item_num * money; //item_num 為public variable ,已預先設好item_num 引用過來 (暫時)
+        PlayerPrefs.SetInt("Price", total);
         price.text = total + "";
 
 
@@ -55,12 +56,13 @@ public class PlusMinus : MonoBehaviour
 
 
 
-    public void Increase()
+    public void Increase() //按下去 購買數量增加
     {
 
 
         save_itemNum.item_num += 1;
         total = save_itemNum.item_num * money;
+        PlayerPrefs.SetInt("Price", total);
         price.text = total + "";
 
 
@@ -74,13 +76,14 @@ public class PlusMinus : MonoBehaviour
         //}
     }
 
-    public void Decrease()
+    public void Decrease() //按下去 購買數量減少
     {
 
         if (save_itemNum.item_num > 1)
         {
             save_itemNum.item_num -= 1;
             total = save_itemNum.item_num * money;
+            PlayerPrefs.SetInt("Price", total);
             price.text = total + "";
 
 

@@ -66,7 +66,7 @@ public class people_map : MonoBehaviour
     {
         // map_which_monster = 0;
         // which_monster = 0;
-        transportation = 3; //之後接值替換
+        transportation = 0; //之後接值替換
         MoveSpeed = 0;
         move_map = false;
         turn_back = false;
@@ -112,7 +112,7 @@ public class people_map : MonoBehaviour
         }
         else if (leftorright != 0 && wall == false && escape_monster != true)
         {
-            MoveSpeed = 1f + transportation * 0.15f; //暫時調快 原先0.2
+            MoveSpeed = 1f + transportation * 0.1f; //暫時調快 原先0.2
         }
         if (
             at_corner == true &&
