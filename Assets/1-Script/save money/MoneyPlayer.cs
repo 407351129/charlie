@@ -93,7 +93,7 @@ public class MoneyPlayer : MonoBehaviour
 
         PlayerPrefs.SetInt("Price", 0); //總價清零
         total_int = PlayerPrefs.GetInt("Price");
-
+        
         Debug.Log("總價應該為0 total_int="+ total_int);
 
     }
