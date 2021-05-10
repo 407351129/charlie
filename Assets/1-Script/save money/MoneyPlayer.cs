@@ -82,7 +82,7 @@ public class MoneyPlayer : MonoBehaviour
 
              else   //若玩家錢不夠
             {
-            coin_int = PlayerPrefs.GetInt("Player Money"); //更新買完後現在玩家擁有的錢
+            coin_int = PlayerPrefs.GetInt("Player Money"); //現在玩家擁有的錢
             Coin.text = coin_int + "";
 
             Debug.Log("沒買coin_int=" + coin_int);
