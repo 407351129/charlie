@@ -29,6 +29,8 @@ public class ArmorLevel : MonoBehaviour
 
     public Text levelText;
 
+    public int coin;
+
     void Start()
     {
         EnableLevelNotice(false);

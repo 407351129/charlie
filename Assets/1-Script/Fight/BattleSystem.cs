@@ -195,6 +195,11 @@ public class BattleSystem : MonoBehaviour
         dialogueText.EnableBag(true);
     }
 
+    //public void testing()
+    //{
+    //    PlayerAttack();
+    //}
+
     public void HealingButton()
     {
         PlayerHeal();
@@ -224,7 +229,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (state == BattleState.ATTACK)
             {
-                if (AzureSpeech.message.Contains("奶茶") == true)
+                if (AzureSpeech.message.Contains("珍珠奶茶") == true)
                 {
                     Invoke("PlayerAttack", 0.5f);
                     //PlayerAttack();
@@ -238,7 +243,7 @@ public class BattleSystem : MonoBehaviour
 
                     click = false;
                 }
-                else if (AzureSpeech.message.Contains("奶茶") == false & countdown.time == 0)
+                else if (AzureSpeech.message.Contains("珍珠奶茶") == false & countdown.time == 0)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("EnemyAttack", 0.5f);
@@ -253,7 +258,7 @@ public class BattleSystem : MonoBehaviour
             }
             else if (state == BattleState.DEFENSE)
             {
-                if (AzureSpeech.message.Contains("奶茶") == true)
+                if (AzureSpeech.message.Contains("珍珠奶茶") == true)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("DefenseSuccess", 0.5f);
@@ -265,7 +270,7 @@ public class BattleSystem : MonoBehaviour
 
                     click = false;
                 }
-                else if (AzureSpeech.message.Contains("奶茶") == false & countdown.time == 0)
+                else if (AzureSpeech.message.Contains("珍珠奶茶") == false & countdown.time == 0)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("DefenseFail", 0.5f);
