@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, ACTIONS, ATTACK, DEFENSE, BAG, ENEMYTURN, WIN, LOST }
+public enum BattleState { START, ACTIONS, ATTACK, DEFENSE, BAG, ENEMYTURN, WIN, LOSE }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -120,7 +120,7 @@ public class BattleSystem : MonoBehaviour
         {
             endNotice.EnableWin(true);
         }
-        else if (state == BattleState.LOST)
+        else if (state == BattleState.LOSE)
         {
             endNotice.EnableDie(true);
         }
@@ -286,7 +286,7 @@ public class BattleSystem : MonoBehaviour
         }
         if (PlayerIsDead == true)
         {
-            state = BattleState.LOST;
+            state = BattleState.LOSE;
             EndBattle();
         }
         if (EnemyIsDead == true)
