@@ -42,7 +42,7 @@ public class questionData : MonoBehaviour
                 break;
 
             case 1:
-                OrderQ(3);
+                OrderQ(3); //預計會寫成迴圈 
                 break;
 
             case 2:
@@ -50,7 +50,7 @@ public class questionData : MonoBehaviour
                 break;
 
             case 3:
-                BattleQ(5);
+                BattleQ(5);//暫時卡死在1到5題
                 break;
 
         }
@@ -68,7 +68,7 @@ public class questionData : MonoBehaviour
 
     }
 
-    //控制台打印数据
+    //控制台打印数据  (目前仍必須留 否則下方method全部失效
     void PrintAllData()
     {
         //读取example表中所有数据
@@ -115,7 +115,7 @@ public class questionData : MonoBehaviour
 
         }
 
-}
+     }
 
 
     public void ArriveQ() //送餐至客戶家(短句) type 0

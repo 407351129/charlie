@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 9289743}
   - component: {fileID: 9289742}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: listen_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 41576837}
   - component: {fileID: 41576836}
   m_Layer: 5
-  m_Name: English
+  m_Name: English1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1531,7 +1531,7 @@ GameObject:
   - component: {fileID: 174101768}
   - component: {fileID: 174101767}
   m_Layer: 5
-  m_Name: Button
+  m_Name: record_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1940,7 @@ GameObject:
   - component: {fileID: 265305653}
   - component: {fileID: 265305652}
   m_Layer: 5
-  m_Name: "\u7C73\u6F3F"
+  m_Name: foodPic2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 294450150}
   - component: {fileID: 294450149}
   m_Layer: 5
-  m_Name: "\u725B\u8089"
+  m_Name: foodPic1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2509,7 +2509,7 @@ GameObject:
   - component: {fileID: 312490806}
   - component: {fileID: 312490805}
   m_Layer: 5
-  m_Name: English
+  m_Name: English3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3427,7 +3427,7 @@ MonoBehaviour:
   map_pin_num: 3
   time_UI: {fileID: 189419775}
   time_out_test: 0
-  food: {fileID: 243018867}
+  food: {fileID: 928895770}
   monster: {fileID: 820301764}
 --- !u!1 &438836329
 GameObject:
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 442626565}
   - component: {fileID: 442626564}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: listen_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4121,12 +4121,12 @@ GameObject:
   - component: {fileID: 490985974}
   - component: {fileID: 490985973}
   m_Layer: 5
-  m_Name: map_pin4
+  m_Name: map_pin_house
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &490985972
 Transform:
   m_ObjectHideFlags: 0
@@ -4162,7 +4162,7 @@ MonoBehaviour:
   map_pin_num: 4
   time_UI: {fileID: 189419775}
   time_out_test: 0
-  food: {fileID: 243018867}
+  food: {fileID: 689625794}
   monster: {fileID: 820301764}
 --- !u!61 &490985974
 BoxCollider2D:
@@ -4359,7 +4359,7 @@ GameObject:
   - component: {fileID: 511366973}
   - component: {fileID: 511366972}
   m_Layer: 5
-  m_Name: English
+  m_Name: English4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5353,7 +5353,7 @@ GameObject:
   - component: {fileID: 616697915}
   - component: {fileID: 616697914}
   m_Layer: 5
-  m_Name: Chinese
+  m_Name: Chinese4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5431,7 +5431,7 @@ GameObject:
   - component: {fileID: 631495268}
   - component: {fileID: 631495267}
   m_Layer: 5
-  m_Name: Chinese
+  m_Name: Chinese2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5770,7 +5770,7 @@ GameObject:
   - component: {fileID: 665978276}
   - component: {fileID: 665978275}
   m_Layer: 5
-  m_Name: Chinese
+  m_Name: Chinese3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6120,7 +6120,7 @@ GameObject:
   - component: {fileID: 732031308}
   - component: {fileID: 732031307}
   m_Layer: 5
-  m_Name: "\u73CD\u73E0\u5976\u8336"
+  m_Name: foodPic4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6872,7 +6872,7 @@ GameObject:
   - component: {fileID: 782976154}
   - component: {fileID: 782976153}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: listen_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7272,7 +7272,7 @@ GameObject:
   - component: {fileID: 846727178}
   - component: {fileID: 846727177}
   m_Layer: 5
-  m_Name: Pinyin
+  m_Name: Pinyin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9174,7 +9174,7 @@ GameObject:
   - component: {fileID: 1028429523}
   - component: {fileID: 1028429522}
   m_Layer: 5
-  m_Name: "\u73CD\u73E0\u5976\u8336"
+  m_Name: foodPic3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9650,7 +9650,7 @@ GameObject:
   - component: {fileID: 1087075876}
   - component: {fileID: 1087075879}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: listen_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10770,7 +10770,7 @@ GameObject:
   - component: {fileID: 1261236498}
   - component: {fileID: 1261236497}
   m_Layer: 5
-  m_Name: Button
+  m_Name: record_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11791,7 +11791,7 @@ GameObject:
   - component: {fileID: 1323253118}
   - component: {fileID: 1323253117}
   m_Layer: 5
-  m_Name: Pinyin
+  m_Name: Pinyin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12255,7 +12255,7 @@ GameObject:
   - component: {fileID: 1369707997}
   - component: {fileID: 1369707996}
   m_Layer: 5
-  m_Name: Pinyin
+  m_Name: Pinyin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12333,7 +12333,7 @@ GameObject:
   - component: {fileID: 1377095253}
   - component: {fileID: 1377095252}
   m_Layer: 5
-  m_Name: Chinese
+  m_Name: Chinese1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12556,7 +12556,7 @@ MonoBehaviour:
   map_pin_num: 2
   time_UI: {fileID: 189419775}
   time_out_test: 0
-  food: {fileID: 243018867}
+  food: {fileID: 1937804993}
   monster: {fileID: 820301764}
 --- !u!1 &1390902378
 GameObject:
@@ -12731,7 +12731,7 @@ GameObject:
   - component: {fileID: 1415369620}
   - component: {fileID: 1415369619}
   m_Layer: 5
-  m_Name: Pinyin
+  m_Name: Pinyin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14004,7 +14004,7 @@ GameObject:
   - component: {fileID: 1593218528}
   - component: {fileID: 1593218527}
   m_Layer: 5
-  m_Name: Button
+  m_Name: record_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18027,7 +18027,7 @@ GameObject:
   - component: {fileID: 2029184546}
   - component: {fileID: 2029184545}
   m_Layer: 5
-  m_Name: English
+  m_Name: English2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18829,7 +18829,7 @@ GameObject:
   - component: {fileID: 2101004937}
   - component: {fileID: 2101004935}
   m_Layer: 5
-  m_Name: Button
+  m_Name: record_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
