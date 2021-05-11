@@ -773,6 +773,7 @@ GameObject:
   - component: {fileID: 94409511}
   - component: {fileID: 94409513}
   - component: {fileID: 94409512}
+  - component: {fileID: 94409514}
   m_Layer: 5
   m_Name: Chinese
   m_TagString: Untagged
@@ -796,7 +797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 65}
+  m_AnchoredPosition: {x: 0, y: 65}
   m_SizeDelta: {x: 349.23465, y: 51.40763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94409512
@@ -840,6 +841,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94409510}
   m_CullTransparentMesh: 0
+--- !u!114 &94409514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94409510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &106682549
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +915,7 @@ GameObject:
   - component: {fileID: 134814003}
   - component: {fileID: 134814007}
   - component: {fileID: 134814006}
+  - component: {fileID: 134814008}
   m_Layer: 5
   m_Name: AttackButton
   m_TagString: Untagged
@@ -1004,6 +1021,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 134814008}
+        m_MethodName: BattleQ
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &134814004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1096,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_on: 0
+--- !u!114 &134814008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134814001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &205503559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 301551645}
+  - component: {fileID: 301551646}
   m_Layer: 5
   m_Name: Questions
   m_TagString: Untagged
@@ -1529,6 +1573,21 @@ RectTransform:
   m_AnchoredPosition: {x: 2.4358215, y: 0.25003052}
   m_SizeDelta: {x: 350, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &301551646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301551644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &307960153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2072,7 @@ GameObject:
   - component: {fileID: 453932348}
   - component: {fileID: 453932350}
   - component: {fileID: 453932349}
+  - component: {fileID: 453932351}
   m_Layer: 5
   m_Name: English
   m_TagString: Untagged
@@ -2080,6 +2140,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453932347}
   m_CullTransparentMesh: 0
+--- !u!114 &453932351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453932347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &466573585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2689,7 @@ GameObject:
   - component: {fileID: 612605307}
   - component: {fileID: 612605309}
   - component: {fileID: 612605308}
+  - component: {fileID: 612605310}
   m_Layer: 5
   m_Name: Pinyin
   m_TagString: Untagged
@@ -2681,6 +2757,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612605306}
   m_CullTransparentMesh: 0
+--- !u!114 &612605310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612605306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &670857458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4442,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'You''re dead!
 
-    Would you like to spend 1 life potion to continue the game?
+    Would you like to spend 1 life potion to continue the
+    game?
 
     You have 3 in your bag.'
 --- !u!222 &1100350553
@@ -4638,6 +4730,7 @@ GameObject:
   - component: {fileID: 1158470562}
   - component: {fileID: 1158470566}
   - component: {fileID: 1158470565}
+  - component: {fileID: 1158470567}
   m_Layer: 5
   m_Name: DefenseButton
   m_TagString: Untagged
@@ -4742,6 +4835,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1158470567}
+        m_MethodName: BattleQ
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1158470563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4791,7 +4895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_UI: {fileID: 0}
+  time_UI: {fileID: 1080945351}
   time_out_test: 0
 --- !u!114 &1158470566
 MonoBehaviour:
@@ -4806,6 +4910,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_on: 0
+--- !u!114 &1158470567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158470560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203e41649961b7949afd161821be631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chinese: {fileID: 94409512}
+  Pinin: {fileID: 612605308}
+  English: {fileID: 453932349}
 --- !u!1 &1177086940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8053,8 +8172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1992411922}
   - component: {fileID: 1992411923}
-  - component: {fileID: 1992411925}
-  - component: {fileID: 1992411924}
   m_Layer: 0
   m_Name: "\u73CD\u73E0\u5976\u8336"
   m_TagString: Untagged
@@ -8126,34 +8243,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1992411924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992411921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time_UI: {fileID: 0}
-  time_out_test: 0
---- !u!114 &1992411925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992411921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1df962b497b814428dccbeb01acd120, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time_UI: {fileID: 0}
-  time_out_test: 0
 --- !u!1 &2009527631
 GameObject:
   m_ObjectHideFlags: 0
