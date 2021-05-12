@@ -19,7 +19,7 @@ public class questionData : MonoBehaviour
     int Questions_Id;
     string Questions_Content;
     string Questions_Symbol;
-    string Questions_Chinese;
+    public static string Questions_Chinese;
     int Questions_Reward;
     int Questions_Type;
 
@@ -53,6 +53,9 @@ public class questionData : MonoBehaviour
                 BattleQ(5);//暫時卡死在1到5題
                 break;
 
+            default:
+                OrderQ(3);
+                break;
         }
      
             //Debug.Log("目前英文:" + Questions_Content);

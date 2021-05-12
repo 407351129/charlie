@@ -25,7 +25,7 @@ public class Map_food : MonoBehaviour
     public GameObject food_appear;
 
     [SerializeField]
-    string[] food_speak; //接關卡資料庫的
+    string[] food_speak; 
 
     [SerializeField]
     bool[] map_pin_appear;
@@ -82,7 +82,7 @@ public class Map_food : MonoBehaviour
     {
         test_end_map = end_map;
         test_now_food = now_food;
-        food_speak = levelstars.foods;
+        food_speak = levelstars.foods; //關卡已接所有的食物題目
 
         // now_level = levelstars.now_level;
         test_get_food = get_food;

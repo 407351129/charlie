@@ -39,6 +39,9 @@ public class BattleSystem : MonoBehaviour
     public int playerDamage;
     public  int playerLevel;
 
+    private string chinese;
+
+
     // Start is called before the first frame update
     // void Awake(){
 
@@ -222,6 +225,8 @@ public class BattleSystem : MonoBehaviour
 
     void Update()
     {
+        chinese = questionData.Questions_Chinese; //接上資料庫的chinese
+
         Armor();
         bool EnemyIsDead = playerUnit.End();
         bool PlayerIsDead = enemyUnit.End();
@@ -229,7 +234,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (state == BattleState.ATTACK)
             {
-                if (AzureSpeech.message.Contains("珍珠奶茶") == true)
+                if (AzureSpeech.message.Contains(chinese) == true)
                 {
                     Invoke("PlayerAttack", 0.5f);
                     //PlayerAttack();
@@ -243,7 +248,7 @@ public class BattleSystem : MonoBehaviour
 
                     click = false;
                 }
-                else if (AzureSpeech.message.Contains("珍珠奶茶") == false & countdown.time == 0)
+                else if (AzureSpeech.message.Contains(chinese) == false & countdown.time == 0)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("EnemyAttack", 0.5f);
@@ -258,7 +263,7 @@ public class BattleSystem : MonoBehaviour
             }
             else if (state == BattleState.DEFENSE)
             {
-                if (AzureSpeech.message.Contains("珍珠奶茶") == true)
+                if (AzureSpeech.message.Contains(chinese) == true)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("DefenseSuccess", 0.5f);
@@ -270,7 +275,7 @@ public class BattleSystem : MonoBehaviour
 
                     click = false;
                 }
-                else if (AzureSpeech.message.Contains("珍珠奶茶") == false & countdown.time == 0)
+                else if (AzureSpeech.message.Contains(chinese) == false & countdown.time == 0)
                 {
                     state = BattleState.ENEMYTURN;
                     Invoke("DefenseFail", 0.5f);

@@ -7,6 +7,8 @@ public class button_attack : MonoBehaviour
 {
     public static bool fight_on;
 
+    private string chinese;
+
     public bool f_on;
 
     void Start()
@@ -17,9 +19,10 @@ public class button_attack : MonoBehaviour
 
     void Update()
     {
+        chinese = questionData.Questions_Chinese; //接上資料庫的chinese
         if (
             countdown.time_out == true ||
-            AzureSpeech.message.Contains("珍珠奶茶") //再加上或語音(攻擊)成功
+            AzureSpeech.message.Contains(chinese) //再加上或語音(攻擊)成功
         )
         {
             fight_on = false;

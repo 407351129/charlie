@@ -18,11 +18,11 @@ public class levelstars : MonoBehaviour
 
     public int level_num;
 
-    public string[] food = new string[4];
+    public string[] food = new string[4]; //每一關都不一樣,此處接資料庫的Order, 4的最後一個會被getfood蓋過
 
-    public string getfood;
+    public string getfood; //送餐至客戶家的
 
-    public static string[] foods;
+    public static string[] foods; //數值傳出去的地方 別人要接的數值  
 
     int stars;
 
@@ -67,11 +67,11 @@ public class levelstars : MonoBehaviour
         }
     }
 
-    public void level_click()
+    public void level_click() //在選擇關卡頁 點擊任何一個關卡
     {
-        now_level = level_num;
+        now_level = level_num; //目前關卡
         foods = food;
-        foods[3] = getfood;
+        foods[3] = getfood; //第3個是送餐至客戶家
     }
 
     void Start()
@@ -83,5 +83,5 @@ public class levelstars : MonoBehaviour
         //PlayerPrefs.SetInt("num"+2, 12);
         //PlayerPrefs.SetInt("numwewkoekwoekweowkoe", 1);
     }
-    // Update is called once per frame
+  
 }
