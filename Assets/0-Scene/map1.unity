@@ -2040,7 +2040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &258333686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11271,7 +11271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: pinin
+  m_Text: pinin1111111111111111
 --- !u!222 &1172633945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11296,8 +11296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 23.607}
-  m_SizeDelta: {x: 162.20581, y: 47.2146}
+  m_AnchoredPosition: {x: 11, y: 13}
+  m_SizeDelta: {x: 402.51987, y: 53.605453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172633947
 MonoBehaviour:
@@ -14659,7 +14659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chinese
+  m_Text: Chinese11111111111111
 --- !u!222 &1522689322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14684,8 +14684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9, y: 62.9}
-  m_SizeDelta: {x: 162.20581, y: 47.2146}
+  m_AnchoredPosition: {x: 11, y: 57}
+  m_SizeDelta: {x: 402.52026, y: 50.163666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522689324
 MonoBehaviour:
@@ -20007,7 +20007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: English
+  m_Text: English11111111111111
 --- !u!222 &2071813855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20032,8 +20032,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9, y: -23.607}
-  m_SizeDelta: {x: 162.20581, y: 47.2146}
+  m_AnchoredPosition: {x: 11, y: -20.6}
+  m_SizeDelta: {x: 402.52002, y: 41.21557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071813857
 MonoBehaviour:
