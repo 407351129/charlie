@@ -42,7 +42,7 @@ public class questionData : MonoBehaviour
                 break;
 
             case 1:
-                OrderQ(3); //預計會寫成迴圈 
+                OrderQ(3); //暫時卡死在1~3
                 break;
 
             case 2:
@@ -55,12 +55,12 @@ public class questionData : MonoBehaviour
 
         }
      
-            Debug.Log("目前英文:" + Questions_Content);
-            Debug.Log("目前讀音:" + Questions_Symbol);
-            Debug.Log("目前中文:" + Questions_Chinese);
+            //Debug.Log("目前英文:" + Questions_Content);
+            //Debug.Log("目前讀音:" + Questions_Symbol);
+            //Debug.Log("目前中文:" + Questions_Chinese);
 
-            Debug.Log("目前id:" + Questions_Id);
-            Debug.Log("目前type:" + Questions_Type);
+            //Debug.Log("目前id:" + Questions_Id);
+            //Debug.Log("目前type:" + Questions_Type);
  
 
 
@@ -157,7 +157,7 @@ public class questionData : MonoBehaviour
     public void OrderQ(int question_id) //訂單、送餐題目(食物單字) type 1
     {
 
-        DataTable dt = sqlDB.ExecuteQuery("SELECT * FROM Questions WHERE Questions_Id = 1"); //選擇第一題
+        DataTable dt = sqlDB.ExecuteQuery("SELECT * FROM Questions WHERE Questions_Id BETWEEN 1 AND 3 ORDER BY random() LIMIT 1"); //限制1到3 (還沒寫好 
 
         foreach (DataRow dr in dt.Rows)  //搜尋結果各欄儲存在dictionary 
         {
@@ -168,12 +168,13 @@ public class questionData : MonoBehaviour
             Questions_Reward = (int)dr["Questions_Reward"];
             Questions_Type = (int)dr["Questions_Type"];
 
+            English.text = Questions_Content;
+            Pinin.text = Questions_Symbol;
+            Chinese.text = Questions_Chinese;
         }
 
 
-        English.text = Questions_Content;
-        Pinin.text = Questions_Symbol;
-        Chinese.text = Questions_Chinese;
+       
 
 
 
