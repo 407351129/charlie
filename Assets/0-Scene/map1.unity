@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc02ac166a022ee4a8a79dacd8ab83bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outputText: {fileID: 1817788273}
+  outputText: {fileID: 920637330}
   startRecoButton: {fileID: 9615960}
   azure: {fileID: 0}
   fight_a: 0
@@ -7314,7 +7314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &758094642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7372,7 +7372,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1685165571
+  m_SortingLayerID: 0
   m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!224 &758094645
@@ -10190,7 +10190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1022371153
 MonoBehaviour:
   m_ObjectHideFlags: 0
