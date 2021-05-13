@@ -1278,9 +1278,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: Cost
-          m_Mode: 3
+        - m_Target: {fileID: 309797342}
+          m_MethodName: ArmorMoney
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have 4310 dollars.
+  m_Text: 'You have 1000 dollars.
 
     Do you want to spend      to level up you
     armor?'
@@ -2335,7 +2335,7 @@ Transform:
   - {fileID: 1547904027}
   - {fileID: 1531410241}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508332115
 GameObject:
@@ -2557,12 +2557,13 @@ MonoBehaviour:
   level3Armors: {fileID: 972954385}
   level3CurrentArmors: {fileID: 1935972998}
   levelNotice: {fileID: 2001083338}
+  warning: {fileID: 647814902}
   moneyEN: {fileID: 1022165825}
   moneyCH: {fileID: 2115453724}
   level_int: 0
   level_prefs: 0
   levelText: {fileID: 722483928}
-  coin: 0
+  playerMoney: 0
 --- !u!114 &539847621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,6 +2635,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 647814903}
   - {fileID: 2001083339}
   - {fileID: 2106253244}
   - {fileID: 458457118}
@@ -2811,6 +2813,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &647814902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647814903}
+  - component: {fileID: 647814905}
+  - component: {fileID: 647814904}
+  m_Layer: 5
+  m_Name: warning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &647814903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647814902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539847624}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -171}
+  m_SizeDelta: {x: 728.8081, y: 99.324265}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &647814904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647814902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fecc37a0cd2f7744ea62da2c36275b4b, type: 3}
+    m_FontSize: 46
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 60
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: You don't have enough money!
+--- !u!222 &647814905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647814902}
+  m_CullTransparentMesh: 0
 --- !u!1 &652309472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2960,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u662F\u5426\u8981\u82B1\u8CBB  \u91D1\u5E63\u4F86\u5347\u7D1A\u88DD\u5099?\n\u60A8\u76EE\u524D\u64C1\u67094310\u91D1\u5E63\u3002"
+  m_Text: "\u662F\u5426\u8981\u82B1\u8CBB  \u91D1\u5E63\u4F86\u5347\u7D1A\u88DD\u5099?\n\u60A8\u76EE\u524D\u64C1\u67091000\u91D1\u5E63\u3002"
 --- !u!222 &652309475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3026,6 +3106,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 539847620}
         m_MethodName: LevelNotice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 539847620}
+        m_MethodName: NoMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3238,7 +3329,7 @@ Transform:
   - {fileID: 1988973940}
   - {fileID: 1326310471}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &755524934
 GameObject:
@@ -3512,8 +3603,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 309797342}
-          m_MethodName: Cost
-          m_Mode: 3
+          m_MethodName: ArmorMoney
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3947,7 +4038,7 @@ Transform:
   - {fileID: 755524935}
   - {fileID: 2093448739}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004077154
 GameObject:
@@ -6747,7 +6838,6 @@ GameObject:
   - component: {fileID: 1522058251}
   - component: {fileID: 1522058250}
   - component: {fileID: 1522058254}
-  - component: {fileID: 1522058253}
   - component: {fileID: 1522058252}
   m_Layer: 0
   m_Name: no_EN
@@ -6846,18 +6936,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1522058253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522058248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e45c62d10c3fa24981cb325f0127c6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1522058254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7850,7 +7928,7 @@ Transform:
   - {fileID: 1487664000}
   - {fileID: 1188988169}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762388344
 GameObject:
@@ -8607,7 +8685,7 @@ Transform:
   - {fileID: 2057417815}
   - {fileID: 1641771784}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1946411546
 GameObject:
@@ -8787,7 +8865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2001083339
 Transform:
   m_ObjectHideFlags: 0
@@ -8811,7 +8889,7 @@ Transform:
   - {fileID: 1162994904}
   - {fileID: 225186860}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2001083340
 SpriteRenderer:
@@ -9385,7 +9463,7 @@ Transform:
   - {fileID: 245566586}
   - {fileID: 1792634668}
   m_Father: {fileID: 539847624}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107578041
 GameObject:
@@ -9480,7 +9558,6 @@ GameObject:
   - component: {fileID: 2113405588}
   - component: {fileID: 2113405587}
   - component: {fileID: 2113405591}
-  - component: {fileID: 2113405590}
   - component: {fileID: 2113405589}
   m_Layer: 0
   m_Name: no_CH
@@ -9577,18 +9654,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &2113405590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113405585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e45c62d10c3fa24981cb325f0127c6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2113405591
 BoxCollider2D:
   m_ObjectHideFlags: 0
