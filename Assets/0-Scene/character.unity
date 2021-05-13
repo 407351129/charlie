@@ -1223,7 +1223,6 @@ GameObject:
   - component: {fileID: 272138525}
   - component: {fileID: 272138524}
   - component: {fileID: 272138523}
-  - component: {fileID: 272138522}
   - component: {fileID: 272138521}
   m_Layer: 0
   m_Name: yes_EN
@@ -1290,18 +1289,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &272138522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272138519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e45c62d10c3fa24981cb325f0127c6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &272138523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1543,6 +1530,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coin: {fileID: 309797340}
   coin_int: 0
+  playerMoney: 0
+  armorLevel: 0
 --- !u!1 &387362979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,7 +3456,6 @@ GameObject:
   - component: {fileID: 870974989}
   - component: {fileID: 870974988}
   - component: {fileID: 870974987}
-  - component: {fileID: 870974986}
   - component: {fileID: 870974985}
   m_Layer: 0
   m_Name: yes_CH
@@ -3534,18 +3522,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &870974986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870974983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e45c62d10c3fa24981cb325f0127c6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &870974987
 BoxCollider2D:
   m_ObjectHideFlags: 0

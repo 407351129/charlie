@@ -19,6 +19,8 @@ public class ArmorLevel : MonoBehaviour
 
     public GameObject levelNotice;
 
+    public GameObject warning;
+
     public Text moneyEN;
 
     public Text moneyCH;
@@ -29,14 +31,16 @@ public class ArmorLevel : MonoBehaviour
 
     public Text levelText;
 
-    public int coin;
+    //public int coin;
+
+    public int playerMoney;
 
     void Start()
     {
+        EnableWarning(false);
         EnableLevelNotice(false);
         level_int = 1;
     }
-
 
     public void SetLevel()
     {
@@ -63,6 +67,18 @@ public class ArmorLevel : MonoBehaviour
     public void LevelNoticeOff()
     {
         EnableLevelNotice(false);
+    }
+
+    public void NoMoney()
+    {
+        if (level_int == 1)
+        {
+            if (playerMoney < 50) EnableWarning(true);
+        }
+        else if (level_int == 2)
+        {
+            if (playerMoney < 80) EnableWarning(true);
+        }
     }
 
     void Armor()
@@ -103,29 +119,38 @@ public class ArmorLevel : MonoBehaviour
 
     public void EnableLevel1(bool enabled)
     {
-        level1Armors.SetActive (enabled);
-        level1CurrentArmors.SetActive (enabled);
+        level1Armors.SetActive(enabled);
+        level1CurrentArmors.SetActive(enabled);
     }
 
     public void EnableLevel2(bool enabled)
     {
-        level2Armors.SetActive (enabled);
-        level2CurrentArmors.SetActive (enabled);
+        level2Armors.SetActive(enabled);
+        level2CurrentArmors.SetActive(enabled);
     }
 
     public void EnableLevel3(bool enabled)
     {
-        level3Armors.SetActive (enabled);
-        level3CurrentArmors.SetActive (enabled);
+        level3Armors.SetActive(enabled);
+        level3CurrentArmors.SetActive(enabled);
     }
 
     public void EnableLevelNotice(bool enabled)
     {
-        levelNotice.SetActive (enabled);
+        levelNotice.SetActive(enabled);
+    }
+
+    public void EnableWarning(bool enabled)
+    {
+        warning.SetActive(enabled);
     }
 
     void Update()
     {
+        playerMoney = PlayerPrefs.GetInt("Player Money");
+        level_prefs = PlayerPrefs.GetInt("level_int");
+        levelText.text = level_int.ToString();
+        if (level_int < level_prefs) level_int = level_prefs;
         Armor();
         Money();
 
@@ -134,8 +159,5 @@ public class ArmorLevel : MonoBehaviour
         //    level_prefs = 1;
         //    levelText.text = level_prefs.ToString();
         //}
-        level_prefs = PlayerPrefs.GetInt("level_int");
-        levelText.text = level_int.ToString();
-        if (level_int < level_prefs) level_int = level_prefs;
     }
 }
